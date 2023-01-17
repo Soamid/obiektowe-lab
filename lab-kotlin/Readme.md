@@ -8,9 +8,10 @@ Uwaga: do realizacji zadań z Kotlina nie będzie potrzebna JavaFX.
 
 ## Materiały do zajęć
 
-- Kod z przykładami Java vs Kotlin (do uzupełniania w trakcie zajęć!)
-- Prezentacja z zajęć
-- Oficjalna dokumentacja Kotlina (jest serio dobra i często pokrywa wszelkie wątpliwości)
+- [**Kod z przykładami Java vs Kotlin**](kotlin-examples.zip) **(do uzupełniania w trakcie zajęć!)**
+- [Prezentacja z zajęć](Kotlin.pptx)
+- [Oficjalna dokumentacja Kotlina](https://kotlinlang.org/docs/home.html) (jest serio dobra i często pokrywa wszelkie wątpliwości)
+- [Kotlin Koans](https://play.kotlinlang.org/koans/overview) - tutorial w formie serii interaktywnych ćwiczeń
 
 
 

@@ -18,7 +18,9 @@ Uwaga: do realizacji zadań z Kotlina nie będzie potrzebna JavaFX.
 ## Zadania do wykonania
 
 1. Stwórz nowy projekt w IntelliJ: *File -> New --> Project... -->* wpisz nazwę, zaznacz *Kotlin* jako język oraz *Gradle* jako *Build system*, a także *Groovy* jako *Gradle DSL*.
+
    **Uwaga:** projekt umieść w repozytorium z laboratoriami, najlepiej jako osobny folder obok projektu Javowego. 
+
    **Uwaga 2**: IntelliJ domyślnie wybierze i ustawi najnowszą wersję Kotlina. Do poprawnego działania może ona wymagać aktualizacji IntelliJ do najnowszej wersji. Jeśli nie chcesz aktualizować IntelliJ, można zmienić wersję w pliku *build.gradle* (sekcja plugins). Np. dla IntelliJ z początku 2022 powinien działać Kotlin `1.6.21`.
 
 2. Przenieś i przepisz na Kotlina wybrane klasy z poprzednich laboratoriów: `MapDirection`, `MoveDirection`, `Vector2d`. 
@@ -48,6 +50,7 @@ Uwaga: do realizacji zadań z Kotlina nie będzie potrzebna JavaFX.
    - Przenieś metodę `MapDirection.toUnitVector()` jako *extension function* do pliku z klasą `Vector2d` - to jej odpowiedzialność by zapewnić taką konwersję i uniezależnić ją od siebie.
    - Stwórz plik `RandomExtensions.kt` i przygotuj tam dwie *extension functions*:
      - `randomPosition()` - działa na każdej mapie, której kluczami są obiekty `Vector2d` i zwraca losową pozycję z tej mapy lub `null`, jeśli mapa jest pusta. 
+
        Uwaga: w Kotlinie istnieje już *extension function* `random()` oraz `randomOrNull()` dla np. listy lub zbioru liczb - można z niej tu skorzystac. 
      - `randomFreePostion(mapSize: Vector2d)` - działa na każdej mapie, której kluczami są obiekty `Vector2d` i zwraca losową wolną pozycję, zakładając że mapa jest prostokątna, a jej rozmiar ograniczony przez `mapSize`. Jeśli nie ma już wolnej pozycji, zwraca `null`. 
 

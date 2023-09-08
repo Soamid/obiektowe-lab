@@ -142,8 +142,7 @@ umieszczenie obiektów w kolekcji takiej jak `Set` będzie niezgodne z semantyk�
 
 ### Pozostałe klasy
 
-6. Utwórz typ wyliczeniowy `MoveDirection` z czterema kierunkami: `FORWARD, BACKWARD, RIGHT, LEFT`.
-7. Utwórz typ wyliczeniowy `MapDirection` z czterema kierunkami: `NORTH, SOUTH, WEST, EAST`, który:
+6. Utwórz typ wyliczeniowy `MapDirection` z czterema kierunkami: `NORTH, SOUTH, WEST, EAST`, który:
    * posiada metodę `toString`, która dla kierunku `EAST` zwraca łańcuch `Wschód`, dla `WEST` - `Zachód`, itd.
    * posiada metodę `next`, która dla kierunku `EAST` zwraca `SOUTH` (kolejny kierunek zgodnie z ruchem wskazówek
      zegara), itd.

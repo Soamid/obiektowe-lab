@@ -12,87 +12,87 @@ Najważniejsze zadania:
 ## Przydatne informacje
 
 * Pola w obiekcie deklarowane są w ciele klasy, np. 
-```java
-class Vector2d {
-  public int x;
-  public int y;
-}
-```
+    ```java
+    class Vector2d {
+      private int x;
+      private int y;
+    }
+    ```
 * Konstruktor jest specjalną metodą w każdej klasie. Nazywa się tak samo jak klasa i nie zwraca wartości. Konstruktor 
-pozwala ustalić początkową wartość pól obiektu, jeśli mają być przekazane przez użytkownika, np.
-```java
-class Vector2d {
-  public Vector2d(int x, int y){
-    this.x = x;
-    this.y = y;
-  }
-}
-```
+  pozwala ustalić początkową wartość pól obiektu, jeśli mają być przekazane przez użytkownika, np.
+    ```java
+    class Vector2d {
+      public Vector2d(int x, int y){
+        this.x = x;
+        this.y = y;
+      }
+    }
+    ```
 * Obiekty klasy tworzy się za pomocą wywołania `new`, np. 
-```java
-Vector2d position1 = new Vector2d(1,2);
-```
+    ```java
+    Vector2d position1 = new Vector2d(1,2);
+    ```
 * Słowo kluczowe `this` odnosi się do obiektu, na rzecz którego wywołano metodę.
-Przykładowo w języku C moglibyśmy zdefiniować metodę `createPoint`:
+  Przykładowo w języku C moglibyśmy zdefiniować metodę `createPoint`:
 
-```C
-struct Point {
-  int x;
-  int y;
-}
-
-struct Point * createPoint(int x, int y){
-  struct Point * result = malloc(sizeof(struct Point));
-  result->x = x;
-  result->y = y;
-  return result;
-}
-
-struct Point * p1 = createPoint(1,2);
-```
+    ```C
+    struct Point {
+      int x;
+      int y;
+    }
+  
+    struct Point * createPoint(int x, int y){
+      struct Point * result = malloc(sizeof(struct Point));
+      result->x = x;
+      result->y = y;
+      return result;
+    }
+  
+    struct Point * p1 = createPoint(1,2);
+    ```
 
 Ten kod jest analogiczny do konstruktora, z ta różnicą, że w konstruktorze nie tworzymy obiektu *explicite*, tylko mamy do
 niego dostęp za pomocą słowa kluczowego `this`.
 
 * Metoda `equals` ma zwykle taki sam schemat:
 
-```java
-public boolean equals(Object other){
-  if (this == other)
-    return true;
-  if (!(other instanceof Vector2d))
-    return false;
-  Vector2d that = (Vector2d) other;
-  // tutaj przeprowadzane jest faktyczne porównanie
-}
-```
+    ```java
+    public boolean equals(Object other){
+      if (this == other)
+        return true;
+      if (!(other instanceof Vector2d))
+        return false;
+      Vector2d that = (Vector2d) other;
+      // tutaj przeprowadzane jest faktyczne porównanie
+    }
+    ```
 
-Należy również wiedzieć, że zmiana metody `equals` powinna powodować zmianę metody `hashCode`, w przeciwnym razie
+Należy również pamiętać, że zmiana metody `equals` powinna powodować zmianę metody `hashCode`, w przeciwnym razie
 umieszczenie obiektów w kolekcji takiej jak `Set` będzie niezgodne z semantyką metody `equals`.
 
 
 * Definicję typu wyliczeniowego można rozszerzać dodając do niego pola i metody. Wymaga to umieszczenia średnika po ostatniej
   wartości typu, np.:
-```java
-enum MapDirection {
-  NORTH,
-  SOUTH,
-  EAST,
-  WEST;
-
-  public String toString(){
-    switch(this) {
-      case NORTH: return "Północ";
-      case SOUTH: return "Południe";
-      //...
+    ```java
+    enum MapDirection {
+      NORTH,
+      SOUTH,
+      EAST,
+      WEST;
+  
+      public String toString(){
+        return switch(this) {
+          case NORTH -> "Północ";
+          case SOUTH -> "Południe";
+          //...
+        }
+      }
     }
-  }
-}
-```
+    ```
 
 * Metody testujące posiadają adnotację `@Test`.
 
-* W metodach testujących można użyć np. następujących asercji:
+* W metodach testujących można użyć m. in. następujących asercji:
   * `assertEquals(a, b)` - weryfikuje czy obiekty `a` i `b` są sobie równe (korzystając z metody `equals`),
   * `assertTrue(a)` - weryfikuje czy wartość logiczna `a` jest prawdą,
   * `assertFalse(a)` - weryfikuje czy wartość logiczna `a` jest fałszem.
@@ -101,15 +101,12 @@ enum MapDirection {
 
 ### Klasa `Vector2d`
 
-0. Projekt z poprzedniego laboratorium należy umieścić w repozytorium git.
-0. Wersję opracowaną na poprzednich zajęciach należy [otagować](https://www.jetbrains.com/help/idea/use-tags-to-mark-specific-commits.html) jako `lab1` oraz 
-   [wysłać tag](https://stackoverflow.com/questions/28905277/how-to-push-git-tags-from-intellij-without-using-the-console) do zdalnego repozytorium.
-0. Po zakończeniu pracy nad laboratorium należy je otagować tagiem `lab2`.
 1. Pliki projektu należy umieszczać w pakiecie `agh.ics.oop`.
 2. Wykorzystaj klasę `World` z metodą `main` z poprzednich zajęć.
 3. Utwórz klasę `Vector2d`, która:
-   * posiada dwa publiczne pola `x` i `y` typu `int`, które nie mogą być modyfikowane (`final`),
+   * posiada dwa prywatne pola `x` i `y` typu `int`, które nie mogą być modyfikowane (`final`),
    * posiada konstruktor akceptujący parametry `x` i `y`, która są przypisywane do pól `x` i `y`,
+   * posiada gettery umożliwiające odczyt wartości utworzonych atrybutów
    * posiada metodę `String toString()`, która zamienia pozycję na napis `(x,y)`, np. dla `x = 1` oraz `y = 2`, napis ma postać
      `(1,2)`,
    * posiada metodę `boolean precedes(Vector2d other)`, akceptującą inny obiekt tej klasy i zwracającą wartość `true`, jeśli oba pola mają
@@ -134,14 +131,14 @@ enum MapDirection {
 4. Poniższy obrazek ilustruje metody `lowerLeft` oraz `upperRight`.
    ![rogi](vector2d-a.png)
 5. W metodzie `main` wprowadź następujący kod:
-```java
-Vector2d position1 = new Vector2d(1,2);
-System.out.println(position1);
-Vector2d position2 = new Vector2d(-2,1);
-System.out.println(position2);
-System.out.println(position1.add(position2));
-```
-Sprawdź czy uzyskane wyniki są poprawne.
+    ```java
+    Vector2d position1 = new Vector2d(1,2);
+    System.out.println(position1);
+    Vector2d position2 = new Vector2d(-2,1);
+    System.out.println(position2);
+    System.out.println(position1.add(position2));
+    ```
+    Sprawdź czy uzyskane wyniki są poprawne.
 
 ### Pozostałe klasy
 
@@ -153,24 +150,22 @@ Sprawdź czy uzyskane wyniki są poprawne.
    * posiada metodę `previous`, która dla kierunku `EAST` zwraca `NORTH` (kolejny kierunek zgodnie z ruchem przeciwnym
      do ruchu wskazówek zegara), itd.
    * posiada metodę `toUnitVector`, która zwraca jednostkowy wektor przemieszczenia typu `Vector2d` zgodny z orientacją na mapie,
-     tzn. dla `NORTH` wektor ten powinien mieć wartość `(0,1)`, dla `EAST` `(1,0)`, itd.
+     tzn. dla `NORTH` wektor ten powinien mieć wartość `(0,1)`, dla `WEST` `(-1,0)`, itd.
 8. Sprawdź w metodzie `main` czy metody te działają zgodnie z opisem.
 
 
 ### Testy
 
 
-1. Zmodyfikuj plik `build.gradle`:
-   * usuń linię `testCompile` w sekcji `dependencies`.
-   * dodaj linię `testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")` w tej samej sekcji
-3. Utwórz klasę `MapDirectionTest` w katalogu `src/test/java` w pakiecie `agh.ics.oop`.
-4. Zaimplementuj test weryfikujący poprawność działania metody `next()`, dla wszystkich przypadków (dodaj anotację
+1. Utwórz klasę `MapDirectionTest` w katalogu `src/test/java` w pakiecie `agh.ics.oop`.
+2. Zaimplementuj test weryfikujący poprawność działania metody `next()`, dla wszystkich przypadków (dodaj anotację
    `@Test` przed deklaracją metody).
-4. Uruchom test korzystając z zielonych trójkątów po lewej stronie.
-5. Zaimplementuj test weryfikujący poprawność działania metody `previous()`, dla wszystkich przypadków.
-6. Utwórz klasę `Vector2dTest`.
-7. Dodaj testy weryfikujące poprawność metod: `equals(Object other)`, `toString()`, `precedes(Vector2d other)`, `follows(Vector2d other)`,
+3. Uruchom test korzystając z zielonych trójkątów po lewej stronie.
+4. Zaimplementuj test weryfikujący poprawność działania metody `previous()`, dla wszystkich przypadków.
+5. Utwórz klasę `Vector2dTest`.
+6. Dodaj testy weryfikujące poprawność metod: `equals(Object other)`, `toString()`, `precedes(Vector2d other)`, `follows(Vector2d other)`,
    `upperRight(Vector2d other)`, `lowerLeft(Vector2d other)`, `add(Vector2d other)`, `subtract(Vector2d other)`,
    `opposite()`.
-
+   
+   Pamiętaj, że kod testów również powinien być czytelny i dobrze ustrukturyzowany. Warto zapoznać się z konwencją [Given When Then](https://www.j-labs.pl/blog-technologiczny/given-when-then-pattern-in-unit-tests/) i zawsze formułować przypadki testowe tak by jasno opisywały, co chcemy przetestować i jakie powinny być skutki badanej akcji.
 

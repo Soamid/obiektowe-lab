@@ -26,7 +26,7 @@ class RectangularMap extends AbstractWorldMap {
   klasach podrzędnych, to oznaczamy je jako chronione (`protected`). Przykładowo, lista zwierząt w klasie `AbstractWorldMap`
   powinna być chroniona:
 ```java
-abstract class AbstractWorldMap implements IWorldMap {
+abstract class AbstractWorldMap implements WorldMap {
   protected List<Animal> animals = new ArrayList<>();
 }
 ```
@@ -56,7 +56,7 @@ W ten sposób można *rozszerzać* zachowanie jakiejś metody w klasach podrzęd
    * posiada metodę publiczną `Vector2d getPosition()`, która zwraca jej pozycję,
    * posiada metodę publiczną `String toString()`, która zwraca `*` jako swoją reprezentację.
 2. Zdefiniuj klasę `GrassField`, która:
-   * implementuje interfejs `IWorldMap`,
+   * implementuje interfejs `WorldMap`,
    * w konstruktorze akceptuje parametr określający liczbę pól trawy, które znajdują się na mapie,
    * kępki trawy powinny być umieszczane losowo w obszarze o współrzędnych `(0, 0)` - `(sqrt(n*10), sqrt(n*10))`, 
      gdzie `n` to liczba pól trawy, przy założeniu, że dwie kępki trawy nie mogą być w tym samym miejscu,
@@ -66,10 +66,11 @@ W ten sposób można *rozszerzać* zachowanie jakiejś metody w klasach podrzęd
      W celu jej implementacji wykorzystaj klasę `MapVisualizer` z poprzedniego laboratorium oraz
      dynamicznie oblicz skrajne punkty, które powinny zostać wyświetlone. Obecność zwierząt ma priorytet nad obecnością
      kępki trawy na danym polu.
+   * posiada metody `equals()/hashCode()` nadpisane tak by porównywać obiekty trawy po ich pozycjach.
 3. Sprawdź czy implementacja klasy jest poprawna - zainicjuj mapę z 10 kępkami trawy.
    Uruchom tę samą sekwencję ruchów co w laboratorium 4.
 4. Dodaj testy do klas `RectangularMap` oraz `GrassField` weryfikujące poprawność działania metod dostępnych w
-   interfejsie `IWorldMap`,
+   interfejsie `WorldMap`,
 5. Przyjrzyj się implementacjom tych klas - łatwo można zauważyć, że duża część kodu w obu klasach się powtarza. 
 6. Dodaj klasę abstrakcyjną `AbstractWorldMap`, która zawiera kod wspólny dla tych klas.
 7. Spraw aby obie klasy dziedziczyły z `AbstractWorldMap` oraz usuń kod, który jest już zaimplementowany w klasie
@@ -78,11 +79,10 @@ W ten sposób można *rozszerzać* zachowanie jakiejś metody w klasach podrzęd
    sposób, aby wykorzystywała ona abstrakcyjne metody zdefiniowane w tej klasie, posiadające odrębne implementacje w
    klasach dziedziczących. Jest to wzorzec projektowy [metoda szablonowa](https://pl.wikipedia.org/wiki/Metoda_szablonowa_(wzorzec_projektowy)).
 9. Uruchom testy i zweryfikuj, że mapy działają tak jak wcześniej.
-10. Rozważ dodanie interfejsu `IMapElement`, który byłby implementowany przez klasy `Animal` oraz `Grass`. Zastanów się
-   czy można by uprościć implementację klasy `GrassField` wykorzystując ten interfejs.
+10. Rozważ dodanie interfejsu `MapElement`, który byłby implementowany przez klasy `Animal` oraz `Grass`. Zastanów się
+      czy można by uprościć implementację klasy `GrassField` wykorzystując ten interfejs.
 11. Zastanów się, czy celowe byłoby dodanie klasy `AbstractMapElement`.
 12. (**Dla zaawansowanych**). Zmodyfikuj implementację tak, żeby po spotkaniu zwierzęcia i trawy, trawa znikała. Nowe kępki
     trawy powinny pojawiać się losowo w obszarze z punktu 1, po zjedzeniu trawy przez zwierzę, przy założeniu, że nowe położenie
     kępki trawy nie pokrywa się z istniejącą kępką trawy, ani z żadnym zwierzęciem.
-11. Otaguj gotowe rozwiązanie jako lab5.
 

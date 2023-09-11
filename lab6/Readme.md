@@ -68,18 +68,14 @@ public int hashCode() {
 
 1. Implementacja mechanizmu aktualizacji słownika mapy wymaga, aby mapa była informowana o zmianach pozycji zwierząt, które inicjuje `SimulationEngine`.
     Rozwiązaniem jest zastosowanie wzorca projektowego `Observer` - mapa ma zarejestrować się jako obserwator dla zmian pozycji zwierzęcia.
-2. Realizację implementacji rozpocznij od zdefiniowana interfejsu `IPositionChangeObserver`, który zawiera jedną metodę
-  `positionChanged(Vector2d oldPosition, Vector2d newPosition)`.
+2. Realizację implementacji rozpocznij od zdefiniowana interfejsu `PositionChangeObserver`, który zawiera jedną metodę
+    `positionChanged(Vector2d oldPosition, Vector2d newPosition)`.
 3. Obie mapy muszą implementować ten interfejs. Możesz to również zrealizować, jeśli odpowiedni kod umieścisz w klasie
    `AbstractWorldMap`. Implementacja metody `positionChanged` powinna polegać na tym, że ze słownika usuwana jest para:
    `<stara pozycja, zwierzę>`, a dodawana jest para: `<nowa pozycja, zwierzę>`.
-4. Klasa `Animal` musi umożliwić rejestrowanie obserwatorów. Dodaj metody: `void addObserver(IPositionChangeObserver
-    observer)` oraz `void removeObserver(IPositionChangeObserver observer)`, które będą dodawały i usuwały danego
+4. Klasa `Animal` musi umożliwić rejestrowanie obserwatorów. Dodaj metody: `void addObserver(PositionChangeObserver
+    observer)` oraz `void removeObserver(PositionChangeObserver observer)`, które będą dodawały i usuwały danego
     obserwatora do listy obserwatorów w klasie `Animal`.
 5. Klasa `Animal` musi informować wszystkich obserwatorów, o tym że pozycja została zmieniona. Stwórz metodę
     `positionChanged` w klasie `Animal`, która będzie notyfikowała wszystkich obserwatorów o zmianie.
 6. Zweryfikuj poprawność implementacji korzystając z kodu z poprzednich laboratoriów.
-7. Otaguj gotowe rozwiązanie jako lab6.
-
-
-TODO przeniesienie z zadania 7 obsługi wyjątków do tego zadania.

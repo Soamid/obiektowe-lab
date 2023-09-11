@@ -67,7 +67,7 @@ na niższym poziomie.
 
 1. Dodaj nową klasę `MapBoundary`, która będzie odpowiedzialna za przechowywanie informacji o obszarze zajmowanym przez
    obiekty na mapie.
-2. Klasa ta powinna implementować interfejs `IPositionChangeObserver`.
+2. Klasa ta powinna implementować interfejs `PositionChangeObserver`.
 3. Klasa `MapBoundary` powinna zawierać dwa zbiory uporządkowane obiektów na mapie - jeden wzdłuż osi X, drugi wzdłuż
    osi Y. ~~Ponieważ porządek musi być zupełny, w przypadku obiektów o tym samym indeksie wzdłuż danej osi porównaj
    drugą współrzędną oraz typ obiektu (zwierzę/trawa).~~ Przemyśl jakie dokładnie obiekty należy trzymać w tych zbiorach.
@@ -129,4 +129,3 @@ na niższym poziomie.
 8. Wyśrodkuj etykiety korzystając z wywołania `GridPane.setHalignment(label, HPos.CENTER)`.
 9. Aktualnie, twój program powinien wyglądać mniej więcej tak (użyto mapy `GrassField`, dodano 2 zwierzaki):<br>
 ![look1](img/look1.png)
-10. Otaguj gotowe rozwiązanie jako lab7.

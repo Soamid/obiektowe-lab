@@ -1,81 +1,100 @@
-# Laboratorium 6
+# Lab 6: Refactoring kodu
 
-Celem laboratorium jest zapoznanie się z interfejsem `Map` oraz wzorcem projektowym `Observer`.
+Celem laboratorium jest zapoznanie się z różnymi metodami usprawniania kodu (*refactoringu*) bez wprowadzania nowych funkcji. Wprowadzimy mechanizm wyjątków, a także zapoznamy się z przydatnymi wzorcami projektowymi, takimi jak metoda szablonowa czy obserwator. 
 
 Najważniejsze zadania:
 
-1. Zamiana listy zwierząt na słownik.
-2. Dodanie wzorca `Observer`.
+1. Walidacja danych przy użyciu mechanizmu wyjątków.
+2. Zastosowanie wzorca `template method` do wyliczania granic mapy.
+3. Zastosowanie rekordów do tworzenia kontenerów na dane.
+4. Zastosowanie wzorca `Observer`.
+
+
+
+
+## Zadania do wykonania
+
+### Obsługa błędów
+
+1. W metodzie odpowiedzialnej za zamianę argumentów aplikacji na ruchy zwierzęcia rzuć wyjątek `IllegalArgumentException`, jeśli którykolwiek z parametrów nie należy do listy poprawnych parametrów (`f`, `forward`, `b`, `backward`, etc.). Jako przyczynę wyjątku wprowadź łańcuch znaków informujący, że określony parametr jest niepoprawny, np.  `new IllegalArgumentException(argument + " is not legal move specification")`.
+2. Stwórz własną klasę wyjątku - `PositionAlreadyOccupiedException`. Powinien być to wyjątek typu **checked**. Wyjątek powinien przyjmować w konstruktorze `Vector2d` i tworzyć na jego podstawie wiadomość np. `Position (x, y) is already occupied`.
+3. W metodach odpowiedzialnych za dodawanie elementów do mapy, jeśli dodanie elementu na wybrane pole jest niemożliwe rzuć wyjątek `PositionAlreadyOccupiedException`. Wyjątek zastępuje sygnalizowanie błędu przy pomocy zwracania wartości `false` (zmień sygnaturę metody).
+4. Obsłuż oba wyjątki. W przypadku błędów walidacji opcji program powinien zostać przerwany z odpowiednim komunikatem. W przypadku próby ustawiania zwierzątek na złych pozycjach w klasie `Simulation` powinny one być pominięte, ale program nadal ma działać i umożliwiać symulację dla poprawnie ustawionych zwierzątek.
+5. Zaktualizuj testy metody `place` oraz klasy `OptionsParser`, aby były zgodne z nowym kontraktem.
+
+### Metoda szablonowa
+
+1. Stwórz **rekord** `Boundary`, który będzie przechowywał dwie pozycje `Vector2d` - lewy dolny róg i prawy górny róg (opisujące prostokątny obszar).
+2. Dodaj do klasy `AbstractWorldMap` abstrakcyjną metodę `getCurrentBounds()`, która będzie zwracała obiekt `Boundary`.
+3. Zaimplementuj metodę w obu realizacjach mapy korzystając z istniejącego już kodu.
+4. Pozbądź się z obu realizacji mapy metody `toString()` oraz atrybutu `MapVisualizer` - przenieś je do klasy bazowej. W tym przypadku `toString()` powinno stać się metodą szablonową. Wykorzystaj w tym celu stworzoną wcześniej metodę `getCurrentBounds()`.
+
+### Obserwator
+
+1. Stwórz nowy interfejs `MapChangeListener`, zawierający jedną metodę: `void mapChanged(WorldMap worldMap, String message)`.
+
+2. Klasa `AbstractWorldMap` będzie naszym typem obserwowanym (*observable*). Dodaj do niej niezbędne elementy zgodnie z wzorcem:
+
+   - Klasa powinna przechowywać listę swoich obserwatorów realizujących interfejs `MapChangeListener`.
+   - Klasa powinna umożliwiać rejestrowanie i wyrejestrowanie obserwatorów.
+   - Umieszczenie zwierzęcia na mapie lub jego poruszenie powinno skutkować powiadomieniem wszystkich obserwatorów z podaniem opisu, co się wydarzyło (stwórz dodatkową metodę pomocniczą np. `mapChanged(String)` - powinna wywoływać metodę z interfejsu `MapChangeListener` na wszystkich zarejestrowanych obserwatorach).
+
+3. Stwórz klasę `ConsoleMapDisplay` - to będzie nasz pierwszy obserwator (*observer*). Kolejnych dodamy na późniejszych zajęciach. Klasa powinna:
+
+   - realizować interfejs `MapChangeListener`
+   - w reakcji na zmianę mapy wypisywać najpierw wiadomość, a następnie całą aktualną mapę.
+
+4. Zarejestruj `ConsoleMapDisplay` jako obserwatora dla tworzonej mapy - możesz to zrobić np. w klasie `World`. 
+
+5. Pozbądź się wypisywania stanu mapy z klasy `Simulation`. Jeśli wszystko poszło ok, mapa i tak będzie się wypisywać po każdej zmianie pozycji!
+
+   Zastanów się, co nam daje takie rozwiązanie? W jaki sposób zastosowanie wzorca obserwator może wpłynąć korzystnie na dalsze rozwijanie naszego kodu? 
+
+
 
 ## Przydatne informacje
 
-* Interfejs `Map` definiuje w Javie strukturę słownikową, czyli mapę odwzorowującą *klucze* na *wartości*.
-* Jedną z najczęściej wykorzystywanych implementacji interfejsu `Map` jest klasa `HashMap`, przykładowo:
+* Wyjątki są mechanizmem pozwalającym przekazywać informację o błędzie pomiędzy odległymi fragmentami kodu.
+* Zgłoszenie błędu odbywa się poprzez *rzucenie wyjątku*. W Javie służy do tego słowo kluczowe `throw`:
 
-```java
-Map<Vector2d, Animal> animals = new HashMap<>();
-```
+    ```java
+    throw new IllegalArgumentException("ABC argument is invalid")
+	```
+* Nieobsłużony wyjątek powoduje przerwanie działania aplikacji.
+* Obsługa wyjątków odbywa się za pomocą mechanizmu *przechwytywania wyjątków*. W Javie służy do tego konstrukcja `try...catch`:
 
-* Poprawne działanie `HashMap` uzależnione jest od implementacji metod `equals` oraz `hashCode` w klasie, która stanowi
-  klucze mapy (w ćwiczeniu dotyczy to klasy `Vector2d`).
+    ```java
+    try {
+      // kod który może rzucić wyjątek
+    } catch(IllegalArgumentException ex) {
+      // kod obsługi wyjątku
+    }
+    ```
+    Wyjątek może być rzucony na dowolnym poziomie w kodzie, który otoczony jest blokiem `try`. Tzn. w kodzie tym może być
+    wiele zagnieżdżonych wywołań funkcji, a i tak blok `try` przechwyci taki wyjątek, pod warunkiem, że nie zostanie on obsłużony
+    na niższym poziomie.
 
-* Wynik działania metody `hashCode` musi być zgodny z wynikiem działania metody `equals`, tzn. jeśli dwa obiekty są
-  równe według `equals`, to ich `hashCode` musi być równy.
-
-* Przykładowa implementacja metody `hashCode` dla klasy `Vector2d` może wyglądać następująco:
-
-```java
-@Override
-public int hashCode() {
-  return Objects.hash(this.x, this.y);
-}
-```
-
-* Używanie mapy nie wymaga jawnego wywoływania metody `hashCode`, ale jest ona używana wewnętrznie dla potrzeb optymalizacji.
-  Istotą funkcji jest fakt, że dla identycznych wartości `x` i `y` wartość funkcji `hashCode` będzie identyczna.
+* Wyjątki w Javie dzielą się na **checked** i **unchecked**. W pierwszym przypadku konieczna jest ich deklaracja (kompilator nie pozwoli zostawić rzucony wyjątek bez jego obsługi), w drugim - wyjątki mogą być rzucane bez konieczności ich definiowania lub łapania (ale niezłapanie wyjątku wiąże się z przerwaniem wątku lub programu). Aby stworzyć wyjątek typu *checked* wystarczy podziedziczyć po klasie `Exception`. Wyjątki *unchecked* dziedziczą z kolei po `RuntimeException`.
 
 * Wzorce projektowe są koncepcją występującą w programowaniu obiektowym polegającą na tym, że określona klasa problemów
   może być rozwiązana w schematyczny sposób. Rozwiązanie problemu jednak nie może być (najczęściej) zawarte w jednej
   klasie, dlatego wzorzec stanowi swego rodzaju szkielet rozwiązania, który określa jakie klasy i interfejsy muszą być
   wykorzystane, aby poprawnie rozwiązać dany problem.
 
-* Przykładem wzorca jest obserwator (*observer*) - rozwiązuje on problem zmian wewnętrznego stanu obiektu.
-  Więcej informacji na temat tego wzorca można znaleźć pod adresem https://en.wikipedia.org/wiki/Observer_pattern
-* W Javie istnieje kolekcja `SortedSet`, która umożliwia przechowywanie uporządkowanego zbioru elementów. Elementy mogą
-  implementować interfejs `Comparable` lub przy tworzeniu zbioru należy wskazać obiekt implementujący interfejs
-  `Comparator`, odpowiedzialny za porządkowanie elementów. Przekazany `Comparator` zastępuje naturalny porządek sortowania
-  (wynikający z interfejsu `Comparable`), jeśli taki jest.
+* Przykładem wzorca jest [obserwator (*observer*)](https://refactoring.guru/design-patterns/observer) - rozwiązuje on problem zmian wewnętrznego stanu obiektu bez konieczności uzależniania klasy od wielu innych klas, które mają na te zmiany reagować.
+* Innym wzorcem jest [metoda szablonowa (template method)](https://refactoring.guru/design-patterns/template-method) - jest to sposób na wykorzystanie mechanizmu dziedziczenia i metod abstrakcyjnych do jeszcze większej redukcji powtarzającego się kodu. 
+* Rekordy to proste struktury opisujące **niezmienne (*immutable*)** dane. Korzystamy z nich by uniknąć żmudnego tworzenia getterów, setterów, konstruktorów, equals, hashCode i toString - wszystkie te elementy są automatycznie generowane! 
+    ```java
+    public record Color(int red, int blue, int green) {}
+    ```
+    
+    Ten kod pozwala tworzyć obiekty kolorów i odwoływać się do nich tak podobnie w przypadku zwykłych klas:
+    ```java
+    Color color = new Color(255, 20, 10);
+    int blue = color.blue();
+    System.out.println(color); // wypisze "Color[red=255, blue=20, green=10]"
+    ```
+    
+    
 
-
-## Zadania do wykonania
-
-
-### Zmiana sposobu przechowywania obiektów na mapie
-
-1. Implementacja metod `isOccupied` oraz `objectAt` w listach nie jest wydajna, ponieważ za każdym razem wymaga przejścia
-   przez wszystkie elementy znajdujące się na liście. Można ją poprawić zamieniając listę na słownik (wykorzystując 
-   interfejs `Map` oraz implementację `HashMap`). Jest to jednocześnie wydajniejsze pamięciowo niż przechowywanie zwierząt (i trawy) w tablicy.
-   Kluczami słownika powinny być pozycje elementów, a wartościami konkretne obiekty.
-2. Poprawna implementacja słownika wymaga, aby klasa `Vector2d` implementowała metodę `hashCode`. Metoda ta jest
-   wykorzystywana m.in. przez słownik oparty o tablicę haszującą (`HashMap`). Możesz wygenerować kod metody `hashCode` w
-   klasie `Vector2d` korzystając ze
-   wsparcia środowiska programistycznego. Zasadniczo metoda ta musi być zgodna z działaniem metody `equals` - dwa
-   obiekty, które są równe według metody `equals` muszą mieć identyczną wartość zwracaną przez metodę `hashCode`
-   (nie działa to w drugą stronę - `hashCode` może zwracać równe wartości dla obiektów, które nie są równe wg. `equals`).
-3. Zmiana typu kolekcji `animals` będzie wymagała zmiany implementacji metod `isOccupied` i `objectAt`.
-
-### Aktualizacja słownika w mapie
-
-1. Implementacja mechanizmu aktualizacji słownika mapy wymaga, aby mapa była informowana o zmianach pozycji zwierząt, które inicjuje `SimulationEngine`.
-    Rozwiązaniem jest zastosowanie wzorca projektowego `Observer` - mapa ma zarejestrować się jako obserwator dla zmian pozycji zwierzęcia.
-2. Realizację implementacji rozpocznij od zdefiniowana interfejsu `PositionChangeObserver`, który zawiera jedną metodę
-    `positionChanged(Vector2d oldPosition, Vector2d newPosition)`.
-3. Obie mapy muszą implementować ten interfejs. Możesz to również zrealizować, jeśli odpowiedni kod umieścisz w klasie
-   `AbstractWorldMap`. Implementacja metody `positionChanged` powinna polegać na tym, że ze słownika usuwana jest para:
-   `<stara pozycja, zwierzę>`, a dodawana jest para: `<nowa pozycja, zwierzę>`.
-4. Klasa `Animal` musi umożliwić rejestrowanie obserwatorów. Dodaj metody: `void addObserver(PositionChangeObserver
-    observer)` oraz `void removeObserver(PositionChangeObserver observer)`, które będą dodawały i usuwały danego
-    obserwatora do listy obserwatorów w klasie `Animal`.
-5. Klasa `Animal` musi informować wszystkich obserwatorów, o tym że pozycja została zmieniona. Stwórz metodę
-    `positionChanged` w klasie `Animal`, która będzie notyfikowała wszystkich obserwatorów o zmianie.
-6. Zweryfikuj poprawność implementacji korzystając z kodu z poprzednich laboratoriów.
+​	

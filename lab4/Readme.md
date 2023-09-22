@@ -62,11 +62,16 @@ Interfejs `WorldMap` zakłada, że mapa może przechowywać jedynie zwierzęta, 
 * Interfejs określa jedynie, że dana klasa ma posiadać określoną metodę - dlatego w interfejsie nie ma implementacji - wszystkie metody są
   z założenia abstrakcyjne (można pominąć modyfikator `abstract`).
 
-* Od Javy 8 interfejsy mogą posiadać metody statyczne (takie same jak metody statyczne w klasach) oraz metody domyślne
-  (oznaczane modyfikatorem `default`), które posiadają implementację.
-
 * W interfejsie wszystkie metody są z założenia publiczne, dlatego nie ma potrzeby dodania modyfikatora dostępu
-  `public`. Od Javy 9 interfejs może posiadać także metody prywatne.
+  `public`. Od Javy 9 interfejs może posiadać także metody prywatne. Od Javy 8 interfejsy mogą posiadać metody statyczne (takie same jak metody statyczne w klasach) oraz metody domyślne (oznaczane modyfikatorem `default`), które posiadają implementację.
+
+* Podstawianie obiektów realizujących interfejs pod deklaracje metod i zmiennych wymagających interfejsu jest możliwe, bo w Javie działa **polimorfizm**. Przykładowo:
+
+  ```java
+  MoveValidator validator = new RectangularMap(10, 10); // RectangularMap pośrednio realizuje MoveValidator 
+  validator.canMoveTo(new Vector2d(1, 2)); // wywołanie poprawne, Java wywoła implementację metody z RectangularMap
+  // validator.place(animal);  wywołanie niepoprawne, kod się NIE skompiluje! MoveValidator nie ma metody place()
+  ```
 
 * Klasa deklaruje fakt implementacji interfejsu za pomocą słowa kluczowego `implements`, np. 
 

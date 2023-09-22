@@ -87,6 +87,8 @@ Uwaga: dla przejrzystości pliki z klasami `Vector2d` oraz `MapDirection` należ
 6. Dodaj testy weryfikujące poprawność metod: `equals(Object other)`, `toString()`, `precedes(Vector2d other)`, `follows(Vector2d other)`,
    `upperRight(Vector2d other)`, `lowerLeft(Vector2d other)`, `add(Vector2d other)`, `subtract(Vector2d other)`,
    `opposite()`.
+   
+7. W podobny sposób przetestuj także `OptionsParser`.
 
    Pamiętaj, że kod testów również powinien być czytelny i dobrze ustrukturyzowany. Warto zapoznać się z konwencją [Given When Then](https://www.j-labs.pl/blog-technologiczny/given-when-then-pattern-in-unit-tests/) i zawsze formułować przypadki testowe tak by jasno opisywały, co chcemy przetestować i jakie powinny być skutki badanej akcji.
 

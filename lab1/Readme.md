@@ -60,12 +60,12 @@ Najważniejsze zadania:
     - Zwierzak skręca w lewo
     - Stop
 
-16. Zdefiniuj typ wyliczeniowy (enum) `MoveDirection`, który będzie zawierał wszystkie opcje ruchu (np. `FORWARD`, `BACKWARD` itp.). 
-    **Uwaga:** stosujemy zasadę "nowa klasa = nowy plik", więc typ wyliczeniowy powinien znajdować się w osobnym pliku (w tym samym pakiecie)!
-
+16. Zdefiniuj typ wyliczeniowy (enum) `MoveDirection`, który będzie zawierał wszystkie opcje ruchu (np. `FORWARD`, `BACKWARD` itp.). Enum powinien znajdować się w nowym pliku w pakiecie `agh.ics.oop.model` (utwórz w tym celu pod-pakiet `model`).
+    
 17. Zmodyfikuj program w ten sposób, aby metoda `run` nie akceptowała tablicy łańcuchów znaków, lecz tablicę
     wartości typu wyliczeniowego (`enum`).  W tym celu dodaj nową klasę `OptionsParser`,  zawierającą jedną statyczną metodę. Powinna ona przyjmować tablicę łańcuchów znaków i zwracać tablicę `MoveDirection[]`. Niepoprawne opcje powinny być pomijane.
-
+    **Uwaga:** stosujemy zasadę "nowa klasa = nowy plik", więc `OptionsParser` również powinien znaleźć się w osobnym pliku. Umieść go w głównym pakiecie `agh.ics.oop`.
+    
 18. Zweryfikuj poprawność działania programu poprzez jego uruchomienie.
 
 19. Zamknij IntelliJ.

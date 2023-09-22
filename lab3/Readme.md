@@ -79,7 +79,7 @@ Najważniejsze zadania:
     private Vector2d position = new Vector2d(2,2);
   }
   ```
-* W Javie istnieją dwie podstawowe struktury sekwencyjne (poza tablicami): [LinkedList](https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html) oraz [ArrayList](https://docs.oracle.com/javase/7/docs/api/java/util/ArrayList.html). W przeciwieństwie do tablic obie klasy pozwalają na określenie początkowego rozmiaru na 0 i dowolne rozszerzanie kolekcji. 
+* W Javie istnieją dwie podstawowe struktury sekwencyjne (poza tablicami): [LinkedList](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedList.html) oraz [ArrayList](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html). W przeciwieństwie do tablic obie klasy pozwalają na określenie początkowego rozmiaru na 0 i dowolne rozszerzanie kolekcji. 
 * Obie klasy implementują interfejs `List`, który definiuje podstawowe operacje na listach.
 * Klasy te różnią się implementację - `LinkedList` oparta jest o listę dwukierunkową, przez co operacje dodawania i usuwania elementów są szybkie, ale swobodny dostęp za pomocą operatora `get` jest wolniejszy. `ArrayList` oparta jest o tablicę, dlatego dostęp jest szybki, ale dodawanie i usuwanie elementów jest wolniejsze.
 * W Javie występują typy parametryzowane i typ `List` jest tego przykładem. Taki typ jest podobny do szablonów w C++. Wymaga on podania innego typu (lub typów) jako parametru (parametr musi być typem obiektowym):

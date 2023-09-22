@@ -1,4 +1,4 @@
-# Laboratorium 0: Git - rozproszony system kontroli wersji
+# Lab 0: Git - rozproszony system kontroli wersji
 
 W tym ćwiczeniu zapoznamy się z jednym z najbardziej popularnych systemów do zarządzania kodem źródłowym - Gitem
 oraz hostingiem do projektów GitHub. Git będzie nam towarzyszyć przez cały semestr (a także i pewnie poza zajęciami), dlatego warto poświęcić mu odpowiednio dużo uwagi.

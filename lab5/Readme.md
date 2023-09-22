@@ -1,65 +1,32 @@
-# Laboratorium 5
+# Lab 5: Dziedziczenie
 
 Celem laboratorium jest zapoznanie się z mechanizmem dziedziczenia oraz właściwym sposobem jego użycia w programowaniu
 obiektowym.
 
 Najważniejsze zadania:
 
-1. Stworzenie klasy `Grass`.
-2. Stworzenie klasy `GrassField`.
+1. Stworzenie klasy `Grass` - nowego rodzaju obiektu na mapie.
+2. Stworzenie klasy `GrassField` - nowego rodzaju mapy, przechowującej zwierzęta i trawy.
 3. Stworzenie klasy `AbstractWorldMap`.
 4. Testy integracyjne.
-
-## Przydatne informacje
-
-* Klasa abstrakcyjna to klasa, która może posiadać niekompletną implementację. Wprowadza się ją, aby usunąć powtarzający się
-  kod. Nie można tworzyć obiektów klasy abstrakcyjnej. Klasa jest oznaczana jako abstrakcyjna za pomocą słowa kluczowego
-  `abstract`. Klasa abstrakcyjna może implementować jakiś interfejs. Nie wszystkie metody interfejsu muszą być w niej
-  zaimplementowane. Obowiązek zaimplementowania brakujących metod automatycznie przechodzi na nieabstrakcyjnych potomków tej klasy.
-* Każda klasa domyślnie dziedziczy z klasy `Object`. Dziedziczenie z innej klasy wskazujemy za pomocą słowa kluczowego
-  `extends`:
-```java
-class RectangularMap extends AbstractWorldMap {
-}
-```
-* Jeśli chcemy, aby jakieś pola lub metody nie były częścią publicznego interfejsu klasy, ale żeby były dostępne w
-  klasach podrzędnych, to oznaczamy je jako chronione (`protected`). Przykładowo, lista zwierząt w klasie `AbstractWorldMap`
-  powinna być chroniona:
-```java
-abstract class AbstractWorldMap implements WorldMap {
-  protected List<Animal> animals = new ArrayList<>();
-}
-```
-* Klasa podrzędna może zmienić implementację metody dostępnej w klasie nadrzędnej - widzieliśmy to na przykładzie metody
-  `toString()`. Wtedy dla każdego obiektu używana jest zawsze metoda z *faktycznego*, a nie deklarowanego typu tego
-  obiektu. Innymi słowy w Javie domyślnie metody są *wirtualne*. Zwykle metody nadpisujące metody z klasy bazowej oznaczamy
-  anotacją `@Override`. (Anotację `@Override` stosuje się także wobec metod implementujących metody abstrakcyjne interfejsu.
-  Jej użycie jest opcjonalne.)
-* Klasa podrzędna może odwołać się do implementacji z klasy nadrzędnej za pomocą słowa kluczowego `super`. Np.
-```java
-public Object objectAt(Vector2d position) {
-  Object object = super.objectAt(position);
-  //...
-}
-```
-W ten sposób można *rozszerzać* zachowanie jakiejś metody w klasach podrzędnych.
-* W szczególności konstruktor klasy potomnej może *jawnie* wywołać konstruktor klasy bazowej poprzez `super(argumenty)`.
-  Musi to być pierwsza linijka konstruktora potomka. Jeśli tego nie zrobimy, domyślnie wywoływany jest konstruktor bezparametrowy
-  przodka.
 
 ## Zadania do wykonania
 
 
-0. Wykorzystaj klasy z laboratorium nr 4.
 1. Zdefiniuj klasę `Grass` (kępka trawy), która:
-   * w konstruktorze akceptuje parametr `Vector2d`, określający pozycję kępki trawy,
-   * posiada metodę publiczną `Vector2d getPosition()`, która zwraca jej pozycję,
-   * posiada metodę publiczną `String toString()`, która zwraca `*` jako swoją reprezentację.
-2. Zdefiniuj klasę `GrassField`, która:
+    * w konstruktorze akceptuje parametr `Vector2d`, określający pozycję kępki trawy,
+    * posiada metodę publiczną `Vector2d getPosition()`, która zwraca jej pozycję,
+    * posiada metodę publiczną `String toString()`, która zwraca `*` jako swoją reprezentację.
+
+2. Stwórz dodatkowy interfejs `WorldElement`, który byłby implementowany przez klasy `Animal` oraz `Grass`. Zastanów się, co powinien zawierać ten interfejs.
+
+3. Zmodyfikuj interfejs `WorldMap` tak by metoda `objectAt()` zwracała `WorldElement`. 
+
+4. Zdefiniuj klasę `GrassField`, która:
    * implementuje interfejs `WorldMap`,
    * w konstruktorze akceptuje parametr określający liczbę pól trawy, które znajdują się na mapie,
    * kępki trawy powinny być umieszczane losowo w obszarze o współrzędnych `(0, 0)` - `(sqrt(n*10), sqrt(n*10))`, 
-     gdzie `n` to liczba pól trawy, przy założeniu, że dwie kępki trawy nie mogą być w tym samym miejscu,
+     gdzie `n` to liczba pól trawy, przy założeniu, że dwie kępki trawy nie mogą być w tym samym miejscu. Możesz tutaj zastosować dowolny algorytm losowania bez powtórzeń, nawet naiwne losowanie do skutku (patrz zadanie dodatkowe).
    * umożliwia nieograniczone poruszanie się zwierzęcia po mapie, pod warunkiem, że nie wchodzi na inne zwierzę - rozmiar mapy ma być
      "nieskończony" (czyli ograniczony tylko możliwościami `int`-a),
    * posiada metodę `String toString()`, która rysuje fragment mapy, na którym znajdują się wszystkie elementy (zwierzęta oraz trawa). 
@@ -67,22 +34,102 @@ W ten sposób można *rozszerzać* zachowanie jakiejś metody w klasach podrzęd
      dynamicznie oblicz skrajne punkty, które powinny zostać wyświetlone. Obecność zwierząt ma priorytet nad obecnością
      kępki trawy na danym polu.
    * posiada metody `equals()/hashCode()` nadpisane tak by porównywać obiekty trawy po ich pozycjach.
-3. Sprawdź czy implementacja klasy jest poprawna - zainicjuj mapę z 10 kępkami trawy.
-   Uruchom tę samą sekwencję ruchów co w laboratorium 4.
-4. Dodaj testy do klas `RectangularMap` oraz `GrassField` weryfikujące poprawność działania metod dostępnych w
-   interfejsie `WorldMap`,
-5. Przyjrzyj się implementacjom tych klas - łatwo można zauważyć, że duża część kodu w obu klasach się powtarza. 
-6. Dodaj klasę abstrakcyjną `AbstractWorldMap`, która zawiera kod wspólny dla tych klas.
-7. Spraw aby obie klasy dziedziczyły z `AbstractWorldMap` oraz usuń kod, który jest już zaimplementowany w klasie
-   `AbstractWorldMap`.
-8. W szczególności dodaj implementację metody `toString()` w klasie `AbstractWorldMap`, w taki
-   sposób, aby wykorzystywała ona abstrakcyjne metody zdefiniowane w tej klasie, posiadające odrębne implementacje w
-   klasach dziedziczących. Jest to wzorzec projektowy [metoda szablonowa](https://pl.wikipedia.org/wiki/Metoda_szablonowa_(wzorzec_projektowy)).
-9. Uruchom testy i zweryfikuj, że mapy działają tak jak wcześniej.
-10. Rozważ dodanie interfejsu `MapElement`, który byłby implementowany przez klasy `Animal` oraz `Grass`. Zastanów się
-      czy można by uprościć implementację klasy `GrassField` wykorzystując ten interfejs.
-11. Zastanów się, czy celowe byłoby dodanie klasy `AbstractMapElement`.
-12. (**Dla zaawansowanych**). Zmodyfikuj implementację tak, żeby po spotkaniu zwierzęcia i trawy, trawa znikała. Nowe kępki
-    trawy powinny pojawiać się losowo w obszarze z punktu 1, po zjedzeniu trawy przez zwierzę, przy założeniu, że nowe położenie
-    kępki trawy nie pokrywa się z istniejącą kępką trawy, ani z żadnym zwierzęciem.
+
+     **Uwaga:** zwierzęta i trawy na mapie można przechowywać w dwóch osobnych kolekcjach lub jednej wspólnej. Oba rozwiązania będą poprawne, ale sugerujemy implementację na dwóch osobnych kolekcjach. Zastanów się, jakie problemy wygenerowałaby tutaj jedna wspólna kolekcja.
+
+5. Sprawdź czy implementacja klasy jest poprawna - zainicjuj mapę z 10 kępkami trawy. Uruchom tę samą sekwencję ruchów co w laboratorium 4.
+
+6. Dodaj testy do klas `RectangularMap` oraz `GrassField` weryfikujące poprawność działania metod dostępnych w interfejsie `WorldMap`,
+
+7. Przyjrzyj się implementacjom tych klas - łatwo można zauważyć, że duża część kodu w obu klasach się powtarza. 
+
+8. Dodaj klasę abstrakcyjną `AbstractWorldMap`, która zawiera kod wspólny dla tych klas.
+
+9. Spraw aby obie klasy dziedziczyły z `AbstractWorldMap`, a następnie zredukuj kod:
+
+   - przenieś powtarzający się kod do `AbstractWorldMap`
+   - tam gdzie to konieczne nadpisz metody w klasach dziedziczących
+   - tam gdzie to możliwe wydziel wspólną część metody do `AbstractWorldMap` i skorzystaj z wywołań `super.wersjaMetodyZKlasyBazowej()`
+
+10. Uruchom testy i zweryfikuj, że mapy działają tak jak wcześniej.
+
+11. Dodaj do interfejsu metodę `getElements()`, która zwróci kolekcję wszystkich elementów na mapie. Dopisz brakujące implementacje tej metody wykorzystując przygotowaną hierarchię klas tak by nie powtarzać kodu.
+
+## Zadanie dodatkowe
+
+Mechanizm losowania trawy w `GrassField` zakłada, że wylosowane pozycje nie powinny się powtarzać. Jeśli zastosujemy naiwne podejście, tj. w przypadku wylosowania już zajętej pozycji będziemy losować jeszcze raz, nasz program staje się niedeterministyczny. Nie jesteśmy w stanie przewidzieć ilu losowań będziemy potrzebowali, a w skrajnych przypadkach losowanie może nigdy się nie zakończyć. Podejście naiwne ma sens, gdy liczba wolnych pozycji jest istotnie większa niż liczba pozycji do wylosowania. W innych przypadkach powinniśmy jednak stosować mądrzejszy algorytm ze stałą liczbą losowań, nawet kosztem pamięci.
+
+1. Wymyśl lub poszukaj takiego sposobu na losowanie pozycji, który dla N traw będzie wymagał stałej liczby losowań (np. dokładnie N).
+
+2. Zrealizuj wybrany algorytm w osobnej klasie. Skorzystaj tutaj z javowego interfejsu `Iterable` i `Iterator` . Jeśli dobrze zaprojektujesz rozwiązanie to będzie go można używać w następujący sposób:
+
+   ```java
+   RandomPositionGenerator randomPositionGenerator = new RandomPositionGenerator(maxWidth, maxHeight, grassCount);
+   Iterator<Vector2d> positionsIterator = randomPositionGenerator.iterator();
+   
+   while(positionsIterator.hasNext()) {
+       grasses.put(grassPosition, new Grass(positionsIterator.next()));
+   }
+   ```
+
+   albo nawet tak:
+
+   ```java
+   RandomPositionGenerator randomPositionGenerator = new RandomPositionGenerator(maxWidth, maxHeight, grassCount);
+   for(Vector2d grassPosition : randomPositionGenerator) {
+       grasses.put(grassPosition, new Grass(grassPosition));
+   }
+   ```
+
+   **Uwaga**: pętla for each w Javie akceptuje nie tylko kolekcje i tablice, ale każdą strukturę, która implementuje interfejs `Iterable`!
+
+   
+
+## Przydatne informacje
+
+* Klasa abstrakcyjna to klasa, która może posiadać niekompletną implementację. Wprowadza się ją, aby usunąć powtarzający się
+  kod. Nie można tworzyć obiektów klasy abstrakcyjnej. Klasa jest oznaczana jako abstrakcyjna za pomocą słowa kluczowego
+  `abstract`. Klasa abstrakcyjna może implementować jakiś interfejs. Nie wszystkie metody interfejsu muszą być w niej
+  zaimplementowane. Obowiązek zaimplementowania brakujących metod automatycznie przechodzi na nieabstrakcyjnych potomków tej klasy.
+  
+* Każda klasa domyślnie dziedziczy z klasy `Object`. Dziedziczenie z innej klasy wskazujemy za pomocą słowa kluczowego
+  `extends`:
+
+    ```java
+    class RectangularMap extends AbstractWorldMap {
+    }
+    ```
+
+* Jeśli chcemy, aby jakieś pola lub metody nie były częścią publicznego interfejsu klasy, ale żeby były dostępne w
+  klasach podrzędnych, to oznaczamy je jako chronione (`protected`). Przykładowo, lista zwierząt w klasie `AbstractWorldMap`
+  może być chroniona:
+
+    ```java
+    abstract class AbstractWorldMap implements WorldMap {
+      protected Map<Vector2d, Animal> animals = new HashMap<>();
+    }
+    ```
+
+  Alternatywnie można też pozostawić atrybut prywatny, a potem dodać do niego chroniony getter (lepsza hermetyzacja).
+  
+* Klasa podrzędna może zmienić implementację metody dostępnej w klasie nadrzędnej - widzieliśmy to na przykładzie metody
+  `toString()`. Wtedy dla każdego obiektu używana jest zawsze metoda z *faktycznego*, a nie deklarowanego typu tego
+  obiektu. Innymi słowy w Javie domyślnie metody są *wirtualne*. Zwykle metody nadpisujące metody z klasy bazowej oznaczamy
+  anotacją `@Override`. (Anotację `@Override` stosuje się także wobec metod implementujących metody abstrakcyjne interfejsu.
+  Jej użycie jest opcjonalne.)
+  
+* Klasa podrzędna może odwołać się do implementacji z klasy nadrzędnej za pomocą słowa kluczowego `super`. Np.
+
+    ```java
+    public WorldElement objectAt(Vector2d position) {
+      WorldElement object = super.objectAt(position);
+      //...
+    }
+    ```
+
+​		W ten sposób można *rozszerzać* zachowanie jakiejś metody w klasach podrzędnych.
+
+* W szczególności konstruktor klasy potomnej może *jawnie* wywołać konstruktor klasy bazowej poprzez `super(argumenty)`.
+  Musi to być pierwsza linijka konstruktora potomka. Jeśli tego nie zrobimy, domyślnie wywoływany jest konstruktor bezparametrowy
+  przodka.
 

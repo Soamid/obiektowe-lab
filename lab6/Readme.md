@@ -42,7 +42,10 @@ Najważniejsze zadania:
 3. Stwórz klasę `ConsoleMapDisplay` - to będzie nasz pierwszy obserwator (*observer*). Kolejnych dodamy na późniejszych zajęciach. Klasa powinna:
 
    - realizować interfejs `MapChangeListener`
-   - w reakcji na zmianę mapy wypisywać najpierw wiadomość, a następnie całą aktualną mapę.
+   - w reakcji na zmianę mapy wypisywać kolejno:
+     - otrzymaną informację o operacji wykonanej na mapie
+     - wizualną reprezentację otrzymanej mapy (`toString()`)
+     - sumaryczną liczbę wszystkich otrzymanych do tej pory aktualizacji (zdefiniuj odpowiedni atrybut)
 
 4. Zarejestruj `ConsoleMapDisplay` jako obserwatora dla tworzonej mapy - możesz to zrobić np. w klasie `World`. 
 

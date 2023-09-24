@@ -26,6 +26,7 @@ Najważniejsze zadania:
 
 1. Stwórz **rekord** `Boundary`, który będzie przechowywał dwie pozycje `Vector2d` - lewy dolny róg i prawy górny róg (opisujące prostokątny obszar).
 2. Dodaj do klasy `AbstractWorldMap` abstrakcyjną metodę `getCurrentBounds()`, która będzie zwracała obiekt `Boundary`.
+**Uwaga:** możesz dodać tę metodę także bezpośrednio w interfejsie `WorldMap`.
 3. Zaimplementuj metodę w obu realizacjach mapy korzystając z istniejącego już kodu.
 4. Pozbądź się z obu realizacji mapy metody `toString()` oraz atrybutu `MapVisualizer` - przenieś je do klasy bazowej. W tym przypadku `toString()` powinno stać się metodą szablonową. Wykorzystaj w tym celu stworzoną wcześniej metodę `getCurrentBounds()`.
 

@@ -1,19 +1,10 @@
-# Laboratorium dodatkowe: Kotlin
+# Lab bonus 2: Kotlin
 
 Poniższe ćwiczenia mają na celu przetestowanie podstawowych elementów języka Kotlin i porównanie go z Javą. Zakładamy tutaj znajomość Javy na podstawowym poziomie i wcześniejszą realizację pierwszych 8 laboratoriów.
 
 Głównym zadaniem będzie stworzenie (bardzo) uproszczonej wersji mapy zwierząt z wykorzystaniem Kotlina.
 
 Uwaga: do realizacji zadań z Kotlina nie będzie potrzebna JavaFX.
-
-## Materiały do zajęć
-
-- [**Kod z przykładami Java vs Kotlin**](kotlin-examples.zip) **(Wersja z uzupełnionymi rozwiązaniami przykładów jest [tutaj](kotlin-examples-solved.zip))**.
-- [Prezentacja z zajęć](Kotlin.pptx)
-- [Oficjalna dokumentacja Kotlina](https://kotlinlang.org/docs/home.html) (jest serio dobra i często pokrywa wszelkie wątpliwości)
-- [Kotlin Koans](https://play.kotlinlang.org/koans/overview) - tutorial w formie serii interaktywnych ćwiczeń
-
-
 
 ## Zadania do wykonania
 
@@ -63,4 +54,10 @@ Uwaga: do realizacji zadań z Kotlina nie będzie potrzebna JavaFX.
    Warto zainstalować też plugin Kotest do samego IntelliJ (*File --> Settings --> Plugins*) żeby nieco łatwiej zarządzać odpalanymi testami, choć nie jest to konieczne.
 
    Zapoznaj się z [stylami testowania](https://kotest.io/docs/framework/testing-styles.html) i wybierz ten, który najbardziej Ci się podoba (ale postaraj się wybrać coś innego niż JUnit, to już znamy z Javy!).
+
+## Przydatne informacje
+
+- [**Kod z przykładami Java vs Kotlin**](kotlin-examples.zip) **(Wersja z uzupełnionymi rozwiązaniami przykładów jest [tutaj](kotlin-examples-solved.zip))**.
+- [Oficjalna dokumentacja Kotlina](https://kotlinlang.org/docs/home.html) (jest serio dobra i często pokrywa wszelkie wątpliwości)
+- [Kotlin Koans](https://play.kotlinlang.org/koans/overview) - tutorial w formie serii interaktywnych ćwiczeń
 

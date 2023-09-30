@@ -76,6 +76,10 @@ Będzie to wyglądało następująco:
 
 ### FAQ
 
+**Czego trzeba nauczyć się na kartkówkę?**
+
+Kartkówka zawsze będzie dotyczyła tematu poruszanego na ostatnim wykładzie. Forma kartkówki to jedno pytanie zamknięte typu test wyboru z jedną poprawną odpowiedzią. 
+
 **Jak dokładnie działają mnożniki (marchewki)?**
 
 Każda zdobyta marchewka zwiększa wartość wszystkich zdobytych xp za laboratoria z Javy lub projekt. Przykładowo, jeśli zwierzak  zdobędzie w trakcie lab 26xp (z 32 możliwych) oraz 3 marchewki to otrzyma sumarycznie `26 + 3*2,6 = 33,8xp`.

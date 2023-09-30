@@ -77,19 +77,25 @@ Będzie to wyglądało następująco:
 ### FAQ
 
 **Jak dokładnie działają mnożniki (marchewki)?**
+
 Każda zdobyta marchewka zwiększa wartość wszystkich zdobytych xp za laboratoria z Javy lub projekt. Przykładowo, jeśli zwierzak  zdobędzie w trakcie lab 26xp (z 32 możliwych) oraz 3 marchewki to otrzyma sumarycznie `26 + 3*2,6 = 33,8xp`.
 
 **Czy mogę wykorzystać marchewki zdobyte w trakcie lab na projekcie?**
+
 Nie, marchewki działają zgodnie z ich oznaczeniami. W pierwszej części semestru zdobywamy marchewki laboratoryjne (maksymalnie 3). W drugiej części semestru, w trakcie projektu marchewki projektowe (maksymalnie 4).
 
 **Czy marchewki laboratoryjne działają również na ćwiczenia z Gita?**
+
 Nie, mnożą one jedynie punkty zdobywane w trakcie lab z Javy (8 spotkań).
 
 **Czy mogę zachować na później zdobyte lekarstwo albo weterynarza?**
-Nie, łupy aktywowane są niezwłocznie po zdobyciu. W szczególności jeśli zwierzak zdobył maksymalną liczbę xp za dotychczasowe kartkówki, wizyta u weterynarza nie przynosi żadnego efektu. W przypadku lekarstw działają one również na ułamki straconych xp, regenerując maksymalnie 2xp. Przykładowo, jeśli z Lab1 zdobyliśmy 3/4xp, a z Lab2 3.5/4xp to zastosowanie lekarstwa uzupełni nam brakujące 1.5xp. 
+
+Nie, łupy aktywowane są niezwłocznie po zdobyciu. W szczególności jeśli zwierzak zdobył maksymalną liczbę xp za dotychczasowe kartkówki, wizyta u weterynarza nie przynosi żadnego efektu. W przypadku lekarstw działają one również na ułamki straconych xp, regenerując maksymalnie 2xp. Przykładowo, jeśli z Lab1 zdobyliśmy 3 z 4xp, a z Lab2 3.5 z 4xp to zastosowanie lekarstwa uzupełni nam brakujące 1.5xp. 
 
 **Skąd wiadomo jaki kolor skrzynki otrzymam za daną aktywność?**
+
 Rodzaje skrzynek z łupami są zawsze określane w konspekcie lub przez prowadzącego.  
 
 **Co się stanie, jeśli nie zdobędę wystarczająco xp by wykluć zwierzaka z Jaja przed startem projektu?**
+
 W takiej sytuacji należy normalnie wziąć udział w projekcie, ale liczyć się z koniecznością zaliczenia przedmiotu w terminie poprawkowym. Rezultat projektu może wpłynąć na ocenę uzyskaną w terminie poprawkowym. 

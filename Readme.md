@@ -36,13 +36,13 @@ Będzie to wyglądało następująco:
 
    |                                                              | poziom doświadczenia  | xp        | ocena |
    | ------------------------------------------------------------ | --------------------- | --------- | ----- |
-   | <img src="img/owlbear1.png" alt="jajo" style="zoom: 25%;" /> | Jajo                  | <0, 25)   | 2.0   |
-   | <img src="img/owlbear2.png" alt="pisklak" style="zoom: 25%;" /> | Pisklak               | <25, 50)  | 2.0   |
-   | <img src="img/owlbear3.png" alt="podlot" style="zoom: 25%;" /> | Podlot                | <50, 60)  | 3.0   |
-   | <img src="img/owlbear4.png" alt="zoltodziob" style="zoom: 25%;" /> | Żółtodziób            | <60, 70)  | 3.5   |
-   | <img src="img/owlbear5.png" alt="nieopierzony" style="zoom: 25%;" /> | Nieopierzony odkrywca | <70, 80)  | 4.0   |
-   | <img src="img/owlbear6.png" alt="samodzielny" style="zoom: 25%;" /> | Samodzielny Zwierzak  | <80, 90)  | 4.5   |
-   | <img src="img/owlbear7.png" alt="bestia" style="zoom: 25%;" /> | Majestatyczna Bestia  | <90, 100) | 5.0   |
+   | <img src="img/owlbear1.png" alt="jajo" width="100" /> | Jajo                  | <0, 25)   | 2.0   |
+   | <img src="img/owlbear2.png" alt="pisklak"  width="100" /> | Pisklak               | <25, 50)  | 2.0   |
+   | <img src="img/owlbear3.png" alt="podlot"  width="100" /> | Podlot                | <50, 60)  | 3.0   |
+   | <img src="img/owlbear4.png" alt="zoltodziob"  width="100" /> | Żółtodziób            | <60, 70)  | 3.5   |
+   | <img src="img/owlbear5.png" alt="nieopierzony" width="100" /> | Nieopierzony odkrywca | <70, 80)  | 4.0   |
+   | <img src="img/owlbear6.png" alt="samodzielny"  width="100"/> | Samodzielny Zwierzak  | <80, 90)  | 4.5   |
+   | <img src="img/owlbear7.png" alt="bestia"  width="100" /> | Majestatyczna Bestia  | <90, 100) | 5.0   |
 
    
 
@@ -54,19 +54,19 @@ Będzie to wyglądało następująco:
 
    |                                                              | Nazwa łupu              | Znaczenie                                          |
    | ------------------------------------------------------------ | ----------------------- | -------------------------------------------------- |
-   | <img src="img/bonus_multiplier_lab.png" alt="marchew_lab" style="zoom: 25%;" /> | Marchewka laboratoryjna | **+10%** do sumy za lab z Javy (maks. 30%)         |
-   | <img src="img/bonus_multiplier_proj.png" alt="marchew_proj" style="zoom: 25%;" /> | Marchewka projektowa    | **+10%** do sumy za projekt (maks. 40%)            |
-   | <img src="img/bonus_restore_lab.png" alt="restore_lab" style="zoom: 25%;" /> | Lekarstwo               | odrobienie straconych **2xp** za lab               |
-   | <img src="img/bonus_restore_test.png" alt="restore_lab" style="zoom: 25%;" /> | Weterynarz              | odrobienie straconych  **2xp** za kartkówkę        |
-   | <img src="img/bonus_test.png" alt="test" style="zoom: 25%;" /> | Rabat na sianko         | darmowe zaliczenie najbliższej kartkówki (**2xp**) |
+   | <img src="img/bonus_multiplier_lab.png" alt="marchew_lab"  width="100" /> | Marchewka laboratoryjna | **+10%** do sumy za lab z Javy (maks. 30%)         |
+   | <img src="img/bonus_multiplier_proj.png" alt="marchew_proj"  width="100" /> | Marchewka projektowa    | **+10%** do sumy za projekt (maks. 40%)            |
+   | <img src="img/bonus_restore_lab.png" alt="restore_lab"  width="100" /> | Lekarstwo               | odrobienie straconych **2xp** za lab               |
+   | <img src="img/bonus_restore_test.png" alt="restore_lab"  width="100" /> | Weterynarz              | odrobienie straconych  **2xp** za kartkówkę        |
+   | <img src="img/bonus_test.png" alt="test"  width="100" /> | Rabat na sianko         | darmowe zaliczenie najbliższej kartkówki (**2xp**) |
 
 7. Wykonanie dodatkowej aktywności skutkuje otrzymaniem skrzynki z jednym łupem. W zależności od rodzaju aktywności skrzynka może mieć różnią wartość, a co za tym idzie - mieć różną ilość łupów do wyboru. W momencie zdobycia skrzynki to Ty decydujesz, jaki łup zdobywasz. Zostaje on aktywowany niezwłocznie po zdobyciu.
 
-   | Symbol skrzynki                                              | Zawartość (do wyboru jeden z wymienionych)                   | Rodzaj aktywności                                           |
+ | Symbol skrzynki                                              | Zawartość (do wyboru jeden z wymienionych)                   | Rodzaj aktywności                                           |
    | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------------------- |
-   | <img src="img/reward_gold.png" alt="reward_gold" style="zoom: 25%;" /> | <img src="img/bonus_restore_lab.png" alt="restore_lab" style="zoom: 20%;" /><img src="img/bonus_restore_test.png" alt="restore_lab" style="zoom: 20%;" /><img src="img/bonus_multiplier.png" alt="marchew" style="zoom: 20%;" /><img src="img/bonus_test.png" alt="test" style="zoom: 20%;" /> | Quizy na wykładzie                                          |
-   | <img src="img/reward_silver.png" alt="reward_silver" style="zoom: 25%;" /> | <img src="img/bonus_restore_lab.png" alt="restore_lab" style="zoom: 20%;" /><img src="img/bonus_restore_test.png" alt="restore_lab" style="zoom: 20%;" /><img src="img/bonus_multiplier.png" alt="marchew" style="zoom: 20%;" /> | Zadania dodatkowe, Wydarzenia specjalne, Quizy na wykładzie |
-   | <img src="img/reward_bronze.png" alt="reward_bronze" style="zoom: 25%;" /> | <img src="img/bonus_restore_lab.png" alt="restore_lab" style="zoom: 20%;" /><img src="img/bonus_restore_test.png" alt="restore_lab" style="zoom: 20%;" /> | Wydarzenia specjalne, Quizy na wykładzie                    |
+   | <img src="img/reward_gold.png" alt="reward_gold"  width="100" /> | <img src="img/bonus_restore_lab.png" alt="restore_lab" width="60" /><img src="img/bonus_restore_test.png" alt="restore_test"  width="60" /><img src="img/bonus_multiplier.png" alt="marchew" width="60" /><img src="img/bonus_test.png" alt="test" width="60" /> | Quizy na wykładzie                                          |
+   | <img src="img/reward_silver.png" alt="reward_silver"  width="100" /> | <img src="img/bonus_restore_lab.png" alt="restore_lab" width="60" /><img src="img/bonus_restore_test.png" alt="restore_test"  width="60" /><img src="img/bonus_multiplier.png" alt="marchew" width="60" /> | Zadania dodatkowe, Wydarzenia specjalne, Quizy na wykładzie |
+   | <img src="img/reward_bronze.png" alt="reward_bronze"  width="100" /> | <img src="img/bonus_restore_lab.png" alt="restore_lab" width="60" /><img src="img/bonus_restore_test.png" alt="restore_test"  width="60" /> | Wydarzenia specjalne, Quizy na wykładzie            |
 
 8. W trakcie semestru pojawią się liczne okazje do zdobycia skrzynek z łupami. Za każdą aktywność będzie można zdobyć jedną lub dwie skrzynki. Rodzaje dodatkowych aktywności:
 

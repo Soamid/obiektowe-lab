@@ -34,18 +34,62 @@ Będzie to wyglądało następująco:
 
 3. Łącznie Twój zwierzak może zdobyć w ten sposób maksymalnie **84xp**. W trakcie zdobywania doświadczenia Twój zwierzak będzie awansował na kolejne poziomy doświadczenia, które wiążą się też z oceną końcową:
 
-   |      | poziom doświadczenia  | xp        | ocena |
-   | ---- | --------------------- | --------- | ----- |
-   |      | Jajo                  | <0, 25)   | 2.0   |
-   |      | Pisklak               | <25, 50)  | 2.0   |
-   |      | Podlot                | <50, 60)  | 3.0   |
-   |      | Żółtodziób            | <60, 70)  | 3.5   |
-   |      | Nieopierzony odkrywca | <70, 80)  | 4.0   |
-   |      | Samodzielny Zwierzak  | <80, 90)  | 4.5   |
-   |      | Majestatyczna Bestia  | <90, 100) | 5.0   |
+   |                                                              | poziom doświadczenia  | xp        | ocena |
+   | ------------------------------------------------------------ | --------------------- | --------- | ----- |
+   | <img src="img/owlbear1.png" alt="jajo" style="zoom: 25%;" /> | Jajo                  | <0, 25)   | 2.0   |
+   | <img src="img/owlbear2.png" alt="pisklak" style="zoom: 25%;" /> | Pisklak               | <25, 50)  | 2.0   |
+   | <img src="img/owlbear3.png" alt="podlot" style="zoom: 25%;" /> | Podlot                | <50, 60)  | 3.0   |
+   | <img src="img/owlbear4.png" alt="zoltodziob" style="zoom: 25%;" /> | Żółtodziób            | <60, 70)  | 3.5   |
+   | <img src="img/owlbear5.png" alt="nieopierzony" style="zoom: 25%;" /> | Nieopierzony odkrywca | <70, 80)  | 4.0   |
+   | <img src="img/owlbear6.png" alt="samodzielny" style="zoom: 25%;" /> | Samodzielny Zwierzak  | <80, 90)  | 4.5   |
+   | <img src="img/owlbear7.png" alt="bestia" style="zoom: 25%;" /> | Majestatyczna Bestia  | <90, 100) | 5.0   |
 
    
 
-4. Aby zaliczyć przedmiot Twój zwierzak musi być **na koniec** co najmniej **Podlotem** oraz powinien zdobyć co najmniej **16xp** w trakcie Projektu.
+4. Aby zaliczyć przedmiot Twój zwierzak musi być **na koniec** co najmniej **Podlotem** oraz powinien zdobyć co najmniej **16xp** w trakcie Projektu. Ponadto musi on **wykluć się z Jaja** przed końcem laboratoriów. 
 
-5. Aby móc zabrać zwierzaka w teren i zrobić projekt, musi on **wykluć się z Jaja** przed końcem laboratoriów. 
+5. Dodatkowo w trakcie całego semestru będzie można zdobywać wraz z zwierzakiem łupy za wykonywanie dodatkowych, opcjonalnych aktywności. Łupy ułatwią zdobywanie xp, a nawet pozwolą pomnożyć jego wartość! **Wykonywanie dodatkowych aktywności to również jedyny sposób by zdobyć więcej niż 84xp, a co za tym idzie osiągnąć maksymalny poziom zwierzaka i ocenę 5.0.**
+
+6. Rodzaje zdobywanych łupów:
+
+   |                                                              | Nazwa łupu              | Znaczenie                                          |
+   | ------------------------------------------------------------ | ----------------------- | -------------------------------------------------- |
+   | <img src="img/bonus_multiplier_lab.png" alt="marchew_lab" style="zoom: 25%;" /> | Marchewka laboratoryjna | **+10%** do sumy za lab z Javy (maks. 30%)         |
+   | <img src="img/bonus_multiplier_proj.png" alt="marchew_proj" style="zoom: 25%;" /> | Marchewka projektowa    | **+10%** do sumy za projekt (maks. 40%)            |
+   | <img src="img/bonus_restore_lab.png" alt="restore_lab" style="zoom: 25%;" /> | Lekarstwo               | odrobienie straconych **2xp** za lab               |
+   | <img src="img/bonus_restore_test.png" alt="restore_lab" style="zoom: 25%;" /> | Weterynarz              | odrobienie straconych  **2xp** za kartkówkę        |
+   | <img src="img/bonus_test.png" alt="test" style="zoom: 25%;" /> | Rabat na sianko         | darmowe zaliczenie najbliższej kartkówki (**2xp**) |
+
+7. Wykonanie dodatkowej aktywności skutkuje otrzymaniem skrzynki z jednym łupem. W zależności od rodzaju aktywności skrzynka może mieć różnią wartość, a co za tym idzie - mieć różną ilość łupów do wyboru. W momencie zdobycia skrzynki to Ty decydujesz, jaki łup zdobywasz. Zostaje on aktywowany niezwłocznie po zdobyciu.
+
+   | Symbol skrzynki                                              | Zawartość (do wyboru jeden z wymienionych)                   | Rodzaj aktywności                                           |
+   | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------------------- |
+   | <img src="img/reward_gold.png" alt="reward_gold" style="zoom: 25%;" /> | <img src="img/bonus_restore_lab.png" alt="restore_lab" style="zoom: 20%;" /><img src="img/bonus_restore_test.png" alt="restore_lab" style="zoom: 20%;" /><img src="img/bonus_multiplier.png" alt="marchew" style="zoom: 20%;" /><img src="img/bonus_test.png" alt="test" style="zoom: 20%;" /> | Quizy na wykładzie                                          |
+   | <img src="img/reward_silver.png" alt="reward_silver" style="zoom: 25%;" /> | <img src="img/bonus_restore_lab.png" alt="restore_lab" style="zoom: 20%;" /><img src="img/bonus_restore_test.png" alt="restore_lab" style="zoom: 20%;" /><img src="img/bonus_multiplier.png" alt="marchew" style="zoom: 20%;" /> | Zadania dodatkowe, Wydarzenia specjalne, Quizy na wykładzie |
+   | <img src="img/reward_bronze.png" alt="reward_bronze" style="zoom: 25%;" /> | <img src="img/bonus_restore_lab.png" alt="restore_lab" style="zoom: 20%;" /><img src="img/bonus_restore_test.png" alt="restore_lab" style="zoom: 20%;" /> | Wydarzenia specjalne, Quizy na wykładzie                    |
+
+8. W trakcie semestru pojawią się liczne okazje do zdobycia skrzynek z łupami. Za każdą aktywność będzie można zdobyć jedną lub dwie skrzynki. Rodzaje dodatkowych aktywności:
+
+   - **Zadania dodatkowe -** w niektórych konspektach do laboratoriów z Javy pojawią się dodatkowe, opcjonalne zadania. Aby otrzymać skrzynkę z łupem należy wykonać zadanie w tym samym terminie, co podstawową część laboratorium. W części laboratoryjnej przewidzieliśmy 3 takie zadania (3 łupy). W części projektowej pojawią się 2 dodatkowe, całkowicie opcjonalne laboratoria do samodzielnego przerobienia. Za każde z nich będzie można otrzymać po 2 łupy (łącznie 4 łupy).
+   - **Quizy na wykładzie** - na niektórych wykładach będzie można wziąć udział w krótkim quizie podsumowującym omawiane na nim zagadnienia. Osoby, które udzielą poprawne odpowiedzi otrzymają skrzynkę z łupem. Wartość skrzynki będzie zależała od prędkości odpowiedzi (najszybsze osoby otrzymają złotą skrzynkę).
+   - **Wydarzenia specjalne** - podobnie jak zadania dodatkowe będą polegały na wykonaniu aktywności poza zajęciami. Będą one miały jednak określony czas trwania, dłuższy niż tydzień. Przewidujemy 2 takie wydarzenia, każde warte 2 łupy.
+
+### FAQ
+
+**Jak dokładnie działają mnożniki (marchewki)?**
+Każda zdobyta marchewka zwiększa wartość wszystkich zdobytych xp za laboratoria z Javy lub projekt. Przykładowo, jeśli zwierzak  zdobędzie w trakcie lab 26xp (z 32 możliwych) oraz 3 marchewki to otrzyma sumarycznie `26 + 3*2,6 = 33,8xp`.
+
+**Czy mogę wykorzystać marchewki zdobyte w trakcie lab na projekcie?**
+Nie, marchewki działają zgodnie z ich oznaczeniami. W pierwszej części semestru zdobywamy marchewki laboratoryjne (maksymalnie 3). W drugiej części semestru, w trakcie projektu marchewki projektowe (maksymalnie 4).
+
+**Czy marchewki laboratoryjne działają również na ćwiczenia z Gita?**
+Nie, mnożą one jedynie punkty zdobywane w trakcie lab z Javy (8 spotkań).
+
+**Czy mogę zachować na później zdobyte lekarstwo albo weterynarza?**
+Nie, łupy aktywowane są niezwłocznie po zdobyciu. W szczególności jeśli zwierzak zdobył maksymalną liczbę xp za dotychczasowe kartkówki, wizyta u weterynarza nie przynosi żadnego efektu. W przypadku lekarstw działają one również na ułamki straconych xp, regenerując maksymalnie 2xp. Przykładowo, jeśli z Lab1 zdobyliśmy 3/4xp, a z Lab2 3.5/4xp to zastosowanie lekarstwa uzupełni nam brakujące 1.5xp. 
+
+**Skąd wiadomo jaki kolor skrzynki otrzymam za daną aktywność?**
+Rodzaje skrzynek z łupami są zawsze określane w konspekcie lub przez prowadzącego.  
+
+**Co się stanie, jeśli nie zdobędę wystarczająco xp by wykluć zwierzaka z Jaja przed startem projektu?**
+W takiej sytuacji należy normalnie wziąć udział w projekcie, ale liczyć się z koniecznością zaliczenia przedmiotu w terminie poprawkowym. Rezultat projektu może wpłynąć na ocenę uzyskaną w terminie poprawkowym. 

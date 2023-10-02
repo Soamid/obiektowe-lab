@@ -28,8 +28,9 @@ Do wykonania wszystkich ćwiczeń na tym laboratorium potrzebna będzie **jedyni
 
 1. Zarejestruj się na GitHubie.
 
-2. Stwórz nowe repozytorium i nazwij je odpowiednio - będziesz w nim przechowywać rozwiązania zadań z kolejnych laboratoriów.
+2. Stwórz nowe repozytorium i nazwij je odpowiednio (schemat nazywania poniżej) - będziesz w nim przechowywać rozwiązania zadań z kolejnych laboratoriów.
 
+   * nazwa repozytorium to PO_2023_[dzień][godzina]_[nazwisko studenta] - np. PO_2023_PON1500_BRZECZYSZCZYKIEWICZ lub PO_2023_WTO1820_PAPADOPOULOS.
    * repozytorium może być prywatne lub publiczne. Na potrzeby naszych zajęć repozytoria powinny być **prywatne**.
    * możesz na tym etapie zaznaczyć opcję *Add a README file* - zainicjujesz w ten sposób repozytorium plikiem, którego zawartość będzie domyślna na głównej stronie repozytorium.
 

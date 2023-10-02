@@ -26,7 +26,7 @@ Do wykonania wszystkich ćwiczeń na tym laboratorium potrzebna będzie **jedyni
 
 ### Przygotowanie własnego repozytorium
 
-1. Zarejestruj się na GitHubie.
+1. Zarejestruj się na GitHubie.
 
 2. Stwórz nowe repozytorium i nazwij je odpowiednio - będziesz w nim przechowywać rozwiązania zadań z kolejnych laboratoriów.
 
@@ -68,14 +68,14 @@ W celu przygotowania kodu źródłowego do bracy z gitem należy wykonać nastę
 1. `git init` (zainicjowanie plików Gita, w głównym katalogu naszej aplikacji, tworzony jest katalog `.git`, który
    zawiera repozytorium kodu źródłowego)
    
-2. `echo 'out' > .gitignore` (dodanie katalogu `bin` do listy ingorowanych plików/katalogów)
+2. `echo 'out' > .gitignore` (dodanie katalogu `out` do listy ingorowanych plików/katalogów)
 
    **Uwaga:** Powyższe polecenie w PowerShellu powoduje problemy. W tej sytuacji zalecane jest po prostu utworzenie pliku
    `.gitignore` w edytorze tekstu i wpisanie do niego linii o treści `out`.
 
 3. `git add .` (dodanie wszystkich plików, poza ignorowanymi, do *indeksu* Gita)
 
-4. `git status` (sprawdzenie aktualnego statusu kodu źródłowego, polecenie wykonowyane bardzo często)
+4. `git status` (sprawdzenie aktualnego statusu kodu źródłowego, polecenie wykonywane bardzo często)
 
 5. `git commit -m 'Initial commit'` (*zatwierdzenie* (zacommitowanie) zmian w historii Gita)
 
@@ -102,13 +102,13 @@ W poniższych poleceniach fragment ujęty w nawiasy ostre, np. `<file-name>` nal
 
 ### Aktualizowanie się względem zdalnej gałęzi `master`
 
-1. `git add remote <remote-repo-name> <remote-repo-address>` (dodanie zdalnego repozytorium).
+1. `git remote add <remote-repo-name> <remote-repo-address>` (dodanie zdalnego repozytorium).
 2. `git checkout master` (przełączenie się do lokalnej gałęzi master).
 3. `git pull <remote-repo-name> master` (pobranie do lokalnej gałęzi `master` zmian z oficjalnej gałęzi `master`)
 4. `git checkout <feature-branch>` (przełączenie się do gałęzi na której pracowaliśmy).
 5. `git rebase master` (przepięcie commitów z obecnej gałęzi tak by poprzedzał je ostatni commit z `master`).
 6. Rozwiązanie konfliktów, ewentualne wprowadzenie zmian.
-7. `git push origin <feature-branch> -f` (wysłanie zaktualizowanej wersji do zdalnej gałęzi `feature-branch w naszym
+7. `git push origin <feature-branch> -f` (wysłanie zaktualizowanej wersji do zdalnej gałęzi `<feature-branch>` w naszym
    repozytorium).
 
 

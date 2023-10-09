@@ -12,7 +12,7 @@ Git jest rozproszonym systemem pracy z kodem źródłowym. Jego najważniejsze c
 * możliwość pracy w gałęziach ("branchach")
 * brak centralnego repozytorium kodu (repozytorium rozproszone)
 
-## Zadania do wykonania
+## Zadania do wykonania (4xp)
 
 Do wykonania wszystkich ćwiczeń na tym laboratorium potrzebna będzie **jedynie zainstalowany Git oraz terminal**. Jeśli nie jesteś fanem pracy z samą konsolą warto zaopatrzyć się też w aplikację z GUI do obsługi Git:
 

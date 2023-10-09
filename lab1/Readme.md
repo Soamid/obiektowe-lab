@@ -9,7 +9,7 @@ Najważniejsze zadania:
 3. Stworzenie typu wyliczeniowego `MoveDirection` i narzędzia `OptionsParser`.
 
 
-## Zadania do wykonania
+## Zadania do wykonania (4xp)
 
 **Uwaga 1:** przed zainicjowaniem projektu zalecamy upewnić się, czy połączenie z Internetem jest stabilne i wystarczająco szybkie. Stworzenie projektu wymaga pobrania kilku dodatkowych narzędzi w tle. W szczególności **NIE** polecamy pracy na otwartej sieci `AGH-Guest` (lepiej skorzystać z `AGH-5` lub `AGH-WPA`).
 

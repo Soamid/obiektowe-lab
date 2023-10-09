@@ -8,7 +8,7 @@ Najważniejsze zadania:
 2. Stworzenie klasy `MapDirection`.
 3. Testy jednostkowe.
 
-## Zadania do wykonania
+## Zadania do wykonania (4xp)
 
 Uwaga: dla przejrzystości pliki z klasami `Vector2d` oraz `MapDirection` należy umieścić w pakiecie `agh.ics.oop.model`.
 

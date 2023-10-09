@@ -9,7 +9,7 @@ Najważniejsze zadania:
 3. Konsolowa wizualizacja mapy podczas symulacji.
 4. Testy integracyjne.
 
-## Zadania do wykonania
+## Zadania do wykonania (4xp)
 
 1. Przyjrzyj się interfejsom `WorldMap` oraz `MoveValidator`, które znajdują się w katalogu z tym konspektem i skopiuj je do swojego projektu. Skopiuj także klasę `MapVisualizer` - wykorzystasz ją w dalszych zadaniach.
 
@@ -41,7 +41,7 @@ Najważniejsze zadania:
 
 
 
-## Zadanie dodatkowe
+## Zadanie dodatkowe (<img src="../img/reward_silver.png" alt="srebrna skrzynka" width="50" />)
 
 Interfejs `WorldMap` zakłada, że mapa może przechowywać jedynie zwierzęta, a pozycje zawsze wyrażone są jako dwuwymiarowe pozycje. Te założenia można poluzować wprowadzając parametryzację i typy generyczne.
 

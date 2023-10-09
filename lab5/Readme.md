@@ -10,7 +10,7 @@ Najważniejsze zadania:
 3. Stworzenie klasy `AbstractWorldMap`.
 4. Testy integracyjne.
 
-## Zadania do wykonania
+## Zadania do wykonania (4xp)
 
 
 1. Zdefiniuj klasę `Grass` (kępka trawy), która:

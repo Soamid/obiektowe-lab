@@ -8,7 +8,7 @@ Najważniejsze zadania:
 1. Przygotowanie wizualizacji w oparciu o wzorzec projektowy MVP
 1. Umożliwienie prostych interakcji - przycisk do uruchamiania symulacji z zadanymi parametrami
 
-## Zadania do wykonania
+## Zadania do wykonania (4xp)
 
 ### Szkielet aplikacji JavaFX
 

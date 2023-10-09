@@ -8,6 +8,8 @@ Uwaga: do realizacji zadań z Kotlina nie będzie potrzebna JavaFX.
 
 ## Zadania do wykonania
 
+### Część I: Elementy języka Kotlin (<img src="../img/reward_silver.png" alt="srebrna skrzynka" width="50" align="center" />)
+
 1. Stwórz nowy projekt w IntelliJ: *File -> New --> Project... -->* wpisz nazwę, zaznacz *Kotlin* jako język oraz *Gradle* jako *Build system*, a także *Groovy* jako *Gradle DSL*.
 
    **Uwaga:** projekt umieść w repozytorium z laboratoriami, najlepiej jako osobny folder obok projektu Javowego. 
@@ -39,21 +41,24 @@ Uwaga: do realizacji zadań z Kotlina nie będzie potrzebna JavaFX.
 6. Zastosuj mechanizm [extension functions](https://kotlinlang.org/docs/extensions.html) żeby uporządkować kod oraz ułatwić implementację losowania pozycji:
 
    - Przenieś metodę `MapDirection.toUnitVector()` jako *extension function* do pliku z klasą `Vector2d` - to jej odpowiedzialność by zapewnić taką konwersję i uniezależnić ją od siebie.
+
    - Stwórz plik `RandomExtensions.kt` i przygotuj tam dwie *extension functions*:
      - `randomPosition()` - działa na każdej mapie (klasie `Map`), której kluczami są obiekty `Vector2d` i zwraca losową pozycję z tej mapy lub `null`, jeśli mapa jest pusta. 
 
        Uwaga: w Kotlinie istnieje już *extension function* `random()` oraz `randomOrNull()` dla np. listy lub zbioru liczb - można z niej tu skorzystac. 
      - `randomFreePostion(mapSize: Vector2d)` - działa na każdej mapie (klasie `Map`), której kluczami są obiekty `Vector2d` i zwraca losową wolną pozycję, zakładając że mapa jest prostokątna, a jej rozmiar ograniczony przez `mapSize`. Jeśli nie ma już wolnej pozycji, zwraca `null`. 
 
-7. Napisz kilka testów sprawdzających działanie `BouncyMap`. W tym celu wykorzystaj bibliotekę [Kotest](https://kotest.io). Dodaj do konfiguracji `build.gradle` zależności:
-   ```
-   testImplementation 'io.kotest:kotest-runner-junit5:5.5.4'
-   testImplementation 'io.kotest:kotest-assertions-core:5.5.4'
-   ```
+### Część II: Testy z zastosowaniem biblioteki Kotest (<img src="../img/reward_silver.png" alt="srebrna skrzynka" width="50" align="center" />)
 
-   Warto zainstalować też plugin Kotest do samego IntelliJ (*File --> Settings --> Plugins*) żeby nieco łatwiej zarządzać odpalanymi testami, choć nie jest to konieczne.
+Napisz kilka testów sprawdzających działanie `BouncyMap`. W tym celu wykorzystaj bibliotekę [Kotest](https://kotest.io). Dodaj do konfiguracji `build.gradle` zależności:
+```
+testImplementation 'io.kotest:kotest-runner-junit5:5.5.4'
+testImplementation 'io.kotest:kotest-assertions-core:5.5.4'
+```
 
-   Zapoznaj się z [stylami testowania](https://kotest.io/docs/framework/testing-styles.html) i wybierz ten, który najbardziej Ci się podoba (ale postaraj się wybrać coś innego niż JUnit, to już znamy z Javy!).
+Warto zainstalować też plugin Kotest do samego IntelliJ (*File --> Settings --> Plugins*) żeby nieco łatwiej zarządzać odpalanymi testami, choć nie jest to konieczne.
+
+Zapoznaj się z [stylami testowania](https://kotest.io/docs/framework/testing-styles.html) i wybierz ten, który najbardziej Ci się podoba (ale postaraj się wybrać coś innego niż JUnit, to już znamy z Javy!).
 
 ## Przydatne informacje
 

@@ -19,7 +19,7 @@ Najważniejsze zadania:
 
 2. Utwórz nowy projekt o nazwie `oolab` typu **Gradle**. Pamiętaj by kreatorze projektu ustawić pole `Language` na `Java`, `Build system` na `Gradle`  (a **nie**  na `IntelliJ`), a `Gradle DSL` najlepiej na `Groovy`. Możesz wybrać (lub w razie potrzeby pobrać) najnowszą wersję JDK, ale zalecamy **17**, ponieważ jest to wersja LTS i  instrukcje do laboratoriów są o nią oparte. 
 
-3. Po utworzeniu projektu poczekaj aż IntelliJ zainicjuje projekt - może to chwilę potrwać. Jeśli wszystko poszło ok, po lewej stronie zobaczysz drzewo katalogów. Katalog `java` (w `src/main`) powinien mieć niebieską ikonę (oznacza to, że został wykryty jako katalog z źródłami po zainicjowaniu przez Gradle).
+3. Po utworzeniu projektu poczekaj aż IntelliJ zainicjuje projekt - może to chwilę potrwać. Jeśli wszystko poszło ok, po lewej stronie zobaczysz drzewo katalogów. Katalog `java` (w `src/main`) powinien mieć niebieską ikonę (oznacza to, że został wykryty jako katalog ze źródłami po zainicjowaniu przez Gradle).
 
 4. W katalogu `src/main/java/` utwórz pakiet `agh.ics.oop` (ppm na `src/main/java` -> `New package`). Możesz też od razu usunąć ewentualne "śmieci" wygenerowane przez IntelliJ (pakiet `org.example`).
 
@@ -37,7 +37,7 @@ Najważniejsze zadania:
 
 10. Uruchom program.
 
-11. Rozszerz metodę `run` tak by akceptowała tablicę argumentów typu `String`. Przekaż do niej tablicę `args`, która zawiera parametry wywołania programu.
+11. Rozszerz metodę `run` tak, by akceptowała tablicę argumentów typu `String`. Przekaż do niej tablicę `args`, która zawiera parametry wywołania programu.
 
 12. Po komunikacie o poruszaniu się do przodu wypisz w konsoli wartości wszystkich argumentów tej metody oddzielone przecinkami. Zwróć uwagę na to, żeby nie było nadmiarowych przecinków.
 

@@ -27,7 +27,7 @@ Najważniejsze zadania:
 3. Zmodyfikuj klasę `World`, która w metodzie `main` stworzy zwierzę i wyświetli w konsoli jego pozycję.
 4. Dodaj do klasy `Animal` metodę `move(MoveDirection direction)`, która:
 
-      * Dla kierunków `RIGHT` i `LEFT` zmienia orientację zwierzęcia na mapie, np. kiedy zwierzę jest w pozycji `NORTH` a
+      * Dla kierunków `RIGHT` i `LEFT` zmienia orientację zwierzęcia na mapie, np. kiedy zwierzę ma orientację `NORTH` a
         zmiana kierunku to `RIGHT` to orientacja zwierzęcia powinna wynosić `EAST`.
       * Dla kierunków `FORWARD` i `BACKWARD` zmienia pozycję zwierzęcia o 1 pole, uwzględniając jego orientację, np. kiedy zwierzę
         jest na pozycji `(2,2)` i jego orientacja to `NORTH`, to po ruchu `FORWARD` jego pozycja to `(2,3)`.
@@ -44,7 +44,7 @@ Najważniejsze zadania:
 
 1. W pakiecie `agh.ics.oop` stwórz klasę `Simulation`. 
 
-2. Klasa powinna przyjmować w konstruktorze listę pozycji początkowych zwierząt (`List<MoveDirection>`) oraz listę ruchów (`List<Vector2d>`). Na podstawie pozycji początkowych stwórz listę zwierząt, które będzie przechowywać obiekt symulacji.
+2. Klasa powinna przyjmować w konstruktorze listę pozycji początkowych zwierząt (`List<Vector2d>`) oraz listę ruchów (`List<MoveDirection>`). Na podstawie pozycji początkowych stwórz listę zwierząt, które będzie przechowywać obiekt symulacji.
 
 3. W klasie `Simulation` zdefiniuj również metodę `run()`, która na przemian steruje ruchem wszystkich zwierząt. Przykładowo, jeśli użytkownik wprowadzi ciąg: `f b r l`, a na mapie są dwa zwierzęta, to pierwsze zwierzę otrzyma ruchy `f` i `r`, a drugie `b` i `l`. Ruchy obu zwierząt mają być wykonywane na przemian, tzn. po każdym ruchu pierwszego zwierzęcia następuje ruch drugiego zwierzęcia.
 
@@ -54,7 +54,7 @@ Najważniejsze zadania:
        ```java
        List<MoveDirection> directions = OptionsParser.parse(args);
        List<Vector2d> positions = List.of(new Vector2d(2,2), new Vector2d(3,4));
-       Simulation simulation = new Simulation(directions, positions);
+       Simulation simulation = new Simulation(positions, directions);
        simulation.run();
        ```
 

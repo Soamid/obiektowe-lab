@@ -1,7 +1,7 @@
 package agh.ics.oop.model;
 
-import agh.ics.oop.MoveDirection;
-import agh.ics.oop.Vector2d;
+import agh.ics.oop.model.MoveDirection;
+import agh.ics.oop.model.Vector2d;
 
 /**
  * The interface responsible for interacting with the map of the world.

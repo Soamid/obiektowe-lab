@@ -1,6 +1,6 @@
 package agh.ics.oop.model;
 
-import agh.ics.oop.Vector2d;
+import agh.ics.oop.model.Vector2d;
 
 public interface MoveValidator {
 

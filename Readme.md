@@ -78,7 +78,7 @@ Będzie to wyglądało następująco:
 
 **Czego trzeba nauczyć się na kartkówkę?**
 
-Kartkówka zawsze będzie dotyczyła tematu poruszanego na ostatnim wykładzie. Forma kartkówki to jedno pytanie zamknięte typu test wyboru z jedną poprawną odpowiedzią. 
+Kartkówka zawsze będzie dotyczyła tematu poruszanego na ostatnim wykładzie. Forma kartkówki to jedno pytanie zamknięte typu test wyboru z jedną poprawną odpowiedzią. Jeśli zajęcia lab są opóźnione względem wykładu to kartkówka ostatniego dotyczy wykładu, którego znajomość nie była jeszcze weryfikowana (np. jeśli mamy już wykład nr 3, a na lab była dopiero jedna kartkówka to kolejna dotyczy wykładu nr 2). Jeśli z kolei lab wyprzedza wykład to kartkówka nie odbywa się.
 
 **Jak dokładnie działają mnożniki (marchewki)?**
 
@@ -103,3 +103,8 @@ Rodzaje skrzynek z łupami są zawsze określane w konspekcie lub przez prowadz�
 **Co się stanie, jeśli nie zdobędę wystarczająco xp by wykluć zwierzaka z Jaja przed startem projektu?**
 
 W takiej sytuacji należy normalnie wziąć udział w projekcie, ale liczyć się z koniecznością zaliczenia przedmiotu w terminie poprawkowym. Rezultat projektu może wpłynąć na ocenę uzyskaną w terminie poprawkowym. 
+
+**Czy muszę brać udział w quizach na wykładzie by mieć szansę na 5.0?**
+
+Absolutnie nie! Zarówno wykłady, jak i quizy na nich są nieobowiązkowe. Aby zdobyć maksymalną liczbę marchewek (mnożników) wystarczy zrobić np. dodatkowe zadania, które pojawiają się na niektórych laborkach - będą dokładnie 3 takie zadania w trakcie części laboratoryjnej i 4 w trakcie części projektowej. Ponadto można też brać udział w wydarzeniach specjalnych. Co więcej, zdobycie wszystkich możliwych marchewek i zrobienie zadań na max punktów pozwala w teorii nawet przekroczyć 100% możliwych do zdobycia punktów doświadczenia. Quizy na wykładzie to po prostu jeszcze jedna okazja by zdobyć nagrody.
+

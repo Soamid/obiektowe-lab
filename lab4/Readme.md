@@ -11,7 +11,7 @@ Najważniejsze zadania:
 
 ## Zadania do wykonania (4xp)
 
-1. Przyjrzyj się interfejsom `WorldMap` oraz `MoveValidator`, które znajdują się w katalogu z tym konspektem i skopiuj je do swojego projektu. Skopiuj także klasę `MapVisualizer` - wykorzystasz ją w dalszych zadaniach.
+1. Przyjrzyj się interfejsom `WorldMap` oraz `MoveValidator`, które znajdują się w katalogu z tym konspektem i skopiuj je do swojego projektu. Skopiuj także klasę `MapVisualizer` - wykorzystasz ją w dalszych zadaniach. Umieść wszystkie klasy w odpowiednich pakietach, zgodnie z deklaracjami w ich nagłówkach.
 
 2. W pakiecie `agh.ics.oop.model` zdefiniuj klasę `RectangularMap`.
 
@@ -50,7 +50,7 @@ Interfejs `WorldMap` zakłada, że mapa może przechowywać jedynie zwierzęta, 
 3. Ogranicz `Simulation` tak by nadal przyjmowało jedynie mapy zwierząt z dwuwymiarowymi pozycjami. 
 4. Stwórz dodatkową implementację `TextMap`, która będzie przechowywała napisy `String` na pozycjach określonych w jednym wymiarze (liczba całkowita). Deklaracja typu dla takiej mapy to `WorldMap<String, Integer>`.  Mapa powinna spełniać założenia:
    - Mapa nie ma górnej granicy - dokładanie nowego napisu zawsze wstawia go na koniec mapy.
-   - Przemieszczanie napisu jest możliwe jedynie w obecnych granicach `<0, N>` (gdzie `N` - liczba elementów w mapie). Przesunięcie napisu na pozycję `i`, przesuwa napisy na prawo od `i` o 1 w prawo.
+   - Przemieszczanie napisu jest możliwe jedynie w obecnych granicach `<0, N>` (gdzie `N` - liczba elementów w mapie). Przesunięcie napisu na pozycję `i`, przesuwa napisy na prawo od `i` o 1 w prawo. Np. dla mapy `["Ala", "ma", "sowoniedźwiedzia"]` przesunięcie napisu `"ma"` w prawo powinno dać efekt: `["Ala", "sowoniedźwiedzia", "ma"]`. Dalsze przemieszczanie wyrazu `"ma"` w prawo nie jest już możliwe. 
    - Napis może się przemieszczać do przodu i tyłu `FORWARD`/`BACKWARD` tylko w orientacjach `EAST`/`WEST`, w pozostałych przypadkach ruch jest ignorowany. 
 5. Przetestuj nową implementację mapy.
 

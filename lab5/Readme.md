@@ -33,7 +33,6 @@ Najważniejsze zadania:
      W celu jej implementacji wykorzystaj klasę `MapVisualizer` z poprzedniego laboratorium oraz
      dynamicznie oblicz skrajne punkty, które powinny zostać wyświetlone. Obecność zwierząt ma priorytet nad obecnością
      kępki trawy na danym polu.
-   * posiada metody `equals()/hashCode()` nadpisane tak by porównywać obiekty trawy po ich pozycjach.
 
      **Uwaga:** zwierzęta i trawy na mapie można przechowywać w dwóch osobnych kolekcjach lub jednej wspólnej. Oba rozwiązania będą poprawne, ale sugerujemy implementację na dwóch osobnych kolekcjach. Zastanów się, jakie problemy wygenerowałaby tutaj jedna wspólna kolekcja.
 

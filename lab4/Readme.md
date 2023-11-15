@@ -45,6 +45,8 @@ Najważniejsze zadania:
 
 Interfejs `WorldMap` zakłada, że mapa może przechowywać jedynie zwierzęta, a pozycje zawsze wyrażone są jako dwuwymiarowe pozycje. Te założenia można poluzować wprowadzając parametryzację i typy generyczne.
 
+**Uwaga: to zadanie najlepiej robić na osobnym branchu i nie scalać go z `main` - może być trudne w utrzymaniu przy kolejnych laborkach. Najlepiej zacząć realizację zadania od stworzenia brancha `lab4-bonus` z brancha `lab4` (z miejsca, gdzie podstawowa część laborki jest już gotowa). W celu oddania zadania bonusowego wystarczy wtedy utworzyć pull request z `lab4-bonus` do `lab4`**
+
 1. Zmodyfikuj interfejs `WorldMap` tak by mapa mogła przechowywać dowolne obiekty `T` na pozycjach typu `P`. Deklaracja typu powinna wyglądać tak: `WorldMap<T, P>`. Dostosuj do tego założenia wszystkie metody w interfejsie.
 2. Popraw klasę `RectangularMap` tak by implementowała interfejs z odpowiednimi parametrami typów.
 3. Ogranicz `Simulation` tak by nadal przyjmowało jedynie mapy zwierząt z dwuwymiarowymi pozycjami. 

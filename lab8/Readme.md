@@ -34,7 +34,7 @@ Najważniejsze zadania:
    * Będzie to metoda uruchamiająca interfejs graficzny Twojej aplikacji.
    * Na razie możesz w ciele metody wpisać `primaryStage.show();`. Wyświelti to puste okno aplikacji.
 
-5. W metodzie `main` w `World` dodaj `Application.launch(App.class, args);`
+5. W metodzie `main` w `World` dodaj `Application.launch(SimulationApp.class, args);`
 
    * Spowoduje to uruchomienie okna JavaFX.
    * Możesz też zamiast tego (dla czytelności) dodać drugą klasę z metodą `main`, np. `WorldGUI` i tam zainicjować aplikację.

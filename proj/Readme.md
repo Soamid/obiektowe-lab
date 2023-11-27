@@ -73,23 +73,29 @@ Pewne aspekty symulacji są konfigurowalne i mogą silnie zmieniać jej przebieg
 
 W przypadku mapy kluczowe jest to, jak obsługujemy jej krawędzie. Zrealizujemy następujące warianty:
 
-* **kula ziemska** - lewa i prawa krawędź mapy zapętlają się (jeżeli zwierzak wyjdzie za lewą krawędź, to pojawi się po prawej stronie - a jeżeli za prawą, to po lewej); górna i dolna krawędź mapy to bieguny - nie można tam wejść (jeżeli zwierzak próbuje wyjść poza te krawędzie mapy, to pozostaje na polu na którym był, a jego kierunek zmienia się na odwrotny);
-* **piekielny portal** - jeżeli zwierzak wyjdzie poza krawędź mapy, to trafia do magicznego portalu; jego energia zmniejsza się o pewną wartość (taką samą jak w przypadku generacji potomka), a następnie jest teleportowany w nowe, losowe miejsce na mapie.
+* [#] **kula ziemska** - lewa i prawa krawędź mapy zapętlają się (jeżeli zwierzak wyjdzie za lewą krawędź, to pojawi się po prawej stronie - a jeżeli za prawą, to po lewej); górna i dolna krawędź mapy to bieguny - nie można tam wejść (jeżeli zwierzak próbuje wyjść poza te krawędzie mapy, to pozostaje na polu na którym był, a jego kierunek zmienia się na odwrotny);
+* [A] **piekielny portal** - jeżeli zwierzak wyjdzie poza krawędź mapy, to trafia do magicznego portalu; jego energia zmniejsza się o pewną wartość (taką samą jak w przypadku generacji potomka), a następnie jest teleportowany w nowe, losowe wolne miejsce na mapie;
+* [B] **podziemne tunele** - na mapie znajdują się pola z dziurami, każda dziura jest częścią pary wejście-wyjście, wchodząc w jedną stronę dziury wychodzimy jej drugą stroną;
+* [C] **przypływy i odpływy** - na mapie znajdują się obszary wodne, na które zwierzaki nie mogą wejść; obszary te powiększają się i zmniejszają cyklicznie co kilka ruchów symulacji.
 
 W przypadku wzrostu roślin pewne pola są silnie preferowane, zgodnie z zasadą Pareto. Istnieje 80% szansy, że nowa roślina wyrośnie na preferowanym polu, a tylko 20% szans, że wyrośnie na polu drugiej kategorii. Preferowanych jest około 20% wszystkich miejsc na mapie, 80% miejsc jest uznawane za nieatrakcyjne. Implementujemy następujące warianty::
 
-* **zalesione równiki** - preferowany przez rośliny jest poziomy pas pól w centralnej części mapy (udający równik i okolice);
-* **toksyczne trupy** - rośliny preferują te pola, na których zwierzęta umierają najrzadziej - rosną na tych polach, na których najmniej zwierząt skończyło swój żywot w trakcie symulacji.
+* [#] **zalesione równiki** - preferowany przez rośliny jest poziomy pas pól w centralnej części mapy (udający równik i okolice);
+* [D] **życiodajne truchła** - rośliny rosną tylko na tych polach, w których sąsiedztwie niedawno zdechł zwierzak;
+* [E] **pełzająca dżungla** - nowe rośliny pojawiają się tylko w sąsiedztwie już istniejących roślin (chyba, że mapa została z nich całkowicie ogołocona);
+* [F] **zatrute owoce** - na pewnym podobszarze mapy pojawiają się trujące rośliny, które zamiast dostarczać energię, odbierają ją po spożyciu.
 
 W przypadku mutacji mamy do czynienia z dwoma prostymi opcjami:
 
-* **pełna losowość** - mutacja zmienia gen na dowolny inny gen;
-* **lekka korekta** - mutacja zmienia gen o `1` w górę lub w dół (np. gen `3` może zostać zamieniony na `2` lub `4`, a gen `0` na `1` lub `7`).
+* [#] **pełna losowość** - mutacja zmienia gen na dowolny inny gen;
+* [H] **lekka korekta** - mutacja zmienia gen o `1` w górę lub w dół (np. gen `3` może zostać zamieniony na `2` lub `4`, a gen `0` na `1` lub `7`);
+* [I] **podmianka** - mutacja może też skutkować tym, że dwa geny zamienią się miejscami.
 
 Podobnie proste są warianty zachowania:
 
-* **pełna predestynacja** - zwierzak zawsze wykonuje kolejno geny, jeden po drugim;
-* **nieco szaleństwa** - w 80% przypadków zwierzak po wykonaniu genu aktywuje gen następujący zaraz po nim, w 20% przypadków przeskakuje jednak do innego, losowego genu.
+* [#] **pełna predestynacja** - zwierzak zawsze wykonuje kolejno geny, jeden po drugim;
+* [J] **nieco szaleństwa** - w 80% przypadków zwierzak po wykonaniu genu aktywuje gen następujący zaraz po nim, w 20% przypadków przeskakuje jednak do innego, losowego genu;
+* [K] **tam i z powrotem** - genom jest najpierw odtwarzany od lewej do prawej, potem od prawej do lewej, potem od lewej do prawej - i tak dalej.
 
 ## Wymagania dla aplikacji
 

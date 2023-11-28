@@ -101,6 +101,12 @@ Podobnie proste są warianty zachowania:
 * [3] **nieco szaleństwa** - w 80% przypadków zwierzak po wykonaniu genu aktywuje gen następujący zaraz po nim, w 20% przypadków przeskakuje jednak do innego, losowego genu;
 * [4] **tam i z powrotem** - genom jest najpierw odtwarzany od lewej do prawej, potem od prawej do lewej, potem od lewej do prawej - i tak dalej.
 
+### Przykład realizacji wariantów
+Jeśli zespół projektowy otrzymał do realizacji projekt w wariancie B-3 to znaczy, że:
+- musi zapewnić w konfiguracji symulacji możliwość wyboru między mapą _kula ziemska_ a _podziemne tunele_,
+- musi zapewnić w konfiguracji symulacji możliwość wyboru zachowania zwierzaka: _pełna predestynacja_ lub _nieco szaleństwa_,
+- w symulacji rośliny zawsze rosną zgodnie ze strategią _zalesione równiki_, a mutacje zwierząt są _w pełni losowe_ (brak dodatkowej konfiguracji)
+
 ## Wymagania dla aplikacji
 
 1. Aplikacja ma być realizowana z użyciem graficznego interfejsu użytkownika z wykorzystaniem biblioteki JavaFX.

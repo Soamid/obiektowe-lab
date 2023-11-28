@@ -85,7 +85,7 @@ W przypadku wzrostu roślin pewne pola są silnie preferowane, zgodnie z zasadą
 * [obowiązkowo dla wszystkich] **zalesione równiki** - preferowany przez rośliny jest poziomy pas pól w centralnej części mapy (udający równik i okolice);
 * [D] **życiodajne truchła** - rośliny preferują rosnąć na tych polach, w których sąsiedztwie niedawno zdechł zwierzak;
 * [E] **pełzająca dżungla** - nowe rośliny pojawiają się najczęściej w sąsiedztwie już istniejących roślin (chyba, że mapa została z nich całkowicie ogołocona);
-* [F] **zatrute owoce** - preferowany jest rozkład równomierny, ale na pewnym kwadratowym podobszarze mapy (zajmującym 20% mapy) czasem pojawiają się trujące rośliny, które zamiast dostarczać energię, odbierają ją po spożyciu. Jeśli zwierzak podczas swojego ruchu ma wejść na trującą roślinę, wykonuje test na spostrzegawczość - ma 20% szans, żeby ostatecznie wykonać ruch na inne pole i uniknąć zatrucia (test może być wykonywany raz na dzień życia zwierzaka).
+* [F] **zatrute owoce** - preferowany jest rozkład równomierny, ale na pewnym kwadratowym podobszarze mapy (zajmującym 20% mapy) czasem pojawiają się trujące rośliny, które zamiast dostarczać energię, odbierają ją po spożyciu. Jeśli zwierzak podczas swojego ruchu ma wejść na trującą roślinę, wykonuje test na spostrzegawczość - ma 20% szans, żeby ostatecznie wykonać ruch na inne sąsiadujące pole i uniknąć zatrucia (test może być wykonywany raz na dzień życia zwierzaka).
 
 ### Zwierzaki
 

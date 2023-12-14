@@ -141,6 +141,17 @@ Jeśli zespół projektowy otrzymał do realizacji projekt w wariancie B-3 to zn
 9. Jeżeli zdecydowano się na to w momencie uruchamiania symulacji, to jej statystyki powinny być zapisywane (każdego dnia) do pliku CSV. Plik ten powinnien być "otwieralny" przez dowolny rozujmiejący ten format program (np. MS Excel). 
 10. Aplikacja powinna być możliwa do zbudowania i uruchomienia z wykorzystaniem Gradle'a.
 
+## Ocenianie
+
+Za projekt można zdobyć łącznie **32xp** (powiększone o ewentualne bonusy wynikające z marchewek projektowych). Podczas oceniania uwzględniane będą następujące czynniki:
+1. Funkcjonalność (16xp) - kompletność programu i pokrycie wszystkich wymagań, a także (przynajmniej minimalnie przyzwoita) ergonomia interfejsu użytkownika.
+2. Kod programu (16xp)
+   - Architektura - dekompozycja problemu, projekt modelu aplikacji, zastosowawnie wzorców projektowych;
+   - Clean code - estetyka kodu, czytelność, stosowanie zasad SOLID, poprawne nazewnictwo itp;
+   - Wydajność i techniczna realizacja - dobieranie odpowiednich narzędzi i algorytmów do problemów, prawidłowa obsługa wątków itp.
+   - Obsługa błędów i zasobów zewnętrznych
+   - Testy - powinny weryfikować przynajmniej kluczowe fragmenty logiki aplikacji
+
 ## FAQ
 
 (A właściwie odpowiedzi na nie)

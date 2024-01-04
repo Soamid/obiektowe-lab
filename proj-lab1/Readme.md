@@ -182,15 +182,15 @@ Jeśli w trakcie analizy danych wczytanych z pliku poleciałby błąd i przerwal
 ```java
  File file = new File("data.txt");
  try {
-   Scanner scanner = new Scanner(file);
-   // analiza danych z scannera, tu leci blad
- } finally {
-	scanner.close();
+    Scanner scanner = new Scanner(file);
+    // analiza danych z scannera, tu leci blad
  } catch (Exception e) {
     e.printStackTrace();
-}
+ } finally {
+    scanner.close();
+ } 
 ```
-Blok `finally` występuje w kombinacji z `try` lub nawet `try..finally..catch` i daje nam gwarancję, że kod, który w nim zawrzemy wykona się zawsze. Oczywiście nie uchroni nas przed naszymi błędami - w trakcie wykonywania`finally` również możemy doprowadzić do błędu...
+Blok `finally` występuje w kombinacji z `try` lub nawet `try..catch..finally` i daje nam gwarancję, że kod, który w nim zawrzemy wykona się zawsze. Oczywiście nie uchroni nas przed naszymi błędami - w trakcie wykonywania`finally` również możemy doprowadzić do błędu...
 
 #### Try-with-resources
 
@@ -200,7 +200,7 @@ Ponieważ opisana wyżej sytuacja jest bardzo typowa i jednocześnie bardzo łat
  try(Scanner scanner = new Scanner(file)) {
      // analiza danych z scannera, tu leci blad
  } catch (Exception e) {
-    e.printStackTrace();
+     e.printStackTrace();
 }
 ```
 
@@ -212,3 +212,10 @@ Jak to działa? Podobnie jak w przypadku np. porównywania wartości elementów 
 void close() throws Exception;
 ```
 
+Blok `try-with-resources` może posiadać bloki `catch` lub `finally` jak normalny `try`... ale nie musi. Poniższy kod jest poprawny.
+
+```java
+ try (Scanner scanner = new Scanner(file)) {
+     // analiza danych z scannera, tu leci blad
+ }
+```

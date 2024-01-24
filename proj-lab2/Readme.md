@@ -26,11 +26,11 @@ Uwaga: do realizacji zadań z Kotlina nie będzie potrzebna JavaFX.
 
 3. Zastosuj [przeciążenie operatorów](https://kotlinlang.org/docs/operator-overloading.html) by zastąpić nimi metody klasy Vector2d: `add()`, `substract()`, `follows()`, `precedes()`. Np. dodawanie wektorów powinno być możliwe w taki sposób: `val result = Vector2d(1, 2) + Vector2d(3, 4)`.
 
-4. Przepisz na Kotlina `IWorldMap` oraz `Animal`. W przypadku klasy `Animal` zwróć szczególną uwagę na to, które elementy powinny być niezmienne oraz które powinny mieć możliwość zmiany tylko w obrębie tej klasy. 
+4. Przepisz na Kotlina `WorldMap` oraz `Animal`. W przypadku klasy `Animal` zwróć szczególną uwagę na to, które elementy powinny być niezmienne oraz które powinny mieć możliwość zmiany tylko w obrębie tej klasy. 
    Pamiętaj, że w Kotlinie można [mieszać parametry konstruktora oraz definicje atrybutów](https://kotlinlang.org/docs/classes.html#constructors) oraz stosować domyślne wartości dla parametrów. 
    **Uwaga:** na potrzeby  tej laborki nie będziemy potrzebowali żadnych elementów UI ani wzorca obserwator - nie musisz przepisywać tych elementów na Kotlina.
 
-5. Stwórz nową klasę `BouncyMap`, która będzie realizować interfejs `IWorldMap`. Zachowanie tego rodzaju mapy powinno być następujące:
+5. Stwórz nową klasę `BouncyMap`, która będzie realizować interfejs `WorldMap`. Zachowanie tego rodzaju mapy powinno być następujące:
 
    - Przechowuje zwierzęta w mapie `<Vector2d, Animal>`.
    - Posiada zadane wymiary (szerokość, wysokość), podobnie jak mapa prostokątna z pierwszych laborek.

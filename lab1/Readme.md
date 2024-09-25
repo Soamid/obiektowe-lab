@@ -13,7 +13,7 @@ Najważniejsze zadania:
 
 **Uwaga 1:** przed zainicjowaniem projektu zalecamy upewnić się, czy połączenie z Internetem jest stabilne i wystarczająco szybkie. Stworzenie projektu wymaga pobrania kilku dodatkowych narzędzi w tle. W szczególności **NIE** polecamy pracy na otwartej sieci `AGH-Guest` (lepiej skorzystać z `AGH-5` lub `AGH-WPA`).
 
-**Uwaga 2:** projekt tworzony na zajęciach powinien znaleźć się w utworzonym wcześniej repozytorium Git. Kolejne laboratoria będą wymagały rozszerzania tego projektu o nowe elementy. **Pamiętaj by każdą laborkę rozpoczynać od utworzenia brancha z aktualnego stanu repo (np. "lab1")**, a także o regularnym commitowaniu zmian i udostępnieniu gotowego rozwiązania w formie Pull Requesta do oceny zgodnie z wytycznymi prowadzącego. Zwracaj też uwagę na pliki, które commitujesz - nie umieszczaj w repo śmieci (w razie potrzebny zmodyfikuj *.gitignore*), jedynie sam kod i pliki konfiguracyjne gradle.
+**Uwaga 2:** projekt tworzony na zajęciach powinien znaleźć się w utworzonym wcześniej repozytorium Git. Kolejne laboratoria będą wymagały rozszerzania tego projektu o nowe elementy. **Pamiętaj by każdą laborkę rozpoczynać od utworzenia brancha z aktualnego stanu repo (np. "lab1")**, a także o regularnym commitowaniu zmian i udostępnieniu gotowego rozwiązania w formie Pull Requesta do oceny zgodnie z wytycznymi prowadzącego. Zwracaj też uwagę na pliki, które commitujesz - nie umieszczaj w repo śmieci (w razie potrzebny zmodyfikuj *.gitignore*), jedynie sam kod i pliki konfiguracyjne gradle. Polecamy na początek zajrzeć do [dodatkowej instrukcji o pracy z Gitem podczas laboratoriów](git_workflow_tutorial.md).
 
 1. Uruchom program IntelliJ.
 

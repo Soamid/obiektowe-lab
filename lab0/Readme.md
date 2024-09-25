@@ -1,16 +1,16 @@
 # Lab 0: Git - rozproszony system kontroli wersji
 
-W tym ćwiczeniu zapoznamy się z jednym z najbardziej popularnych systemów do zarządzania kodem źródłowym - Gitem
-oraz hostingiem do projektów GitHub. Git będzie nam towarzyszyć przez cały semestr (a także i pewnie poza zajęciami), dlatego warto poświęcić mu odpowiednio dużo uwagi.
+W tym ćwiczeniu zapoznamy się z jednym z systemem **Git**, jednym z najbardziej popularnych systemów do wersjonowania kodu źródłowego
+oraz hostingiem do projektów **GitHub**. Git będzie nam towarzyszyć przez cały semestr (a także i pewnie poza zajęciami), dlatego warto poświęcić mu odpowiednio dużo uwagi.
 
 ## Wstęp
 
-Git jest rozproszonym systemem pracy z kodem źródłowym. Jego najważniejsze cechy to:
+Git jest rozproszonym systemem wersjonowania pracy. Jego najważniejsze cechy to:
 
 * możliwość zapisywania stanu kodu źródłowego w określonym momencie
 * możliwość przywracania starych wersji kodu źródłowego
 * możliwość pracy w gałęziach ("branchach")
-* brak centralnego repozytorium kodu (repozytorium rozproszone)
+* brak centralnego repozytorium kodu (repozytorium rozproszone), co pozwala na lokalne wersjonowanie kodu bez wysyłania go na serwer
 
 ## Zadania do wykonania (4xp)
 
@@ -18,6 +18,8 @@ Do wykonania wszystkich ćwiczeń na tym laboratorium potrzebna będzie **jedyni
 
 - [GitKraken](https://www.gitkraken.com) - najbardziej zaawansowane narzędzie tego typu, wersja Pro jest darmowa dla studentów korzystających z [GitHub Student Developer Pack](https://education.github.com/pack) (bardzo polecam go sobie aktywować niezależnie od samego Gita!)
 - [SourceTree](https://www.sourcetreeapp.com) - popularny darmowy klient z podstawowymi funkcjami i wizualizacją repozytorium.
+
+W trakcie semestru będziemy korzystać z środowiska IntelliJ do tworzenia projektów w Javie. IntelliJ również umożliwia pracę z Gitem, można więc całkowicie zrezygnować z dodatkowych programów. Nie zalecamy jednak tego podejścia, szczególnie na początku przygody z Gitem, ponieważ IntelliJ opakowuje i ukrywa wiele operacji Git i łatwo stracić nad tym kontrolę. Najlepszym wyborem na program towarzyszący nauce Gita wydaje się obecnie GitKraken. 
 
 ### Ćwiczenia Git
 
@@ -30,8 +32,8 @@ Do wykonania wszystkich ćwiczeń na tym laboratorium potrzebna będzie **jedyni
 
 2. Stwórz nowe repozytorium i nazwij je odpowiednio (schemat nazywania poniżej) - będziesz w nim przechowywać rozwiązania zadań z kolejnych laboratoriów.
 
-   * nazwa repozytorium to PO_2023_[dzień][godzina]_[nazwisko studenta] - np. PO_2023_PON1500_BRZECZYSZCZYKIEWICZ lub PO_2023_WTO1820_PAPADOPOULOS.
-   * repozytorium może być prywatne lub publiczne. Na potrzeby naszych zajęć repozytoria powinny być **prywatne**.
+   * nazwa repozytorium to PO_2024_[dzień][godzina]_[nazwisko studenta] - np. PO_2024_PN1500_BRZECZYSZCZYKIEWICZ lub PO_2024_WT1820_PAPADOPOULOS. Dzień prosimy zapisać w formacie dwuliterowym bez polskich znaków (PN, WT, SR, CZ, PT),
+   * repozytorium może być prywatne lub publiczne. Na potrzeby naszych zajęć repozytoria powinny być **prywatne**,
    * możesz na tym etapie zaznaczyć opcję *Add a README file* - zainicjujesz w ten sposób repozytorium plikiem, którego zawartość będzie domyślna na głównej stronie repozytorium.
 
 3. Nadaj uprawnienia dostępu do repozytorium prowadzącemu zajęcia (*Settings --> Collaborators --> Add people*).
@@ -56,8 +58,11 @@ Do wykonania wszystkich ćwiczeń na tym laboratorium potrzebna będzie **jedyni
 
    W ten sposób prowadzący będzie mógł zobaczyć i ocenić Twoje zmiany (np. dodać komentarze w PR). Po sprawdzeniu i ocenieniu Lab PR-a należy scalić z główną gałęzią (przycisk ***Merge pull request*** w widoku PR). 
 
-   **Podobną procedurę będziemy stosować na wszystkich kolejnych laboratoriach. Pamiętaj by zawsze na początku pracy tworzyć branch z głównej gałęzi, commitować zmiany (liczba commitów nie ma znaczenia), a na koniec przygotować PR do sprawdzenia.**
-
+   **Podobną procedurę będziemy stosować na wszystkich kolejnych laboratoriach. Pamiętaj by zawsze na początku pracy tworzyć branch z głównej gałęzi, commitować zmiany (liczba commitów nie ma znaczenia), a na koniec przygotować PR do sprawdzenia. Więcej informacji na ten temat znajdziesz w dodatkowej instrukcji:**
+   
+   
+   [Praca z Git na kolejnych laboratoriach](git_workflow_tutorial.md)
+   
    
 
 ## Przydatne informacje

@@ -45,10 +45,16 @@ W trakcie semestru będziemy korzystać z środowiska IntelliJ do tworzenia proj
 6. Zmodyfikuj plik README.MD dodając do niego następujące informacje:
 
    1. Imię i nazwisko
+
    2. Grupę i godzinę zajęć
+
    3. Nazwę swojego zwierzaka
+
    4. Link do swojego profilu na https://gitexercises.fracz.com
-   5. Możesz też dodać dowolny dodatkowy tekst, to Twoje repo. ;) 
+
+   5. Możesz też dodać dowolny dodatkowy tekst, to Twoje repo. ;)
+
+      Uwaga: zanim zapiszesz nazwę swojego zwierzaka, [upewnij się czy nie jest ona już zajęta](https://aghedupl-my.sharepoint.com/:x:/g/personal/miidzik_agh_edu_pl/EbRk-hL6hWJKnESfA3NMlVEBJi-fSMmz-Z9pIOwQ7tpdkg?e=GwTsDz) żeby uniknąć kolizji z innymi studentami! Każdy zwierzak powinien być unikalny.
 
 7. Dodaj plik **.gitignore** i przygotuj go do pracy z środowiskiem IntelliJ - możesz skorzystać z [gotowego szablonu](https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore).
 
@@ -60,9 +66,9 @@ W trakcie semestru będziemy korzystać z środowiska IntelliJ do tworzenia proj
 
    **Podobną procedurę będziemy stosować na wszystkich kolejnych laboratoriach. Pamiętaj by zawsze na początku pracy tworzyć branch z głównej gałęzi, commitować zmiany (liczba commitów nie ma znaczenia), a na koniec przygotować PR do sprawdzenia. Więcej informacji na ten temat znajdziesz w dodatkowej instrukcji:**
    
-   
    [Praca z Git na kolejnych laboratoriach](git_workflow_tutorial.md)
    
+10. Po wykonaniu wszystkich ćwiczeń [zarejestruj swojego zwierzaka wypełniając formularz](https://forms.office.com/Pages/ResponsePage.aspx?id=PwOxgOAhgkq7wPBf3M07yF6m9cn7cIlCm9fFlCH8KDJUMzdIU0NaTzUyTkFLME5TUzBCVFJRUDVJUi4u). W ten sposób prowadzący będzie wiedział również, jak dostać się do Twojego repozytorium.
    
 
 ## Przydatne informacje

@@ -46,20 +46,20 @@ Będzie to wyglądało następująco:
 
    
 
-4. Aby zaliczyć przedmiot Twój zwierzak musi być **na koniec** co najmniej **Podlotem** oraz powinien zdobyć co najmniej **16xp** w trakcie Projektu. Ponadto musi on **wykluć się z Jaja** przed końcem laboratoriów. 
+4. Aby zaliczyć przedmiot Twój zwierzak musi być **na koniec** co najmniej **Podlotem** oraz powinien zdobyć co najmniej **16xp** w trakcie Projektu. Ponadto musi on **wykluć się z Jaja** przed końcem laboratoriów (*inkubacja*). 
 
 5. Dodatkowo w trakcie całego semestru będzie można zdobywać wraz z zwierzakiem łupy za wykonywanie dodatkowych, opcjonalnych aktywności. Łupy ułatwią zdobywanie xp, a nawet pozwolą pomnożyć jego wartość! **Wykonywanie dodatkowych aktywności to również jedyny sposób by zdobyć więcej niż 84xp, a co za tym idzie osiągnąć maksymalny poziom zwierzaka i ocenę 5.0.**
 
 6. Rodzaje zdobywanych łupów są zależne od momentu w semestrze. W pierwszej części kursu realizujemy laboratoria, z którymi związane są inne łupy niż z projektem, który zaczniemy po zakończeniu laboratoriów:
 
-   **I. Część laboratoryjna**
+   **I. Część laboratoryjna (*Inkubacja*)**
 
    |                                                              | Nazwa łupu | Znaczenie                                                    |
    | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ |
    | <img src="img/bonus_multiplier_lab.png" alt="marchew_lab"  width="100" /> | Marchewka  | **+10%** do sumy za lab z Javy (maks. 30%)<br /><br />*zdrowa alternatywa dla kija* |
-   | <img src="img/bonus_restore_test.png" alt="restore_lab"  width="100" /> | Weterynarz | odrobienie straconych  **2xp** za kartkówkę<br /><br />*darmowy zastrzyk wiedzy* |
+   | <img src="img/bonus_restore_test.png" alt="restore_lab"  width="100" /> | Weterynarz | **2xp** za kartkówkę (przeszłą lub przyszłą)<br /><br />*darmowy zastrzyk wiedzy* |
 
-   **II. Część projektowa**
+   **II. Część projektowa (*Eksploracja*)**
 
    |                                                              | Nazwa łupu              | Znaczenie                                          |
    | ------------------------------------------------------------ | ----------------------- | -------------------------------------------------- |
@@ -98,11 +98,15 @@ Nie, mnożniki działają zgodnie z ich oznaczeniami. W pierwszej części semes
 
 Nie, mnożą one jedynie punkty zdobywane w trakcie lab z Javy (8 spotkań).
 
-**Czy mogę zachować na później zdobytego weterynarza lub plaster?**
+**Czy weterynarz pozwala odrabiać zawalone kartkówki czy być zwolnionym z pisania kolejnych?**
 
-Nie, łupy aktywowane są niezwłocznie po zdobyciu. W szczególności jeśli zwierzak zdobył maksymalną liczbę xp za dotychczasowe kartkówki, wizyta u weterynarza nie przynosi żadnego efektu. 
+Tak. 
 
-Z kolei plastry działają również na ułamki straconych xp, regenerując maksymalnie 2xp. Przykładowo, jeśli z Lab1 zdobyliśmy 3 z 4xp, a z Lab2 3.5 z 4xp to zastosowanie plastra uzupełni nam brakujące 1.5xp. 
+W zależności od sytuacji, weterynarz albo naprawia utracone punkty albo pomaga zdobyć punkty za kolejną kartkówkę. Można jednak mimo wszystko przystąpić do kartkówki - wtedy weterynarz zaaplikuje się do kolejnej, jeśli bieżąca zostanie zaliczona.
+
+**Czy plastry działają tylko na pojedyncze laborki?**
+
+Plastry działają również na ułamki straconych xp w różnych laborkach, regenerując maksymalnie 2xp. Przykładowo, jeśli z Lab1 zdobyliśmy 3 z 4xp, a z Lab2 3.5 z 4xp to zastosowanie plastra uzupełni nam brakujące 1.5xp. 
 
 **Skąd wiadomo jaki kolor skrzynki otrzymam za daną aktywność?**
 

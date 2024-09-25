@@ -50,7 +50,7 @@ Będzie to wyglądało następująco:
 
 5. Dodatkowo w trakcie całego semestru będzie można zdobywać wraz z zwierzakiem łupy za wykonywanie dodatkowych, opcjonalnych aktywności. Łupy ułatwią zdobywanie xp, a nawet pozwolą pomnożyć jego wartość! **Wykonywanie dodatkowych aktywności to również jedyny sposób by zdobyć więcej niż 84xp, a co za tym idzie osiągnąć maksymalny poziom zwierzaka i ocenę 5.0.**
 
-6. Rodzaje zdobywanych łupów:
+6. Rodzaje zdobywanych łupów są zależne od momentu w semestrze. W pierwszej części kursu realizujemy laboratoria, z którymi związane są inne łupy niż z projektem, który zaczniemy po zakończeniu laboratoriów:
 
    **I. Część laboratoryjna**
 

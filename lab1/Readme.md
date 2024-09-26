@@ -17,7 +17,7 @@ Najważniejsze zadania:
 
 1. Uruchom program IntelliJ.
 
-2. Utwórz nowy projekt o nazwie `oolab` typu **Gradle**. Pamiętaj by kreatorze projektu ustawić pole `Language` na `Java`, `Build system` na `Gradle`  (a **nie**  na `IntelliJ`), a `Gradle DSL` najlepiej na `Groovy`. Możesz wybrać (lub w razie potrzeby pobrać) najnowszą wersję JDK, ale zalecamy **17**, ponieważ jest to wersja LTS i  instrukcje do laboratoriów są o nią oparte. 
+2. Utwórz nowy projekt o nazwie `oolab` typu **Gradle**. Pamiętaj by kreatorze projektu ustawić pole `Language` na `Java`, `Build system` na `Gradle`  (a **nie**  na `IntelliJ`), a `Gradle DSL` najlepiej na `Groovy`. Możesz wybrać (lub w razie potrzeby pobrać) najnowszą wersję JDK, ale zalecamy **21**, ponieważ jest to wersja LTS i  instrukcje do laboratoriów są o nią oparte. 
 
 3. Po utworzeniu projektu poczekaj aż IntelliJ zainicjuje projekt - może to chwilę potrwać. Jeśli wszystko poszło ok, po lewej stronie zobaczysz drzewo katalogów. Katalog `java` (w `src/main`) powinien mieć niebieską ikonę (oznacza to, że został wykryty jako katalog ze źródłami po zainicjowaniu przez Gradle).
 
@@ -89,7 +89,7 @@ Najważniejsze zadania:
     ```
     java {
         toolchain {
-            languageVersion.set(JavaLanguageVersion.of(17))
+            languageVersion.set(JavaLanguageVersion.of(21))
         }
     }
     ```
@@ -97,7 +97,7 @@ Najważniejsze zadania:
 
 23. Otwórz konsolę (np. terminal/PowerShell).
 
-24. Wywołaj komendę `export JAVA_HOME=/usr/lib/jvm/java-17` (pod Windows trzeba będzie ustawić zmienną środowiskową wskazującą na katalog, w którym zainstalowana jest Java). **Komendę trzeba zaadaptować do lokalnej instalacji Javy!**
+24. Wywołaj komendę `export JAVA_HOME=/usr/lib/jvm/java-21` (pod Windows trzeba będzie ustawić zmienną środowiskową wskazującą na katalog, w którym zainstalowana jest Java). **Komendę trzeba zaadaptować do lokalnej instalacji Javy!**
 
 25. Uruchom program poleceniem `./gradlew run --args="f l"` (lub `gradlew.bat ...` w systemie Windows)
 

@@ -63,7 +63,7 @@ Będzie to wyglądało następująco:
 
    |                                                              | Nazwa łupu              | Znaczenie                                          |
    | ------------------------------------------------------------ | ----------------------- | -------------------------------------------------- |
-   | <img src="img/bonus_multiplier_proj.png" alt="marchew_proj"  width="100" /> | Pietruszka | **+10%** do sumy za projekt (maks. 40%)<br /><br />*prawie jak marchewka, tylko że biała* |
+   | <img src="img/bonus_multiplier_proj.png" alt="marchew_proj"  width="100" /> | Pietruszka | **+10%** do sumy za projekt (maks. 40%)<br /><br />*to o nią toczy się gra* |
    | <img src="img/bonus_restore_lab.png" alt="restore_lab"  width="100" /> | Plaster    | odrobienie straconych **2xp** za lab<br /><br />*na wypadek wystąpienia dziur w kodzie* |
 
 7. Wykonanie dodatkowej aktywności skutkuje otrzymaniem skrzynki z łupami. W zależności od rodzaju aktywności skrzynka może mieć różnią wartość, a co za tym idzie - mieć różną liczbę łupów do wyboru. Brązowe skrzynki zawierają jeden łup. Srebrne pozwalają wybrać jeden z dwóch (w momencie zdobycia skrzynki to Ty decydujesz, jaki łup zdobywasz). Złote skrzynki pozwalają na zdobycie dwóch łupów. Każdy łup zostaje aktywowany niezwłocznie po zdobyciu.
@@ -81,6 +81,14 @@ Będzie to wyglądało następująco:
    - **Wydarzenia specjalne** - podobnie jak zadania dodatkowe będą polegały na wykonaniu aktywności poza zajęciami. Będą one miały jednak określony czas trwania, dłuższy niż tydzień. Przewidujemy **2 takie wydarzenia**, każde warte **2 skrzynki**.
 
 ### FAQ
+
+**Ile mam czasu na wykonanie zadania z lab?**
+
+Domyślnie każde zadanie wykonujemy w ciągu tygodnia od jego zadania. W specyficznych przypadkach (np. lab wyprzedził wykład) prowadzący może przedłużyć ten czas. Dokładny deadline zawsze ustalamy z prowadzącym lab.
+
+**Czy muszę być obecny na zajęciach?**
+
+Tak, należy przychodzić na zajęcia laboratoryjne i projektowe. Dopuszczalne są 2 nieusprawiedliwione nieobecności w trakcie semestru. Każdą kolejną należy usprawiedliwić, żeby zaliczyć przedmiot. Kartkówki, które przepadły przez nieobecność można odrobić w przypadku pokazania sensownego usprawiedliwienia (np. zwolnienie lekarskie, udział w konferencji itp). 
 
 **Czego trzeba nauczyć się na kartkówkę?**
 

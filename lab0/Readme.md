@@ -80,7 +80,7 @@ W celu przygotowania kodu źródłowego do pracy z gitem należy wykonać nastę
 1. `git init` (zainicjowanie plików Gita, w głównym katalogu naszej aplikacji, tworzony jest katalog `.git`, który
    zawiera repozytorium kodu źródłowego)
    
-2. `echo 'out' > .gitignore` (dodanie katalogu `out` do listy ingorowanych plików/katalogów)
+2. `echo 'out' > .gitignore` (dodanie katalogu `out` do listy ignorowanych plików/katalogów)
 
    **Uwaga:** Powyższe polecenie w PowerShellu powoduje problemy. W tej sytuacji zalecane jest po prostu utworzenie pliku
    `.gitignore` w edytorze tekstu i wpisanie do niego linii o treści `out`.

@@ -75,7 +75,7 @@ W trakcie semestru będziemy korzystać z środowiska IntelliJ do tworzenia proj
 
 ### Polecenia do wykonania za pierwszym razem (jeśli projekt nie jest w żadnym repozytorium)
 
-W celu przygotowania kodu źródłowego do bracy z gitem należy wykonać następujące polecenia
+W celu przygotowania kodu źródłowego do pracy z gitem należy wykonać następujące polecenia
 
 1. `git init` (zainicjowanie plików Gita, w głównym katalogu naszej aplikacji, tworzony jest katalog `.git`, który
    zawiera repozytorium kodu źródłowego)

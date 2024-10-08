@@ -1,6 +1,6 @@
 # Lab 2: Model obiektowy
 
-Celem laboratorium jest zapoznanie się z modelem obiektowym Javy, na przykładzie klasy reprezentującej dwuwymiarowy
+Celem laboratorium jest zapoznanie się z modelem obiektowym Javy, na przykładzie klasy reprezentującej dwuwymiarowy
 wektor. Wprowadzamy też narzędzia do pisania testów jednostkowych.
 
 Najważniejsze zadania:
@@ -17,8 +17,8 @@ Uwaga: dla przejrzystości pliki z klasami `Vector2d` oraz `MapDirection` należ
 1. Utwórz klasę `Vector2d`, która:
 
    * posiada dwa prywatne pola `x` i `y` typu `int`, które nie mogą być modyfikowane (`final`),
-   * posiada konstruktor akceptujący parametry `x` i `y`, która są przypisywane do pól `x` i `y`,
-   * posiada gettery umożliwiające odczyt wartości utworzonych atrybutów
+   * posiada konstruktor akceptujący parametry `x` i `y`, które są przypisywane do pól `x` i `y`,
+   * posiada gettery umożliwiające odczyt wartości utworzonych atrybutów,
    * posiada metodę `String toString()`, która zamienia pozycję na napis `(x,y)`, np. dla `x = 1` oraz `y = 2`, napis ma postać
      `(1,2)`,
    * posiada metodę `boolean precedes(Vector2d other)`, akceptującą inny obiekt tej klasy i zwracającą wartość `true`, jeśli oba pola mają
@@ -35,7 +35,7 @@ Uwaga: dla przejrzystości pliki z klasami `Vector2d` oraz `MapDirection` należ
    * posiada metodę `Vector2d lowerLeft(Vector2d other)`, która akceptuje inny punkt i zwraca obiekt klasy `Vector2d` posiadający te składowe
      punktów, które mają mniejsze wartości dla odpowiednich osi (tzn. lewy dolny róg prostokąta),
    * posiada metodę `Vector2d opposite()`, która zwraca nowy obiekt tej klasy, posiadający zmienione znaki obu składowych,
-   * posiada metodę `boolean equals(Object other)` która zwraca prawdę, jeśli obie pozycje są sobie równe (zwróć uwagę na typ parametru). Uwaga: zastanów się, jaką inną metodę trzeba dodać po zdefiniowaniu własnego `equals`.
+   * posiada metodę `boolean equals(Object other)`, która zwraca prawdę, jeśli obie pozycje są sobie równe (zwróć uwagę na typ parametru). **Uwaga:** Zastanów się, jaką inną metodę trzeba dodać po zdefiniowaniu własnego `equals`.
 
 2. Poniższy obrazek ilustruje metody `precedes` i `follows`. `v1` poprzedza (precedes) `v2` oraz `v3`. `v2` poprzedza `v3`.
    Wszystkie wektory poprzedzają również same siebie (relacja ta jest zwrotna). `v3` następuje po (follows) `v2` oraz
@@ -59,14 +59,15 @@ Uwaga: dla przejrzystości pliki z klasami `Vector2d` oraz `MapDirection` należ
 
 ### Klasa `MapDirection`
 
-6. Utwórz typ wyliczeniowy `MapDirection` z czterema kierunkami: `NORTH, SOUTH, WEST, EAST`, który:
+6. Utwórz typ wyliczeniowy `MapDirection` z czterema kierunkami: `NORTH`, `SOUTH`, `WEST` i `EAST`, który:
    * posiada metodę `toString`, która dla kierunku `EAST` zwraca łańcuch `Wschód`, dla `WEST` - `Zachód`, itd.
    * posiada metodę `next`, która dla kierunku `EAST` zwraca `SOUTH` (kolejny kierunek zgodnie z ruchem wskazówek
-     zegara), itd.
+     zegara) itd.
    * posiada metodę `previous`, która dla kierunku `EAST` zwraca `NORTH` (kolejny kierunek zgodnie z ruchem przeciwnym
-     do ruchu wskazówek zegara), itd.
+     do ruchu wskazówek zegara) itd.
    * posiada metodę `toUnitVector`, która zwraca jednostkowy wektor przemieszczenia typu `Vector2d` zgodny z orientacją na mapie,
      tzn. dla `NORTH` wektor ten powinien mieć wartość `(0,1)`, dla `WEST` `(-1,0)`, itd.
+
 7. Sprawdź w metodzie `main` czy metody te działają zgodnie z opisem.
 
 
@@ -75,12 +76,12 @@ Uwaga: dla przejrzystości pliki z klasami `Vector2d` oraz `MapDirection` należ
 
 1. Utwórz klasę `MapDirectionTest` w katalogu `src/test/java` w pakiecie `agh.ics.oop.model`.
 
-2. Zaimplementuj test weryfikujący poprawność działania metody `next()`, dla wszystkich przypadków (dodaj adnotację
+2. Zaimplementuj test weryfikujący poprawność działania metody `next()` dla wszystkich przypadków (dodaj adnotację
    `@Test` przed deklaracją metody).
 
-3. Uruchom test korzystając z zielonych trójkątów po lewej stronie.
+3. Uruchom test, korzystając z zielonych trójkątów po lewej stronie.
 
-4. Zaimplementuj test weryfikujący poprawność działania metody `previous()`, dla wszystkich przypadków.
+4. Zaimplementuj test weryfikujący poprawność działania metody `previous()` dla wszystkich przypadków.
 
 5. Utwórz klasę `Vector2dTest`.
 
@@ -152,10 +153,10 @@ Uwaga: dla przejrzystości pliki z klasami `Vector2d` oraz `MapDirection` należ
     ```
 
     Należy również pamiętać, że zmiana metody `equals` powinna powodować zmianę metody `hashCode`, w przeciwnym razie
-umieszczenie obiektów w kolekcji takiej jak `Set` będzie niezgodne z semantyką metody `equals`.
+umieszczenie obiektów w kolekcji takiej jak `Set` będzie niezgodne z semantyką metody `equals` (czyt. dużo debuggowania).
 
 
-* Definicję typu wyliczeniowego można rozszerzać dodając do niego pola i metody. Wymaga to umieszczenia średnika po ostatniej
+* Definicję typu wyliczeniowego można rozszerzać, dodając do niego pola i metody. Wymaga to umieszczenia średnika po ostatniej
   wartości typu, np.:
     ```java
     enum MapDirection {
@@ -176,7 +177,7 @@ umieszczenie obiektów w kolekcji takiej jak `Set` będzie niezgodne z semantyk�
 
 * Metody testujące posiadają adnotację `@Test`.
 
-* W metodach testujących można użyć m. in. następujących asercji:
+* W metodach testujących można użyć m.in. następujących asercji:
   * `assertEquals(a, b)` - weryfikuje czy obiekty `a` i `b` są sobie równe (korzystając z metody `equals`),
   * `assertTrue(a)` - weryfikuje czy wartość logiczna `a` jest prawdą,
   * `assertFalse(a)` - weryfikuje czy wartość logiczna `a` jest fałszem.

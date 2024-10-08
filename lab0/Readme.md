@@ -1,6 +1,6 @@
 # Lab 0: Git - rozproszony system kontroli wersji
 
-W tym ćwiczeniu zapoznamy się z jednym z systemem **Git**, jednym z najbardziej popularnych systemów do wersjonowania kodu źródłowego
+W tym ćwiczeniu zapoznamy się z systemem **Git**, jednym z najbardziej popularnych systemów do wersjonowania kodu źródłowego
 oraz hostingiem do projektów **GitHub**. Git będzie nam towarzyszyć przez cały semestr (a także i pewnie poza zajęciami), dlatego warto poświęcić mu odpowiednio dużo uwagi.
 
 ## Wstęp
@@ -14,12 +14,12 @@ Git jest rozproszonym systemem wersjonowania pracy. Jego najważniejsze cechy to
 
 ## Zadania do wykonania (4xp)
 
-Do wykonania wszystkich ćwiczeń na tym laboratorium potrzebna będzie **jedynie zainstalowany Git oraz terminal**. Jeśli nie jesteś fanem pracy z samą konsolą warto zaopatrzyć się też w aplikację z GUI do obsługi Git:
+Do wykonania wszystkich ćwiczeń na tym laboratorium potrzebne będą **jedynie zainstalowany Git oraz terminal**. Jeśli nie jesteś fanem pracy z samą konsolą warto zaopatrzyć się też w aplikację z GUI do obsługi Git:
 
 - [GitKraken](https://www.gitkraken.com) - najbardziej zaawansowane narzędzie tego typu, wersja Pro jest darmowa dla studentów korzystających z [GitHub Student Developer Pack](https://education.github.com/pack) (bardzo polecam go sobie aktywować niezależnie od samego Gita!)
 - [SourceTree](https://www.sourcetreeapp.com) - popularny darmowy klient z podstawowymi funkcjami i wizualizacją repozytorium.
 
-W trakcie semestru będziemy korzystać z środowiska IntelliJ do tworzenia projektów w Javie. IntelliJ również umożliwia pracę z Gitem, można więc całkowicie zrezygnować z dodatkowych programów. Nie zalecamy jednak tego podejścia, szczególnie na początku przygody z Gitem, ponieważ IntelliJ opakowuje i ukrywa wiele operacji Git i łatwo stracić nad tym kontrolę. Najlepszym wyborem na program towarzyszący nauce Gita wydaje się obecnie GitKraken. 
+W trakcie semestru będziemy korzystać ze środowiska IntelliJ do tworzenia projektów w Javie. IntelliJ również umożliwia pracę z Gitem, można więc całkowicie zrezygnować z dodatkowych programów. Nie zalecamy jednak tego podejścia, szczególnie na początku przygody z Gitem, ponieważ IntelliJ opakowuje i ukrywa wiele operacji Gita i łatwo stracić nad tym kontrolę. Najlepszym wyborem na program towarzyszący nauce Gita wydaje się obecnie GitKraken. 
 
 ### Ćwiczenia Git
 
@@ -42,7 +42,7 @@ W trakcie semestru będziemy korzystać z środowiska IntelliJ do tworzenia proj
 
 5. Utwórz *branch* o nazwie **lab0** i przełącz się na niego.
 
-6. Zmodyfikuj plik README.MD dodając do niego następujące informacje:
+6. Zmodyfikuj plik README.MD, dodając do niego następujące informacje:
 
    1. Imię i nazwisko
 
@@ -54,9 +54,9 @@ W trakcie semestru będziemy korzystać z środowiska IntelliJ do tworzenia proj
 
    5. Możesz też dodać dowolny dodatkowy tekst, to Twoje repo. ;)
 
-   **Uwaga**: zanim zapiszesz nazwę swojego zwierzaka, [upewnij się czy nie jest ona już zajęta](https://aghedupl-my.sharepoint.com/:x:/g/personal/miidzik_agh_edu_pl/EbRk-hL6hWJKnESfA3NMlVEBJi-fSMmz-Z9pIOwQ7tpdkg?e=GwTsDz) żeby uniknąć kolizji z innymi studentami! Każdy zwierzak powinien być unikalny. Podlinkowany arkusz aktualizuje się automatycznie co jakiś czas.
+   **Uwaga**: zanim zapiszesz nazwę swojego zwierzaka, [upewnij się czy nie jest ona już zajęta](https://aghedupl-my.sharepoint.com/:x:/g/personal/miidzik_agh_edu_pl/EbRk-hL6hWJKnESfA3NMlVEBJi-fSMmz-Z9pIOwQ7tpdkg?e=GwTsDz), żeby uniknąć kolizji z innymi studentami! Każdy zwierzak powinien być unikalny. Podlinkowany arkusz aktualizuje się automatycznie co jakiś czas.
 
-7. Dodaj plik **.gitignore** i przygotuj go do pracy z środowiskiem IntelliJ - możesz skorzystać z [gotowego szablonu](https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore).
+7. Dodaj plik **.gitignore** i przygotuj go do pracy ze środowiskiem IntelliJ - możesz skorzystać z [gotowego szablonu](https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore).
 
 8. Zrób *commit* i *push* swoich zmian na zdalny branch o tej samej nazwie (*origin/lab0*).
 
@@ -75,9 +75,9 @@ W trakcie semestru będziemy korzystać z środowiska IntelliJ do tworzenia proj
 
 ### Polecenia do wykonania za pierwszym razem (jeśli projekt nie jest w żadnym repozytorium)
 
-W celu przygotowania kodu źródłowego do bracy z gitem należy wykonać następujące polecenia
+W celu przygotowania kodu źródłowego do pracy z Gitem należy, będąc w głównym katalogu naszej aplikacji, wykonać następujące polecenia
 
-1. `git init` (zainicjowanie plików Gita, w głównym katalogu naszej aplikacji, tworzony jest katalog `.git`, który
+1. `git init` (zainicjowanie plików Gita: w głównym katalogu naszej aplikacji, tworzony jest katalog `.git`, który
    zawiera repozytorium kodu źródłowego)
    
 2. `echo 'out' > .gitignore` (dodanie katalogu `out` do listy ingorowanych plików/katalogów)
@@ -103,22 +103,22 @@ Alternatywnie
 
 1. IntelliJ -> Import from Git
 
-W poniższych poleceniach fragment ujęty w nawiasy ostre, np. `<file-name>` należy zastąpić **innym** łańcuchem znaków.
+W poniższych poleceniach fragment ujęty w nawiasy ostre, np. `<file-name>`, należy zastąpić **innym** łańcuchem znaków.
 
 ### Zatwierdzenie zmian na koniec pracy
 
-1. `git add <file-name>` (dodanie zmian w pliku `<file-name>` do *indeksu* - operację powtórzyć dla każdego modyfikowanego i nowego pliku)
+1. `git add <file-name>` (dodanie zmian w pliku `<file-name>` do *indeksu* - operację powtórzyć dla każdego modyfikowanego i nowego pliku, lub użyć wyrażenia typu `git add *.java`)
 2. `git commit -m '<Meaningful description of change>'` (*zatwierdzenie* zmian znajdujących się w indeksie)
-3. `git push origin <branch-name>` (wysłanie zmian do zdalnego repozytorium na gałąź `<branch-name>`)
+3. `git push origin <branch-name>` (wysłanie zmian do zdalnego repozytorium na gałąź `<branch-name>`; jeśli tworzymy nowy branch może być konieczne dodanie przełącznika `--set-upstream-to`)
 
 
 ### Aktualizowanie się względem zdalnej gałęzi `master`
 
-1. `git remote add <remote-repo-name> <remote-repo-address>` (dodanie zdalnego repozytorium).
+1. `git remote add <remote-repo-name> <remote-repo-address>` (dodanie zdalnego repozytorium; jeśli korzystamy z jednego zdalnego repozytorum, to zwyczajowo ma ono nazwę `origin`).
 2. `git checkout master` (przełączenie się do lokalnej gałęzi master).
-3. `git pull <remote-repo-name> master` (pobranie do lokalnej gałęzi `master` zmian z oficjalnej gałęzi `master`)
-4. `git checkout <feature-branch>` (przełączenie się do gałęzi na której pracowaliśmy).
-5. `git rebase master` (przepięcie commitów z obecnej gałęzi tak by poprzedzał je ostatni commit z `master`).
+3. `git pull <remote-repo-name> master` (pobranie do lokalnej gałęzi `master` zmian ze zdalnej gałęzi `master`)
+4. `git checkout <feature-branch>` (przełączenie się do gałęzi, na której pracowaliśmy).
+5. `git rebase master` (przepięcie commitów z obecnej gałęzi tak, by poprzedzał je ostatni commit z `master`).
 6. Rozwiązanie konfliktów, ewentualne wprowadzenie zmian.
 7. `git push origin <feature-branch> -f` (wysłanie zaktualizowanej wersji do zdalnej gałęzi `<feature-branch>` w naszym
    repozytorium).

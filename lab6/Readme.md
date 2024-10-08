@@ -78,7 +78,7 @@ Najważniejsze zadania:
     wiele zagnieżdżonych wywołań funkcji, a i tak blok `try` przechwyci taki wyjątek, pod warunkiem, że nie zostanie on obsłużony
     na niższym poziomie.
 
-* Wyjątki w Javie dzielą się na **checked** i **unchecked**. W pierwszym przypadku konieczna jest ich deklaracja (kompilator nie pozwoli zostawić rzuconego wyjątek bez jego obsługi), w drugim - wyjątki mogą być rzucane bez konieczności ich definiowania lub łapania (ale niezłapanie wyjątku wiąże się z przerwaniem wątku lub programu). Aby stworzyć wyjątek typu *checked*, wystarczy podziedziczyć po klasie `Exception`. Wyjątki *unchecked* dziedziczą z kolei po `RuntimeException`.
+* Wyjątki w Javie dzielą się na **checked** i **unchecked**. W pierwszym przypadku konieczna jest ich deklaracja (kompilator nie pozwoli zostawić rzuconego wyjątku bez jego obsługi), w drugim - wyjątki mogą być rzucane bez konieczności ich definiowania lub łapania (ale niezłapanie wyjątku wiąże się z przerwaniem wątku lub programu). Aby stworzyć wyjątek typu *checked*, wystarczy podziedziczyć po klasie `Exception`. Wyjątki *unchecked* dziedziczą z kolei po `RuntimeException`.
 
 * Wzorce projektowe są koncepcją występującą w programowaniu obiektowym polegającą na tym, że określona klasa problemów
   może być rozwiązana w schematyczny sposób. Rozwiązanie problemu jednak nie może być (najczęściej) zawarte w jednej

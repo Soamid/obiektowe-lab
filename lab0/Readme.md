@@ -114,7 +114,7 @@ W poniższych poleceniach fragment ujęty w nawiasy ostre, np. `<file-name>`, na
 
 ### Aktualizowanie się względem zdalnej gałęzi `master`
 
-1. `git remote add <remote-repo-name> <remote-repo-address>` (dodanie zdalnego repozytorium; jeśli korzystamy z jednego zdalnego repozytorum, to zwyczajowo ma ono nazwę `origin`).
+1. `git remote add <remote-repo-name> <remote-repo-address>` (dodanie zdalnego repozytorium; jeśli korzystamy z jednego zdalnego repozytorium, to zwyczajowo ma ono nazwę `origin`).
 2. `git checkout master` (przełączenie się do lokalnej gałęzi master).
 3. `git pull <remote-repo-name> master` (pobranie do lokalnej gałęzi `master` zmian ze zdalnej gałęzi `master`)
 4. `git checkout <feature-branch>` (przełączenie się do gałęzi, na której pracowaliśmy).

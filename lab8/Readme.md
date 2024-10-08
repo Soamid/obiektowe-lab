@@ -107,7 +107,7 @@ Najważniejsze zadania:
 
    **Uwaga o asynchroniczności:** JavaFX pracuje w swoim własnym, dedykowanym wątku, który cyklicznie rysuje aktualny stan kontrolek. Jeśli w tym samym wątku wywołamy dłuższą logikę, np. symulację, to UI będzie zajęty (zatnie się), dopóki symulacja się nie zakończy. Z tego względu konieczne jest wywoływanie symulacji asynchronicznie. Możesz tutaj skorzystać z `SimulationEngine` z poprzednich zajęć. Konieczne są tutaj dwa elementy:
 
-   - Pauzy między kolejnymi ruchami symulacji - dodaj w odpowiednim miejscu `Simulation` wywołanie `Thread.sleep(500)`. Bez tego możesz nie zobaczyć kolejnych ruchów, bo symulacja wywoła się zbyt szybko. **Uwaga:** Metoda `sleep` może rzucić `IntrruptedException`. Zastanów się, co z nim zrobić. 
+   - Pauzy między kolejnymi ruchami symulacji - dodaj w odpowiednim miejscu `Simulation` wywołanie `Thread.sleep(500)`. Bez tego możesz nie zobaczyć kolejnych ruchów, bo symulacja wywoła się zbyt szybko. **Uwaga:** Metoda `sleep` może rzucić `InterruptedException`. Zastanów się, co z nim zrobić. 
 
    - Aktualizacja wątku UI - jeśli wywołasz metodę `drawMap()` z innego wątku niż wątek graficzny, dostaniesz błąd o treści `java.lang.IllegalStateException: Not on FX application thread`. TYLKO wątek graficzny może zmieniać kontrolki, dlatego konieczne jest zakolejkowanie takiego rysowania w wątku graficznym. Wystarczy w tym celu opakować rysowanie w ten sposób:
      ```java

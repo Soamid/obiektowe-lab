@@ -1,6 +1,6 @@
 # Lab 4: Interfejsy i mapy
 
-Celem laboratorium jest zapoznanie się z mechanizmem interfejsów oraz specjalnym typem struktury danych do przechowywania wielu obiektów - mapą.
+Celem laboratorium jest zapoznanie się z mechanizmem interfejsów oraz specjalnym typem struktury danych do przechowywania wielu obiektów - mapą.
 
 Najważniejsze zadania:
 
@@ -20,7 +20,7 @@ Najważniejsze zadania:
 4. Uzupełnij brakującą logikę w `RectangularMap` zgodnie z wytycznymi:
 
    * definiuje prostokątną mapę - posiada szerokość oraz wysokość,
-   * implementuje interfejs `WorldMap`
+   * implementuje interfejs `WorldMap`,
    * w konstruktorze akceptuje dwa parametry `width` oraz `height` wskazujące szerokość oraz wysokość mapy (możesz założyć
      że otrzymane wartości są poprawne),
    * umożliwia poruszanie się w obrębie zdefiniowanego prostokąta (jak w laboratorium 3),
@@ -33,33 +33,33 @@ Najważniejsze zadania:
 
 5. Zmodyfikuj klasę `Animal`:
 
-     * metoda `move()` powinna od teraz przyjmować `MoveValidator` i używać go do sprawdzania, czy zwierzę może zmienić swoją pozycję na wcześniej wyliczoną. Wykorzystaj ten argument podczas realizacji ruchu w metodzie  `RectangularMap.move()`.
-     * zmodyfikuj metodę `toString` tak by zwracała jedynie schematyczną orientację zwierzęcia w postaci łańcucha składającego się z jednego znaku, Np. jeśli zwierzę ma orientację północną, to metoda `toString()` powinna zwracać łańcuch "N" albo "^".
+     * metoda `move()` powinna od teraz przyjmować `MoveValidator` i używać go do sprawdzania, czy zwierzę może zmienić swoją pozycję na wcześniej wyliczoną. Wykorzystaj ten argument podczas realizacji ruchu w metodzie `RectangularMap.move()`.
+     * zmodyfikuj metodę `toString` tak, by zwracała jedynie schematyczną orientację zwierzęcia w postaci łańcucha składającego się z jednego znaku, Np. jeśli zwierzę ma orientację północną, to metoda `toString()` powinna zwracać łańcuch "N" albo "^".
 
-6. Zmodyfikuj klasę `Simulation` tak by przyjmowała w konstruktorze również obiekt `WorldMap`. Następnie popraw realizację metody `run()` tak, by ruch odbywał się za pośrednictwem mapy. Po każdym ruchu wypisz aktualny stan mapy.
+6. Zmodyfikuj klasę `Simulation` tak, by przyjmowała w konstruktorze również obiekt `WorldMap`. Następnie popraw realizację metody `run()` tak, by ruch odbywał się za pośrednictwem mapy. Po każdym ruchu wypisz aktualny stan mapy.
 7. Dodaj testy integracyjne weryfikujące, że implementacja jest poprawna. 
 
 
 
 ## Zadanie dodatkowe (<img src="../img/reward_silver.png" alt="srebrna skrzynka" width="50" align="center" />)
 
-Interfejs `WorldMap` zakłada, że mapa może przechowywać jedynie zwierzęta, a pozycje zawsze wyrażone są jako dwuwymiarowe pozycje. Te założenia można poluzować wprowadzając parametryzację i typy generyczne.
+Interfejs `WorldMap` zakłada, że mapa może przechowywać jedynie zwierzęta, a pozycje zawsze wyrażone są jako dwuwymiarowe wektory. Te założenia można poluzować, wprowadzając parametryzację i typy generyczne.
 
 **Uwaga: to zadanie najlepiej robić na osobnym branchu i nie scalać go z `main` - może być trudne w utrzymaniu przy kolejnych laborkach. Najlepiej zacząć realizację zadania od stworzenia brancha `lab4-bonus` z brancha `lab4` (z miejsca, gdzie podstawowa część laborki jest już gotowa). W celu oddania zadania bonusowego wystarczy wtedy utworzyć pull request z `lab4-bonus` do `lab4`**
 
-1. Zmodyfikuj interfejs `WorldMap` tak by mapa mogła przechowywać dowolne obiekty `T` na pozycjach typu `P`. Deklaracja typu powinna wyglądać tak: `WorldMap<T, P>`. Dostosuj do tego założenia wszystkie metody w interfejsie.
-2. Popraw klasę `RectangularMap` tak by implementowała interfejs z odpowiednimi parametrami typów.
-3. Ogranicz `Simulation` tak by nadal przyjmowało jedynie mapy zwierząt z dwuwymiarowymi pozycjami. 
-4. Stwórz dodatkową implementację `TextMap`, która będzie przechowywała napisy `String` na pozycjach określonych w jednym wymiarze (liczba całkowita). Deklaracja typu dla takiej mapy to `WorldMap<String, Integer>`.  Mapa powinna spełniać założenia:
+1. Zmodyfikuj interfejs `WorldMap` tak, by mapa mogła przechowywać dowolne obiekty `T` na pozycjach typu `P`. Deklaracja typu powinna wyglądać tak: `WorldMap<T, P>`. Dostosuj do tego założenia wszystkie metody w interfejsie.
+2. Popraw klasę `RectangularMap` tak, by implementowała interfejs z odpowiednimi parametrami typów.
+3. Ogranicz `Simulation` tak, by nadal przyjmowało jedynie mapy zwierząt z dwuwymiarowymi pozycjami. 
+4. Stwórz dodatkową implementację `TextMap`, która będzie przechowywała napisy `String` na pozycjach określonych w jednym wymiarze (liczba całkowita). Deklaracja typu dla takiej mapy to `WorldMap<String, Integer>`. Mapa powinna spełniać założenia:
    - Mapa nie ma górnej granicy - dokładanie nowego napisu zawsze wstawia go na koniec mapy.
-   - Przemieszczanie napisu jest możliwe jedynie w obecnych granicach `<0, N>` (gdzie `N` - liczba elementów w mapie). Przesuwany napis zamienia się miejscami z sąsiadem - w przypadku ruchu "na wschód" z sąsiadem z prawej (o indeksie o 1 wyższym), a "na zachód" z lewej. Np. dla mapy `["Ala", "ma", "sowoniedźwiedzia"]` przesunięcie napisu `"ma"` na wschód powinno dać efekt: `["Ala", "sowoniedźwiedzia", "ma"]`. Dalsze przemieszczanie wyrazu `"ma"` w prawo nie jest już możliwe. 
+   - Przemieszczanie napisu jest możliwe jedynie w obecnych granicach `<0, N-1>` (gdzie `N` - liczba elementów w mapie). Przesuwany napis zamienia się miejscami z sąsiadem - w przypadku ruchu "na wschód" z sąsiadem z prawej (o indeksie o 1 wyższym), a "na zachód" z lewej. Np. dla mapy `["Ala", "ma", "sowoniedźwiedzia"]` przesunięcie napisu `"ma"` na wschód powinno dać efekt: `["Ala", "sowoniedźwiedzia", "ma"]`. Dalsze przemieszczanie wyrazu `"ma"` w prawo nie jest już możliwe. 
    - Napis może się przemieszczać do przodu i tyłu `FORWARD`/`BACKWARD` tylko w orientacjach `EAST`/`WEST`, w pozostałych przypadkach ruch jest ignorowany. 
 5. Przetestuj nową implementację mapy.
 
 ## Przydatne informacje
 
 * Mechanizm interfejsów pozwala na określenie pewnego zestawu metod, które muszą być implementowane przez określony typ.
-  Interfejs `WorldMap` jest tego przykładem - określa on sposób interakcji mapy z zwierzętami oraz klasą `MapVisualizer`. Zarówno interfejsy, jak i klasa są do pobrania z folderu z konspektem - wykorzystasz je w swoim projekcie.
+  Interfejs `WorldMap` jest tego przykładem - określa on sposób interakcji mapy ze zwierzętami oraz klasą `MapVisualizer`. Zarówno interfejsy, jak i klasa są do pobrania z folderu z konspektem - wykorzystasz je w swoim projekcie.
 
 * Interfejs określa jedynie, że dana klasa ma posiadać określoną metodę - dlatego w interfejsie nie ma implementacji - wszystkie metody są
   z założenia abstrakcyjne (można pominąć modyfikator `abstract`).

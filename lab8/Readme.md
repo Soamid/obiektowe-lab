@@ -4,9 +4,9 @@ Celem laboratorium jest wprowadzenie biblioteki graficznej **JavaFX** i zastosow
 
 Najważniejsze zadania:
 
-1. Konfiguracja projektu (dodanie biblioteki JavaFX)
-1. Przygotowanie wizualizacji w oparciu o wzorzec projektowy MVP
-1. Umożliwienie prostych interakcji - przycisk do uruchamiania symulacji z zadanymi parametrami
+1. Konfiguracja projektu (dodanie biblioteki JavaFX).
+1. Przygotowanie wizualizacji w oparciu o wzorzec projektowy MVP.
+1. Umożliwienie prostych interakcji - przycisk do uruchamiania symulacji z zadanymi parametrami.
 
 ## Zadania do wykonania (4xp)
 
@@ -34,13 +34,13 @@ Najważniejsze zadania:
    * Będzie to metoda uruchamiająca interfejs graficzny Twojej aplikacji.
    * Na razie możesz w ciele metody wpisać `primaryStage.show();`. Wyświelti to puste okno aplikacji.
 
-5. W metodzie `main` w `World` dodaj `Application.launch(SimulationApp.class, args);`
+5. W metodzie `main` w `World` dodaj `Application.launch(SimulationApp.class, args);`.
 
    * Spowoduje to uruchomienie okna JavaFX.
    * Możesz też zamiast tego (dla czytelności) dodać drugą klasę z metodą `main`, np. `WorldGUI` i tam zainicjować aplikację.
 
 6. Zobacz czy okno pokazuje się (może być nieresponsywne, ale powinno się pokazać).
-   **Uwaga:** *Pamiętaj, żeby importować brakujące klasy z pakietu `javafx`*
+   **Uwaga:** Pamiętaj, żeby importować brakujące klasy z pakietu `javafx`
 
 
 
@@ -58,7 +58,7 @@ Najważniejsze zadania:
    SimulationPresenter presenter = loader.getController();
    ```
 
-4. Żeby wyświetlić widok musisz powiązać go jeszcze z oknem aplikacji (`Stage`). W tym celu dodaj pomocniczą metodę i wywołaj ją dla `primaryStage` i `viewRoot`:
+4. Żeby wyświetlić widok, musisz powiązać go jeszcze z oknem aplikacji (`Stage`). W tym celu dodaj pomocniczą metodę i wywołaj ją dla `primaryStage` i `viewRoot`:
    ```java
    private void configureStage(Stage primaryStage, BorderPane viewRoot) {
        var scene = new Scene(viewRoot);
@@ -89,9 +89,9 @@ Najważniejsze zadania:
 
 1. W pliku FXML dodaj dodatkowe kontrolki (możesz dowolnie układać layouty, korzystając z takich elementów jak `BorderPane`, `VBox`, `HBox`):
 
-   - pole tekstowe (`TextField`) do wpisywania listy ruchów
-   - dodatkową etykietę (`Label`) do wypisywania opisu ruchu (przekazywanego do `mapChanged()`)
-   - Przycisk z etykietą "Start" (`Button`), który posłuży do uruchamiania symulacji
+   - pole tekstowe (`TextField`) do wpisywania listy ruchów,
+   - dodatkową etykietę (`Label`) do wypisywania opisu ruchu (przekazywanego do `mapChanged()`),
+   - Przycisk z etykietą "Start" (`Button`), który posłuży do uruchamiania symulacji.
 
 2. W przypadku pola z listą ruchów konieczne będzie podpięcie go w klasie prezentera - w ten sposób, wywołując metodę `textField.getText()` można dostać się do aktualnie wpisanych ruchów.
 
@@ -99,15 +99,15 @@ Najważniejsze zadania:
 
 4. Powiąż ze sobą wszystkie potrzebne informacje - przenieś startowanie symulacji z klasy `SimulationApp` do metody `SimulationPresenter.onSimulationStartClicked()`. Skorzystaj z listy ruchów wpisanej przez użytkownika.
 
-   **Uwaga 1**: możesz założyć, że na mapie będą dwa zwierzęta i zainicjować ich pozycje w kodzie.
+   **Uwaga 1**: Możesz założyć, że na mapie będą dwa zwierzęta i zainicjować ich pozycje w kodzie.
 
-   **Uwaga 2**: do przekształcenia stringa z ruchami na tablicę `String[]` możesz użyć metody `String.split()`.
+   **Uwaga 2**: Do przekształcenia stringa z ruchami na tablicę `String[]` możesz użyć metody `String.split()`.
 
 5. Uruchom i przetestuj program. Prawdopodobnie już *prawie* działa.
 
-   **Uwaga o asynchroniczności**: JavaFX pracuje w swoim własnym, dedykowanym wątku, który cyklicznie rysuje aktualny stan kontrolek. Jeśli w tym samym wątku wywołamy dłuższą logikę, np. symulację to UI będzie zajęty (zatnie się), dopóki symulacja się nie zakończy. Z tego względu konieczne jest wywoływanie symulacji asynchronicznie. Możesz tutaj skorzystać z `SimulationEngine` z poprzednich zajęć. Konieczne są tutaj dwa elementy:
+   **Uwaga o asynchroniczności:** JavaFX pracuje w swoim własnym, dedykowanym wątku, który cyklicznie rysuje aktualny stan kontrolek. Jeśli w tym samym wątku wywołamy dłuższą logikę, np. symulację, to UI będzie zajęty (zatnie się), dopóki symulacja się nie zakończy. Z tego względu konieczne jest wywoływanie symulacji asynchronicznie. Możesz tutaj skorzystać z `SimulationEngine` z poprzednich zajęć. Konieczne są tutaj dwa elementy:
 
-   - Pauzy między kolejnymi ruchami symulacji - dodaj w odpowiednim miejscu `Simulation` wywołanie `Thread.sleep(500)` . Bez tego możesz nie zobaczyć kolejnych ruchów, bo symulacja wywoła się zbyt szybko.
+   - Pauzy między kolejnymi ruchami symulacji - dodaj w odpowiednim miejscu `Simulation` wywołanie `Thread.sleep(500)`. Bez tego możesz nie zobaczyć kolejnych ruchów, bo symulacja wywoła się zbyt szybko. **Uwaga:** Metoda `sleep` może rzucić `InterruptedException`. Zastanów się, co z nim zrobić. 
 
    - Aktualizacja wątku UI - jeśli wywołasz metodę `drawMap()` z innego wątku niż wątek graficzny, dostaniesz błąd o treści `java.lang.IllegalStateException: Not on FX application thread`. TYLKO wątek graficzny może zmieniać kontrolki, dlatego konieczne jest zakolejkowanie takiego rysowania w wątku graficznym. Wystarczy w tym celu opakować rysowanie w ten sposób:
      ```java
@@ -125,8 +125,8 @@ Najważniejsze zadania:
 
 3. Przekształć metodę `drawMap()` w taki sposób by za każdym razem:
 
-   - czyściła aktualną siatkę
-   - tworzyła nową siatkę na podstawie aktualnych wymiarów mapy (użyj tutaj `WorldMap.getCurrentBounds()`)
+   - czyściła aktualną siatkę,
+   - tworzyła nową siatkę na podstawie aktualnych wymiarów mapy (użyj tutaj `WorldMap.getCurrentBounds()`).
 
    Do czyszczenia siatki możesz wykorzystać następujący kod:
    ```java
@@ -152,11 +152,11 @@ Najważniejsze zadania:
 
 ### Zadanie dodatkowe (<img src="../img/reward_silver.png" alt="srebrna skrzynka" width="50" align="center" />)
 
-Model naszej aplikacji umożliwia tworzenie nie jeden, a wielu działających równolegle symulacji. Zmodyfikuj kod aplikacji tak by dało się uruchamiać i wyświetlać dowolnie dużo symulacji:
+Model naszej aplikacji umożliwia tworzenie nie jeden, a wielu działających równolegle symulacji. Zmodyfikuj kod aplikacji tak, by dało się uruchamiać i wyświetlać dowolnie dużo symulacji:
 
-- Kliknięcie w przycisk *Start* powinno wyświetlać symulację w nowym, osobnym okienku.
-- Kolejne kliknięcie w *Start* powinno otworzyć kolejne, nowe okienko z symulacją (z ewentualnymi nowymi argumentami).
-- Symulacje powinny działać równocześnie (choć możesz tutaj zastosować wariant z pulą wątków - wtedy równocześnie będą działały np. 4, a pozostałe czekały aż zwolni się zasób).
+- Kliknięcie przycisku *Start* powinno wyświetlać symulację w nowym, osobnym okienku.
+- Kolejne kliknięcie *Start* powinno otworzyć kolejne, nowe okienko z symulacją (z ewentualnymi nowymi argumentami).
+- Symulacje powinny działać równocześnie (choć możesz tutaj zastosować wariant z pulą wątków - wtedy równocześnie będą działały np. 4, a pozostałe czekały, aż zwolni się zasób).
 
 **Wskazówka:** w JavaFX możesz tworzyć dodatkowe obiekty `Stage` oraz wielokrotnie tworzyć obiekty `FXMLLoader`. Możliwe (i wskazane) jest też tworzenie osobnych plików `.fxml` dla osobnych widoków/okienek.
 
@@ -166,10 +166,10 @@ Model naszej aplikacji umożliwia tworzenie nie jeden, a wielu działających r�
 
 * Aplikacja JavaFX składa się z:
   * `Stage` - okno aplikacji,
-  * `Scene` - aktualna zawartość aplikacji (np. ekran symulacji, ekran podsumowania)
+  * `Scene` - aktualna zawartość aplikacji (np. ekran symulacji, ekran podsumowania),
   * Scena zawiera wiele instancji `Node`. Są nimi m.in. przyciski, pola tekstowe, kontenery (`VBox`, `HBox`, `GridPane`, itp.).
 * Główna klasa reprezentująca UI powinna dziedziczyć po `Application` i implementować metodę `start()`.
 * Minimalna aplikacja powinna stworzyć jedną scenę, przypiąć ją do `Stage` i wyświetlić.
-* Wyświetlane kontrolkami można zarządzać zarówno w kodzie, jak i w **plikach FXML** - podobnie jak HTML służą one do opisywania interfejsu graficznego w postaci drzewa tagów.
-* [Model View Presenter (MVP)](https://anshul-vyas380.medium.com/model-view-presenter-b7ece803203c) to jeden z tzw. wzorców architektonicznych, podobny do klasycznego Model View Controller (MVC). Opisuje on nie tylko sposób modelowania pojedynczej interakcji czy struktury, a bardziej narzuca cały schemat architektury aplikacji. Zastosowanie takiego wzorca znacznie zwiększa czytelność i rozszerzalność kodu poprzez separację warstwy wizualnej od warstwy modelowej.
+* Wyświetlanymi kontrolkami można zarządzać zarówno w kodzie, jak i w **plikach FXML** - podobnie jak HTML służą one do opisywania interfejsu graficznego w postaci drzewa tagów.
+* [Model View Presenter (MVP)](https://anshul-vyas380.medium.com/model-view-presenter-b7ece803203c) to jeden z tzw. wzorców architektonicznych, podobny do klasycznego Model View Controller (MVC). Opisuje on nie tylko sposób modelowania pojedynczej interakcji czy struktury, a bardziej narzuca cały schemat architektury aplikacji. Zastosowanie takiego wzorca znacznie zwiększa czytelność i rozszerzalność kodu, poprzez separację warstwy wizualnej od warstwy modelowej.
   Wzorzec ten stosuje się często w połączeniu z innymi wzorcami projektowymi, np. obserwatorem (patrz przykład z naszej laborki).

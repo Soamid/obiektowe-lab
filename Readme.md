@@ -80,6 +80,11 @@ Będzie to wyglądało następująco:
    - **Quizy na wykładzie** - na niektórych wykładach będzie można wziąć udział w krótkim quizie podsumowującym omawiane na nim zagadnienia. Osoby, które udzielą poprawne odpowiedzi otrzymają skrzynkę z łupem. Wartość skrzynki będzie zależała od poprawności i czasu odpowiedzi (najlepsze osoby otrzymają złotą skrzynkę).
    - **Wydarzenia specjalne** - podobnie jak zadania dodatkowe będą polegały na wykonaniu aktywności poza zajęciami. Będą one miały jednak określony czas trwania, dłuższy niż tydzień. Przewidujemy **2 takie wydarzenia**, każde warte **2 skrzynki**.
 
+### Roadmapa
+Wszystkie łupy  (poza tymi z quizów), jakie można zdobyć podczas kursu są zawsze oznaczone przy instrukcjach do lab, ale dla wygody można też zaplanować sobie łowy na podstawie roadmapy (kliknij żeby powiększyć):
+
+[![](img\roadmap_small.png)](img\roadmap.png)
+
 ### FAQ
 
 **Ile mam czasu na wykonanie zadania z lab?**

@@ -49,12 +49,15 @@ Interfejs `WorldMap` zakłada, że mapa może przechowywać jedynie zwierzęta, 
 
 1. Zmodyfikuj interfejs `WorldMap` tak, by mapa mogła przechowywać dowolne obiekty `T` na pozycjach typu `P`. Deklaracja typu powinna wyglądać tak: `WorldMap<T, P>`. Dostosuj do tego założenia wszystkie metody w interfejsie.
 2. Popraw klasę `RectangularMap` tak, by implementowała interfejs z odpowiednimi parametrami typów.
-3. Ogranicz `Simulation` tak, by nadal przyjmowało jedynie mapy zwierząt z dwuwymiarowymi pozycjami. 
+3. Popraw `Simulation` tak, by przyjmowało od teraz dowolne mapy obiektów z dowolnymi pozycjami. 
+   **Uwaga:** być może konieczna będzie w tym celu modyfikacja konstruktora `Simulation`. Zastanów się, jakie parametry powinien przyjmować ten konstruktor i gdzie powinna znajdować się inicjalizacja zwierzaków po zmianach. 
 4. Stwórz dodatkową implementację `TextMap`, która będzie przechowywała napisy `String` na pozycjach określonych w jednym wymiarze (liczba całkowita). Deklaracja typu dla takiej mapy to `WorldMap<String, Integer>`. Mapa powinna spełniać założenia:
    - Mapa nie ma górnej granicy - dokładanie nowego napisu zawsze wstawia go na koniec mapy.
    - Przemieszczanie napisu jest możliwe jedynie w obecnych granicach `<0, N-1>` (gdzie `N` - liczba elementów w mapie). Przesuwany napis zamienia się miejscami z sąsiadem - w przypadku ruchu "na wschód" z sąsiadem z prawej (o indeksie o 1 wyższym), a "na zachód" z lewej. Np. dla mapy `["Ala", "ma", "sowoniedźwiedzia"]` przesunięcie napisu `"ma"` na wschód powinno dać efekt: `["Ala", "sowoniedźwiedzia", "ma"]`. Dalsze przemieszczanie wyrazu `"ma"` w prawo nie jest już możliwe. 
-   - Napis może się przemieszczać do przodu i tyłu `FORWARD`/`BACKWARD` tylko w orientacjach `EAST`/`WEST`, w pozostałych przypadkach ruch jest ignorowany. 
-5. Przetestuj nową implementację mapy.
+   - Napis może się przemieszczać do przodu i tyłu. Można założyć, że przemieszczenie do przodu następuje po podaniu parametru `FORWARD` lub `RIGHT`, a do tyłu po podaniu `BACKWARD` lub `LEFT`.
+5. Przetestuj nową implementację mapy tworząc dodatkową symulację `Simulation<String, Integer>` w metodzie `main()`. Możesz wykorzystać te same parametry ruchu, co w przypadku symulacji zwierząt oraz dowolnie przyjęty zestaw napisów.
+6. Dodaj do systemu dodatkowy interfejs `WorldNumberPositionMap`. Interfejs powinien rozszerzać `WorldMap` i tak definiować typy generyczne by obsługiwać obiekty dowolnych typów `T`, ale na pozycjach wyrażonych dowolnymi typami liczbowymi (`Integer`, `Double`, `Long`, itp). Popraw definicję `TextMap` tak by realizowała interfejs `WorldNumberPositionMap`.
+   **Wskazówka**: wszystkie liczbowe typy kopertowe rozszerzają klasę `Number`. 
 
 ## Przydatne informacje
 

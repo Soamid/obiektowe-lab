@@ -80,8 +80,10 @@ Mechanizm losowania trawy w `GrassField` zakłada, że wylosowane pozycje nie po
    }
    ```
 
-   **Uwaga:** Pętla for-each w Javie akceptuje nie tylko kolekcje i tablice, ale każdą strukturę, która implementuje interfejs `Iterable`!
+   **Uwaga 1:** Pętla for-each w Javie akceptuje nie tylko kolekcje i tablice, ale każdą strukturę, która implementuje interfejs `Iterable`!
 
+   **Uwaga 2:** Zadbaj by Twoje rozwiązanie generowało kolejne losowe pozycje w reakcji na wywołanie metody `next()` na iteratorze. Iterator nie powinien chodzi po przygotowanej wcześniej liście wylosowanych pozycji.
+   
    
 
 ## Przydatne informacje

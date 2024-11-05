@@ -48,7 +48,7 @@ Najważniejsze zadania:
 
 3. W klasie `Simulation` zdefiniuj również metodę `run()`, która na przemian steruje ruchem wszystkich zwierząt. Przykładowo, jeśli użytkownik wprowadzi ciąg: `f b r l`, a na mapie są dwa zwierzęta, to pierwsze zwierzę otrzyma ruchy `f` i `r`, a drugie `b` i `l`. Ruchy obu zwierząt mają być wykonywane na przemian, tzn. po każdym ruchu pierwszego zwierzęcia następuje ruch drugiego zwierzęcia.
 
-4. Zapewnij by po każdym ruchu program wypisywał informację `Zwierzę i : (x ,y)`, gdzie `i`- numer zwierzęcia na liście, `x`,`y` - pozycja zwierzęcia po ruchu (skorzystaj z przygotowanego wcześniej `toString()`).
+4. Zapewnij by po każdym ruchu program wypisywał informację `Zwierzę i : ZWIERZ`, gdzie `i`- numer zwierzęcia na liście, `ZWIERZ` - reprezentacja tekstowa zwierzaka (skorzystaj z przygotowanego wcześniej `toString()`).
 
 5. W celu weryfikacji rozwiązania wykonaj następujący kod w metodzie `main` klasy `World`:
        ```java
@@ -60,7 +60,7 @@ Najważniejsze zadania:
 
     Sprawdź, czy zwierzęta poruszają się poprawnie dla ciągu: `f b r l f f r r f f f f f f f f`.
 
-6. Napisz testy integracyjne weryfikujące poprawność implementacji. Uwzględnij:
+6. Napisz testy integracyjne weryfikujące poprawność implementacji. Każdy test integracyjny powinien sprawdzać, czy wszystkie komponenty aplikacji działają poprawnie (dane wejściowe dla testu powinny stanowić tekstowe reprezentacje ruchu, czyli literki) Uwzględnij:
     * czy zwierzę ma właściwą orientację, 
     * czy zwierzę przemieszcza się na właściwe pozycje,
     * czy zwierzę nie wychodzi poza mapę,

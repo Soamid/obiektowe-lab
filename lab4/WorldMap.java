@@ -12,10 +12,10 @@ import agh.ics.oop.model.Vector2d;
 public interface WorldMap extends MoveValidator {
 
     /**
-     * Place a animal on the map.
+     * Place a new animal on the map.
      *
-     * @param animal The animal to place on the map.
-     * @return True if the animal was placed. The animal cannot be placed if the move is not valid.
+     * @param animal The animal to be placed on the map.
+     * @return True if the animal was placed. The rules for valid placement are the same as for movement.
      */
     boolean place(Animal animal);
 
@@ -27,7 +27,7 @@ public interface WorldMap extends MoveValidator {
 
     /**
      * Return true if given position on the map is occupied. Should not be
-     * confused with canMove since there might be empty positions where the animal
+     * confused with canMoveTo since there might be empty positions where the animal
      * cannot move.
      *
      * @param position Position to check.

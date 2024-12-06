@@ -68,7 +68,7 @@ Będzie to wyglądało następująco:
    | <img src="img/bonus_multiplier_proj.png" alt="marchew_proj"  width="100" /> | Pietruszka | **+10%** do sumy za projekt (maks. 40%)<br /><br />*to o nią toczy się gra* |
    | <img src="img/bonus_restore_lab.png" alt="restore_lab"  width="100" /> | Plaster    | odrobienie straconych **2xp** za lab<br /><br />*na wypadek wystąpienia dziur w kodzie* |
 
-7. Wykonanie dodatkowej aktywności skutkuje otrzymaniem skrzynki z jednym łupem. W zależności od rodzaju aktywności skrzynka może mieć różnią wartość, a co za tym idzie - mieć różną ilość łupów do wyboru. W momencie zdobycia skrzynki to Ty decydujesz, jaki łup zdobywasz. Zostaje on aktywowany niezwłocznie po zdobyciu.
+7. Wykonanie dodatkowej aktywności skutkuje otrzymaniem skrzynki z łupami. W zależności od rodzaju aktywności skrzynka może mieć różnią wartość, a co za tym idzie - mieć różną liczbę łupów do wyboru. Brązowe skrzynki zawierają jeden łup. Srebrne pozwalają wybrać jeden z dwóch (w momencie zdobycia skrzynki to Ty decydujesz, jaki łup zdobywasz). Złote skrzynki pozwalają na zdobycie dwóch łupów. Każdy łup zostaje aktywowany niezwłocznie po zdobyciu.
 
 | Symbol skrzynki                                              | Zawartość <br />(część laboratoryjna)                        | Zawartość<br />(część projektowa) | Rodzaj aktywności                                           |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------- | ----------------------------------------------------------- |
@@ -78,9 +78,9 @@ Będzie to wyglądało następująco:
 
 8. W trakcie semestru pojawią się liczne okazje do zdobycia skrzynek z łupami. Za każdą aktywność będzie można zdobyć jedną lub dwie skrzynki. Rodzaje dodatkowych aktywności:
 
-   - **Zadania dodatkowe -** w niektórych konspektach do laboratoriów z Javy pojawią się dodatkowe, opcjonalne zadania. Aby otrzymać skrzynkę z łupem należy wykonać zadanie w tym samym terminie, co podstawową część laboratorium. W części laboratoryjnej przewidzieliśmy 3 takie zadania (3 łupy). W części projektowej pojawią się 2 dodatkowe, całkowicie opcjonalne laboratoria do samodzielnego przerobienia. Za każde z nich będzie można otrzymać po 2 łupy (łącznie 4 łupy).
-   - **Quizy na wykładzie** - na niektórych wykładach będzie można wziąć udział w krótkim quizie podsumowującym omawiane na nim zagadnienia. Osoby, które udzielą poprawne odpowiedzi otrzymają skrzynkę z łupem. Wartość skrzynki będzie zależała od prędkości odpowiedzi (najszybsze osoby otrzymają złotą skrzynkę).
-   - **Wydarzenia specjalne** - podobnie jak zadania dodatkowe będą polegały na wykonaniu aktywności poza zajęciami. Będą one miały jednak określony czas trwania, dłuższy niż tydzień. Przewidujemy 2 takie wydarzenia, każde warte 2 łupy.
+   - **Zadania dodatkowe -** w niektórych konspektach do laboratoriów z Javy pojawią się dodatkowe, opcjonalne zadania. Aby otrzymać skrzynkę z łupem należy wykonać zadanie w tym samym terminie, co podstawową część laboratorium. W części laboratoryjnej przewidzieliśmy **3 takie zadania (3 skrzynki do zdobycia**). W części projektowej pojawią się **2 dodatkowe, całkowicie opcjonalne** laboratoria do samodzielnego przerobienia. Za każde z nich będzie można otrzymać po **2 skrzynki (łącznie 4 skrzynki)**.
+   - **Quizy na wykładzie** - na niektórych wykładach będzie można wziąć udział w krótkim quizie podsumowującym omawiane na nim zagadnienia. Osoby, które udzielą poprawne odpowiedzi otrzymają skrzynkę z łupem. Wartość skrzynki będzie zależała od poprawności i czasu odpowiedzi (najlepsze osoby otrzymają złotą skrzynkę).
+   - **Wydarzenia specjalne** - podobnie jak zadania dodatkowe będą polegały na wykonaniu aktywności poza zajęciami. Będą one miały jednak określony czas trwania, dłuższy niż tydzień. Przewidujemy **2 takie wydarzenia**, każde warte **2 skrzynki**.
 
 ### Roadmapa
 Wszystkie łupy  (poza tymi z quizów), jakie można zdobyć podczas kursu są zawsze oznaczone przy instrukcjach do lab, ale dla wygody można też zaplanować sobie łowy na podstawie roadmapy (kliknij żeby powiększyć):
@@ -101,15 +101,15 @@ Tak, należy przychodzić na zajęcia laboratoryjne i projektowe. Dopuszczalne s
 
 Kartkówka zawsze będzie dotyczyła tematu poruszanego na ostatnim wykładzie. Forma kartkówki to jedno pytanie zamknięte typu test wyboru z jedną poprawną odpowiedzią. Jeśli zajęcia lab są opóźnione względem wykładu to kartkówka ostatniego dotyczy wykładu, którego znajomość nie była jeszcze weryfikowana (np. jeśli mamy już wykład nr 3, a na lab była dopiero jedna kartkówka to kolejna dotyczy wykładu nr 2). Jeśli z kolei lab wyprzedza wykład to kartkówka nie odbywa się.
 
-**Jak dokładnie działają mnożniki (marchewki)?**
+**Jak dokładnie działają mnożniki (marchewki i pietruszki)?**
 
-Każda zdobyta marchewka zwiększa wartość wszystkich zdobytych xp za laboratoria z Javy lub projekt. Przykładowo, jeśli zwierzak  zdobędzie w trakcie lab 26xp (z 32 możliwych) oraz 3 marchewki to otrzyma sumarycznie `26 + 3*2,6 = 33,8xp`.
+Każda zdobyta marchewka lub pietruszka zwiększa wartość wszystkich zdobytych xp za laboratoria z Javy lub projekt. Przykładowo, jeśli zwierzak  zdobędzie w trakcie lab 26xp (z 32 możliwych) oraz 3 marchewki to otrzyma sumarycznie `26 + 3*2,6 = 33,8xp`.
 
-**Czy mogę wykorzystać marchewki zdobyte w trakcie lab na projekcie?**
+**Czy mogę wykorzystać mnożniki zdobyte w trakcie lab na projekcie?**
 
-Nie, marchewki działają zgodnie z ich oznaczeniami. W pierwszej części semestru zdobywamy marchewki laboratoryjne (maksymalnie 3). W drugiej części semestru, w trakcie projektu marchewki projektowe (maksymalnie 4).
+Nie, mnożniki działają zgodnie z ich oznaczeniami. W pierwszej części semestru zdobywamy marchewki (maksymalnie 3). W drugiej części semestru, w trakcie projektu pietruszki (maksymalnie 4).
 
-**Czy marchewki laboratoryjne działają również na ćwiczenia z Gita?**
+**Czy marchewki działają również na ćwiczenia z Gita?**
 
 Nie, mnożą one jedynie punkty zdobywane w trakcie lab z Javy (8 spotkań).
 
@@ -133,5 +133,5 @@ W takiej sytuacji należy normalnie wziąć udział w projekcie, ale liczyć si�
 
 **Czy muszę brać udział w quizach na wykładzie by mieć szansę na 5.0?**
 
-Absolutnie nie! Zarówno wykłady, jak i quizy na nich są nieobowiązkowe. Aby zdobyć maksymalną liczbę marchewek (mnożników) wystarczy zrobić np. dodatkowe zadania, które pojawiają się na niektórych laborkach - będą dokładnie 3 takie zadania w trakcie części laboratoryjnej i 4 w trakcie części projektowej. Ponadto można też brać udział w wydarzeniach specjalnych. Co więcej, zdobycie wszystkich możliwych marchewek i zrobienie zadań na max punktów pozwala w teorii nawet przekroczyć 100% możliwych do zdobycia punktów doświadczenia. Quizy na wykładzie to po prostu jeszcze jedna okazja by zdobyć nagrody.
+Absolutnie nie! Zarówno wykłady, jak i quizy na nich są nieobowiązkowe. Aby zdobyć maksymalną liczbę marchewek i pietruszek (mnożników) wystarczy zrobić np. dodatkowe zadania, które pojawiają się na niektórych laborkach - będą dokładnie 3 takie zadania w trakcie części laboratoryjnej i 4 w trakcie części projektowej. Ponadto można też brać udział w wydarzeniach specjalnych. Co więcej, zdobycie wszystkich możliwych mnożników i zrobienie zadań na max punktów pozwala w teorii nawet przekroczyć 100% możliwych do zdobycia punktów doświadczenia. Quizy na wykładzie to po prostu jeszcze jedna okazja by zdobyć nagrody.
 

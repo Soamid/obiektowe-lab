@@ -6,24 +6,23 @@ Niniejsza treść została zaadaptowana przez Aleksandra Smywińskiego-Pohla na 
 
 Stwórzmy grę! Nie będzie to jednak gra, w którą my gramy. Zamiast tego będzie to świat, który ewoluuje na naszych oczach! Stworzymy środowisko stepów i dżungli ze zwierzakami, które biegają, buszują w zaroślach, jedzą i rozmnażają się. A po kilku milionach lat zobaczymy, że wyewoluowały w różne gatunki!
 
-<img src="zwierzak.jpg"/>
+<img src="zwierzak.jpg" style="zoom: 33%;" />
 
 Świat naszej gry jest dość prosty. Składa się ze zwykłej, prostokątnej połaci podzielonej na kwadratowe pola. Większość świata pokrywają stepy, na których rośnie niewiele roślin stanowiących pożywienie zwierzaków. Niektóre rejeony porasta jednak dżungla, gdzie rośliny rosną dużo szybciej. Rośliny będą wyrastały w losowych miejscach, ale ich koncentracja będzie większa w dżungli niż na stepie.
 
-<img src="dzungla.jpg"/>
+<img src="dzungla.jpg" style="zoom: 33%;" />
 
 Nasze zwierzęta, które są roślinożercami, będą przemierzały ten świat w poszukiwaniu pożywienia. Każdy zwierzak ma określoną energię, która zmniejsza się co dnia. Znalezienie i zjedzenie rośliny zwiększa poziom energii o pewną wartość.
 
 ## Anatomia zwierzaka
 
-
-<img src="zwierzak2.jpg"/>
+<img src="zwierzak2.jpg" style="zoom:33%;" />
 
 Musimy śledzić kilka cech każdego zwierzaka. Po pierwsze, zarówno w przypadku rośliny jak i tych, którzy je zjadają, musimy znać koordynaty `x` i `y`. Wskazują nam one, gdzie dany zwierzak lub roślina jest na mapie.
 
 Musimy także wiedzieć, ile energii ma dany zwierzak. To darwinowska gra o przetrwanie, więc jeśli zwierzak nie zdoła zdobyć odpowiedniej ilości pożywienia, będzie głodować i zdechnie...  Energia mówi nam o tym, ile dni funkcjonowania zostało jeszcze danemu zwierzakowi. Musi ono koniecznie znaleźć więcej jedzenia, zanim jej zapas się wyczerpie.
 
-<img src="kierunki.jpg"/>
+<img src="kierunki.jpg" style="zoom: 25%;" />
 
 Musimy również pamiętać, w którą stronę zwierzak jest zwrócony. Jest to ważne, ponieważ każdego dnia będzie ono poruszać się na mapie w tym właśnie kierunku. Istnieje osiem różnych możliwych pozycji i tyle samo możliwych obrotów. Obrót `0` oznacza, że zwierzak nie zmienia swojej orientacji, obrót `1` oznacza, że zwierzak obraca się o 45°, `2`, o 90°, itd. Przykładowo: jeśli zwierzak był skierowany na północ i obrót wynosi `1`, to zwierzak skierowany jest teraz na północny wschód.
 
@@ -76,16 +75,17 @@ Pewne aspekty symulacji są konfigurowalne i mogą silnie zmieniać jej przebieg
 W przypadku mapy kluczowe jest to, jak obsługujemy jej krawędzie. Zrealizujemy następujące warianty:
 
 * [obowiązkowo dla wszystkich] **kula ziemska** - lewa i prawa krawędź mapy zapętlają się (jeżeli zwierzak wyjdzie za lewą krawędź, to pojawi się po prawej stronie - a jeżeli za prawą, to po lewej); górna i dolna krawędź mapy to bieguny - nie można tam wejść (jeżeli zwierzak próbuje wyjść poza te krawędzie mapy, to pozostaje na polu na którym był, a jego kierunek zmienia się na odwrotny);
-* [A] **piekielny portal** - jeżeli zwierzak wyjdzie poza krawędź mapy, to trafia do magicznego portalu; jego energia zmniejsza się o pewną wartość (taką samą jak w przypadku generacji potomka), a następnie jest teleportowany w nowe, losowe wolne miejsce na mapie;
-* [B] **podziemne tunele** - na mapie znajdują się pola z dziurami, każda dziura jest częścią pary wejście-wyjście, wchodząc w jedną stronę dziury wychodzimy jej drugą stroną;
+* [A] **bieguny** – bieguny zdefiniowane są na dolnej i górnej krawędzi mapy. Im bliżej bieguna znajduje się zwierzę, tym większą energię traci podczas pojedynczego ruchu (na biegunach jest zimno);
+* [B] **pożary** - co jakąś (zadaną w konfiguracji) liczbę tur na mapie pojawia się pożar. Pożar zaczyna się na jednym polu z rośliną i w każdej turze rozprzestrzenia się na wszystkie przylegające do niej rośliny (ale nie po skosie). Pożar na każdym polu trwa stałą zadaną (konfigurowalną) liczbę tur i po jego zakończeniu roślina na tym polu znika. Jeśli zwierzak wejdzie na pole z ogniem, umiera.  
 * [C] **przypływy i odpływy** - na mapie znajdują się obszary wodne, na które zwierzaki nie mogą wejść; obszary te powiększają się i zmniejszają cyklicznie co kilka ruchów symulacji.
+* [D] **dziki sowoniedźwiedź** - wyznaczony kwadratowy podobszar mapy (zajmujący 20% mapy) to terytorium dzikiego sowoniedźwiedzia. Sowoniedźwiedź w każdej turze porusza się podobnie jak zwierzaki na podstawie losowego genotypu, ale nie wychodzi nigdy poza swoje terytorium. Sowoniedźwiedź jest mięsożerny, więc nie wchodzi w interakcje z trawą. Interesują go tylko nasze zwierzaki. Gdy zwierzak znajdzie się na jednym polu z sowoniedźwiedziem, zostaje natychmiastowo skonsumowany i ginie. Sowoniedźwiedź jest nieśmiertelny i nie traci energii.
 
 W przypadku wzrostu roślin pewne pola są silnie preferowane, zgodnie z zasadą Pareto. Istnieje 80% szansy, że nowa roślina wyrośnie na preferowanym polu, a tylko 20% szans, że wyrośnie na polu drugiej kategorii. Preferowanych jest około 20% wszystkich miejsc na mapie, 80% miejsc jest uznawane za nieatrakcyjne. Implementujemy następujące warianty:
 
 * [obowiązkowo dla wszystkich] **zalesione równiki** - preferowany przez rośliny jest poziomy pas pól w centralnej części mapy (udający równik i okolice);
-* [D] **życiodajne truchła** - rośliny preferują rosnąć na tych polach, w których sąsiedztwie niedawno zdechł zwierzak;
-* [E] **pełzająca dżungla** - nowe rośliny pojawiają się najczęściej w sąsiedztwie już istniejących roślin (chyba, że mapa została z nich całkowicie ogołocona);
-* [F] **zatrute owoce** - preferowany jest rozkład równomierny, ale na pewnym kwadratowym podobszarze mapy (zajmującym 20% mapy) czasem pojawiają się trujące rośliny, które zamiast dostarczać energię, odbierają ją po spożyciu. Jeśli zwierzak podczas swojego ruchu ma wejść na trującą roślinę, wykonuje test na spostrzegawczość - ma 20% szans, żeby ostatecznie wykonać ruch na inne sąsiadujące pole i uniknąć zatrucia (test może być wykonywany raz na dzień życia zwierzaka).
+* [E] **życiodajne truchła** - rośliny preferują rosnąć na tych polach, w których sąsiedztwie niedawno zdechł zwierzak;
+* [F] **pełzająca dżungla** - nowe rośliny pojawiają się najczęściej w sąsiedztwie już istniejących roślin (chyba, że mapa została z nich całkowicie ogołocona);
+* [G] **dorodne plony** - preferowany jest rozkład równomierny, ale na pewnym kwadratowym podobszarze mapy (zajmującym 20% mapy) czasem pojawiają się większe rośliny, których zjedzenie dodaje zwierzakowi znacznie więcej energii. Każda taka roślina zajmuje kwadratowy obszar 2x2 pola. Obsługa sytuacji, w której więcej zwierzaków kończy ruch na jednym z pól należących do dużej rośliny powinna wyglądać tak samo jak w przypadku, gdy wiele zwierząt walczy o normalną roślinę na jednym polu.
 
 ### Zwierzaki
 
@@ -99,7 +99,7 @@ Podobnie proste są warianty zachowania:
 
 * [obowiązkowo dla wszystkich] **pełna predestynacja** - zwierzak zawsze wykonuje kolejno geny, jeden po drugim;
 * [3] **nieco szaleństwa** - w 80% przypadków zwierzak po wykonaniu genu aktywuje gen następujący zaraz po nim, w 20% przypadków przeskakuje jednak do innego, losowego genu;
-* [4] **tam i z powrotem** - genom jest najpierw odtwarzany od lewej do prawej, potem od prawej do lewej, potem od lewej do prawej - i tak dalej.
+* [4] **starość nie radość** - starsze zwierzaki poruszają się wolniej, raz na kilka tur pomijając swój ruch, ale nadal tracąc energię. Prawdopodobieństwo pominięcia ruchu rośnie z wiekiem, maksymalnie do 80%. 
 
 ### Przykład realizacji wariantów
 Jeśli zespół projektowy otrzymał do realizacji projekt w wariancie B-3 to znaczy, że:

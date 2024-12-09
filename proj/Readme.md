@@ -103,7 +103,7 @@ Podobnie proste są warianty zachowania:
 
 ### Przykład realizacji wariantów
 Jeśli zespół projektowy otrzymał do realizacji projekt w wariancie B-3 to znaczy, że:
-- musi zapewnić w konfiguracji symulacji możliwość wyboru między mapą _kula ziemska_ a _podziemne tunele_,
+- musi zapewnić w konfiguracji symulacji możliwość wyboru między mapą _kula ziemska_ a _pożary_,
 - musi zapewnić w konfiguracji symulacji możliwość wyboru zachowania zwierzaka: _pełna predestynacja_ lub _nieco szaleństwa_,
 - w symulacji rośliny zawsze rosną zgodnie ze strategią _zalesione równiki_, a mutacje zwierząt są _w pełni losowe_ (brak dodatkowej konfiguracji)
 

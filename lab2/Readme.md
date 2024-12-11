@@ -10,7 +10,7 @@ Najważniejsze zadania:
 
 ## Zadania do wykonania (4xp)
 
-Uwaga: dla przejrzystości pliki z klasami `Vector2d` oraz `MapDirection` należy umieścić w pakiecie `agh.ics.oop.model`.
+**Uwaga:** Dla przejrzystości pliki z klasami `Vector2d` oraz `MapDirection` należy umieścić w pakiecie `agh.ics.oop.model`.
 
 ### Klasa `Vector2d`
 

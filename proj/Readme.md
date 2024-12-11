@@ -20,7 +20,7 @@ Nasze zwierzęta, które są roślinożercami, będą przemierzały ten świat w
 
 Musimy śledzić kilka cech każdego zwierzaka. Po pierwsze, zarówno w przypadku rośliny jak i tych, którzy je zjadają, musimy znać koordynaty `x` i `y`. Wskazują nam one, gdzie dany zwierzak lub roślina jest na mapie.
 
-Musimy także wiedzieć, ile energii ma dany zwierzak. To darwinowska gra o przetrwanie, więc jeśli zwierzak nie zdoła zdobyć odpowiedniej ilości pożywienia, będzie głodować i zdechnie...  Energia mówi nam o tym, ile dni funkcjonowania zostało jeszcze danemu zwierzakowi. Musi ono koniecznie znaleźć więcej jedzenia, zanim jej zapas się wyczerpie.
+Musimy także wiedzieć, ile energii ma dany zwierzak. To darwinowska gra o przetrwanie, więc jeśli zwierzak nie zdoła zdobyć odpowiedniej ilości pożywienia, będzie głodować i zdechnie... Energia mówi nam o tym, ile dni funkcjonowania zostało jeszcze danemu zwierzakowi. Musi ono koniecznie znaleźć więcej jedzenia, zanim jej zapas się wyczerpie.
 
 <p align="center"><img src="kierunki.jpg" style="width:600px" /></p>
 
@@ -32,11 +32,11 @@ oznacza, że żyjątko będzie kolejno: szło przed siebie, szło przed siebie, 
 
 ## Konsumpcja i rozmnażanie
 
-Jedzenie jest prostym procesem. Zakładamy, że zwierzak zjada roślinę, gdy stanie na jej polu, a jego energia wzrasta wtedy o z góry zdefiniowaną wartość.
+Jedzenie jest prostym procesem. Zakładamy, że zwierzak zjada roślinę, jeśli stoi na jej polu, a jego energia wzrasta wtedy o z góry zdefiniowaną wartość. Chyba, że inne zwierzę zje mu roślinę sprzed nosa (patrz dalej).
 
-Rozmnażanie jest zwykle najciekawszą częścią każdej symulacji ze zwierzakami. Zdrowe młode może mieć tylko zdrowa para rodziców, dlatego nasze zwierzaki będą się rozmnażać tylko jeśli mają odpowiednią ilość energii. Przy reprodukcji rodzice tracą na rzecz młodego pewną część swojej energii - ta energia będzie rónocześnie stanowić startową energię ich potomka.
+Rozmnażanie jest zwykle najciekawszą częścią każdej symulacji ze zwierzakami. Zdrowe młode może mieć tylko zdrowa para rodziców, dlatego nasze zwierzaki będą się rozmnażać tylko, jeśli mają odpowiednią ilość energii. Przy reprodukcji rodzice tracą na rzecz młodego pewną część swojej energii - ta energia będzie rónocześnie stanowić startową energię ich potomka.
 
-Urodzone zwierzę otrzymuje genotyp będący krzyżówką genotypów rodziców. Udział genów jest proporcjonalny do energii rodziców i wyznacza miejsce podziału genotypu. Przykładowo, jeśli jeden rodzic ma 50, a  drugi 150 punktów energii, to dziecko otrzyma 25% genów pierwszego oraz 75% genów drugiego rodzica. Udział ten określa miejsce przecięcia genotypu, przyjmując, że geny są uporządkowane. W pierwszym kroku losowana jest strona genotypu, z której zostanie wzięta część osobnika silniejszego, np. *prawa*. W tym przypadku dziecko otrzymałoby odcinek obejmujący 25% *lewych* genów pierwszego rodzica oraz 75% *prawych* genów drugiego rodzica. Jeśli jednak wylosowana byłaby strona *lewa*, to dziecko otrzymałoby 75% *lewych* genów silniejszego osobnika oraz 25% *prawych* genów. Na koniec mają zaś miejsce mutacje: losowa liczba (wybranych również losowo) genów potomka zmienia swoje wartości na zupełnie nowe.
+Urodzone zwierzę otrzymuje genotyp będący krzyżówką genotypów rodziców. Udział genów jest proporcjonalny do energii rodziców. Przykładowo, jeśli jeden rodzic ma 50, a drugi 150 punktów energii, to dziecko otrzyma 25% genów pierwszego oraz 75% genów drugiego rodzica. Udział ten określa miejsce przecięcia genotypu. W pierwszym kroku losowana jest strona genotypu, z której zostanie wzięta część osobnika silniejszego, np. *prawa*. W tym przypadku dziecko otrzymałoby odcinek obejmujący 25% *lewych* genów pierwszego rodzica oraz 75% *prawych* genów drugiego rodzica. Jeśli jednak wylosowana byłaby strona *lewa*, to dziecko otrzymałoby 75% *lewych* genów silniejszego osobnika oraz 25% *prawych* genów. Na koniec mają zaś miejsce mutacje: losowa liczba (wybranych również losowo) genów potomka zmienia swoje wartości na zupełnie nowe.
 
 
 ## Symulacja
@@ -51,24 +51,27 @@ Symulacja każdego dnia składa się z poniższej sekwencji kroków:
 
 Daną symulację opisuje szereg parametrów:
 
-* wysokość i szerokość mapy,
-* wariant mapy (wyjaśnione w sekcji poniżej),
-* startowa liczba roślin,
-* energia zapewniana przez zjedzenie jednej rośliny,
-* liczba roślin wyrastająca każdego dnia,
-* wariant wzrostu roślin (wyjaśnione w sekcji poniżej),
-* startowa liczba zwierzaków,
-* startowa energia zwierzaków,
-* energia konieczna, by uznać zwierzaka za najedzonego (i gotowego do rozmnażania),
-* energia rodziców zużywana by stworzyć potomka,
-* minimalna i maksymalna liczba mutacji u potomków (może być równa `0`),
-* wariant mutacji (wyjaśnione w sekcji poniżej),
-* długość genomu zwierzaków,
-* wariant zachowania zwierzaków (wyjaśnione w sekcji poniżej).
+* dotyczących mapy:
+  * wysokość i szerokość mapy,
+  * wariant mapy (wyjaśnione w sekcji poniżej),
+* roślinności:
+  * startowa liczba roślin,
+  * energia zapewniana przez zjedzenie jednej rośliny,
+  * liczba roślin wyrastająca każdego dnia,
+  * wariant wzrostu roślin (wyjaśnione w sekcji poniżej),
+* zwierząt:
+  * startowa liczba zwierzaków,
+  * startowa energia zwierzaków,
+  * energia konieczna, by uznać zwierzaka za najedzonego (i gotowego do rozmnażania),
+  * energia rodziców zużywana by stworzyć potomka,
+  * minimalna i maksymalna liczba mutacji u potomków (może być równa `0`),
+  * wariant mutacji (wyjaśnione w sekcji poniżej),
+  * długość genomu zwierzaków,
+  * wariant zachowania zwierzaków (wyjaśnione w sekcji poniżej).
 
 ## Warianty konfiguracji
 
-Pewne aspekty symulacji są konfigurowalne i mogą silnie zmieniać jej przebieg. Część to zwykłe parametry liczbowe (np. początkowe rozmiary populacji). Część z nich  jednak dość znacząco modyfikuje jej zasady. Dotyczy to w szczególności: działania mapy, działania wzrostu roślin, działania mutacji, zachowania zwierzaków. Każdy zespół realizujący projekt **powinien zrealizować wszystkie aspekty z sekcji poniżej oznaczone jako obowiązkowe, a także dodatkowo 2 warianty przydzielone na pierwszych zajęciach przez prowadzącego**. Jeden z dodatkowych wariantów będzie dotyczyć mapy (jej kształtu lub roślinności), a drugi zwierzaków (ich zachowania lub mutacji przy rozmnażaniu). 
+Pewne aspekty symulacji są konfigurowalne i mogą silnie zmieniać jej przebieg. Część to zwykłe parametry liczbowe (np. początkowe rozmiary populacji). Część z nich jednak dość znacząco modyfikuje jej zasady. Dotyczy to w szczególności: działania mapy, działania wzrostu roślin, działania mutacji, zachowania zwierzaków. Każdy zespół realizujący projekt **powinien zrealizować wszystkie aspekty z sekcji poniżej oznaczone jako obowiązkowe, a także dodatkowo 2 warianty przydzielone na pierwszych zajęciach przez prowadzącego**. Jeden z dodatkowych wariantów będzie dotyczyć mapy (jej kształtu lub roślinności), a drugi zwierzaków (ich zachowania lub mutacji przy rozmnażaniu). 
 
 ### Mapa i roślinność
 
@@ -76,7 +79,7 @@ W przypadku mapy kluczowe jest to, jak obsługujemy jej krawędzie. Zrealizujemy
 
 * [obowiązkowo dla wszystkich] **kula ziemska** - lewa i prawa krawędź mapy zapętlają się (jeżeli zwierzak wyjdzie za lewą krawędź, to pojawi się po prawej stronie - a jeżeli za prawą, to po lewej); górna i dolna krawędź mapy to bieguny - nie można tam wejść (jeżeli zwierzak próbuje wyjść poza te krawędzie mapy, to pozostaje na polu na którym był, a jego kierunek zmienia się na odwrotny);
 * [A] **bieguny** – bieguny zdefiniowane są na dolnej i górnej krawędzi mapy. Im bliżej bieguna znajduje się zwierzę, tym większą energię traci podczas pojedynczego ruchu (na biegunach jest zimno);
-* [B] **pożary** - co jakąś (zadaną w konfiguracji) liczbę tur na mapie pojawia się pożar. Pożar zaczyna się na jednym polu z rośliną i w każdej turze rozprzestrzenia się na wszystkie przylegające do niej rośliny (ale nie po skosie). Pożar na każdym polu trwa stałą zadaną (konfigurowalną) liczbę tur i po jego zakończeniu roślina na tym polu znika. Jeśli zwierzak wejdzie na pole z ogniem, umiera.  
+* [B] **pożary** - co jakąś (zadaną w konfiguracji) liczbę tur na mapie pojawia się pożar. Pożar zaczyna się na jednym polu z rośliną i w każdej turze rozprzestrzenia się na wszystkie przylegające do niej rośliny (ale nie po skosie). Pożar na każdym polu trwa stałą zadaną (konfigurowalną) liczbę tur i po jego zakończeniu roślina na tym polu znika. Jeśli zwierzak wejdzie na pole z ogniem, umiera.
 * [C] **przypływy i odpływy** - na mapie znajdują się obszary wodne, na które zwierzaki nie mogą wejść; obszary te powiększają się i zmniejszają cyklicznie co kilka ruchów symulacji.
 * [D] **dziki sowoniedźwiedź** - wyznaczony kwadratowy podobszar mapy (zajmujący 20% mapy) to terytorium dzikiego sowoniedźwiedzia. Sowoniedźwiedź w każdej turze porusza się podobnie jak zwierzaki na podstawie losowego genotypu, ale nie wychodzi nigdy poza swoje terytorium. Sowoniedźwiedź jest mięsożerny, więc nie wchodzi w interakcje z trawą. Interesują go tylko nasze zwierzaki. Gdy zwierzak znajdzie się na jednym polu z sowoniedźwiedziem, zostaje natychmiastowo skonsumowany i ginie. Sowoniedźwiedź jest nieśmiertelny i nie traci energii.
 
@@ -165,7 +168,7 @@ Za projekt można zdobyć łącznie **32xp** (powiększone o ewentualne bonusy w
   - jeżeli to nie pozwala rozstrzygnąć, to pierwszeństwo mają organizmy najstarsze,
   - jeżeli to nie pozwala rozstrzygnąć, to pierwszeństwo mają organizmy o największej liczbie dzieci,
   - jeżeli to nie pozwala rozstrzygnąć, to wśród remisujących organizmów wybieramy losowo.
-* Rośliny mogą rosnąć tam, gdzie stoją zwierzaki. Zjadanie ma miejsce w momencie wchodzenia na pole. Potem zwierzak nie przeszkadza już w istnieniu rośliny.
+* Rośliny mogą rosnąć tam, gdzie stoją zwierzaki. Zjadanie ma miejsce na wcześniejszym etapie rundy. Potem zwierzak nie przeszkadza już w istnieniu rośliny.
 * Nowe rośliny nie pojawiają się, jeżeli nie ma już dla nich miejsca na mapie.
 * Statystyki nie muszą być prezentowane w formie wykresu (choć na pewno byłoby to ciekawe usprawnienie).
 * Powyższa specyfikacja może różnić się trochę (lub bardzo) od analogicznych dokumentów znanych ubiegłym rocznikom. Zaleca się czujność i unikanie dróg na skróty. :)

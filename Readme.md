@@ -101,6 +101,12 @@ Tak, należy przychodzić na zajęcia laboratoryjne i projektowe. Dopuszczalne s
 
 Kartkówka zawsze będzie dotyczyła tematu poruszanego na ostatnim wykładzie. Forma kartkówki to jedno pytanie zamknięte typu test wyboru z jedną poprawną odpowiedzią. Jeśli zajęcia lab są opóźnione względem wykładu to kartkówka ostatniego dotyczy wykładu, którego znajomość nie była jeszcze weryfikowana (np. jeśli mamy już wykład nr 3, a na lab była dopiero jedna kartkówka to kolejna dotyczy wykładu nr 2). Jeśli z kolei lab wyprzedza wykład to kartkówka nie odbywa się.
 
+**Czy mogę korzystać z AI podczas rozwiązywania zadań?**
+
+Wszystkie zadania oraz projekt należy pisać samodzielnie. Używanie chatbota do generowania rozwiązań zadań jest równoważne z oddawaniem cudzej pracy. Pamiętajcie, że uczycie się tu absolutnych podstaw programowania! Jeśli nie będziecie w stanie pisać kodu na takim poziomie samodzielnie, nie będziecie też w stanie w przyszłości weryfikować odpowiedzi chatbota i rozwiązywać mniej oczywistych problemów.
+
+Zalecamy całkowite odcięcie się od wspomagania AI na tym przedmiocie. Dotyczy to nie tylko rozwiązań opartych o LLM, ale również maszynowo generowanych podpowiedzi w IntelliJ. Podpowiadamy jak je konfigurować tutaj. 
+
 **Jak dokładnie działają mnożniki (marchewki i pietruszki)?**
 
 Każda zdobyta marchewka lub pietruszka zwiększa wartość wszystkich zdobytych xp za laboratoria z Javy lub projekt. Przykładowo, jeśli zwierzak  zdobędzie w trakcie lab 26xp (z 32 możliwych) oraz 3 marchewki to otrzyma sumarycznie `26 + 3*2,6 = 33,8xp`.

@@ -14,46 +14,51 @@ Najważniejsze zadania:
 
 1. W `build.gradle`:
 
-   1. Dodaj `id 'org.openjfx.javafxplugin' version '0.0.13'` do sekcji `plugins`.
+   2. Dodaj `id 'org.openjfx.javafxplugin' version '0.1.0'` do sekcji `plugins`.
 
-   2. Dodaj pod `repositories` sekcję:
+   3. Dodaj pod `repositories` sekcję:
 
       ```gradle
       javafx {
-          version = "17"
+          version = "21"
           modules = ['javafx.base', 'javafx.controls', 'javafx.fxml', 'javafx.graphics', 'javafx.media', 'javafx.swing', 'javafx.web']
       }
       ```
 
-2. Odśwież konfigurację Gradle'a (`Ctrl+Shift+O`).
+4. Odśwież konfigurację Gradle'a (`Ctrl+Shift+O`).
 
-3. Utwórz klasę `SimulationApp` dziedziczącą z `Application` z pakietu `javafx.application`.
+5. Utwórz klasę `SimulationApp` dziedziczącą z `Application` z pakietu `javafx.application`.
 
-4. Zaimplementuj metodę `public void start(Stage primaryStage)`.
+6. Zaimplementuj metodę `public void start(Stage primaryStage)`.
 
    * Będzie to metoda uruchamiająca interfejs graficzny Twojej aplikacji.
-   * Na razie możesz w ciele metody wpisać `primaryStage.show();`. Wyświelti to puste okno aplikacji.
+   * Na razie możesz w ciele metody wpisać `primaryStage.show();` W ten sposób nakazujemy aplikacji wyświetlić jedno, puste okno.
 
-5. W metodzie `main` w `World` dodaj `Application.launch(SimulationApp.class, args);`.
+4. Stwórz dodatkową klasę `WorldGUI`, a w niej metodę `main`. Dodaj w niej instrukcję: `Application.launch(SimulationApp.class, args);`.
 
    * Spowoduje to uruchomienie okna JavaFX.
-   * Możesz też zamiast tego (dla czytelności) dodać drugą klasę z metodą `main`, np. `WorldGUI` i tam zainicjować aplikację.
+   * Możesz też zamiast tego zmodyfikować istniejącą metodę `main` w klasie `World`, jednak utworzenie nowej klasy będzie czytelniejsze.
 
-6. Zobacz czy okno pokazuje się (może być nieresponsywne, ale powinno się pokazać).
-   **Uwaga:** Pamiętaj, żeby importować brakujące klasy z pakietu `javafx`
-
-
+4. Uruchom klasę `WorldGUI` i zobacz, czy okno się pokazuje (może być nieresponsywne, ale powinno się wyświetlić). 
+   
+   Pamiętaj by uruchamiać klasę, w której jest zdefiniowana metoda `main()` - uruchomienie samego `SimulationApp` technicznie jest możliwe, ale nie przy sposobie, który tutaj pokazujemy.
+   
+   **Uwaga:** Pamiętaj, żeby importować brakujące klasy z pakietu `javafx`, a nie innego (np. `awt`) - niektóre nazwy mogą być niejednoznaczne, bo w Javie jest kilka bibliotek graficznych.
 
 ### Wyświetlanie mapy w GUI (Wzorzec MVP)
 
-1. Pobierz z folderu z konspektem plik `simulation.fxml` - opisuje on szkielet widoku okna aplikacji. Umieść go w zasobach projektowych, czyli w katalogu `src/main/resources`.
+1. Pobierz z folderu z konspektem plik `simulation.fxml` - opisuje on szkielet widoku okna aplikacji. Umieść go w zasobach projektowych, czyli w katalogu `src/main/resources` (jeśli nie widzisz katalogu `resources` - utwórz go i odśwież Gradle).
 
 2. Przyjrzyj się pobranemu plikowi - w głównym tagu ma zdefiniowaną ścieżkę do tzw. kontrolera widoku (`agh.ics.oop.presenter.SimulationPresenter`). Jest to pojedyncza klasa, w której będzie można odwoływać się do widoku i jednocześnie porozumiewać się z modelem, który przygotowaliśmy na poprzednich zajęciach. **Stwórz tę klasę i umieść ją w odpowiednim pakiecie.**
 
 3. Aby stworzyć instancję widoku i powiązanego z nim prezentera w oparciu o FXML, skorzystaj z `FXMLLoader`. W metodzie `SimulationApp.start()` umieść kod:
    ```java
-   FXMLLoader loader = new FXMLLoader();
+   FXMLLoader loader = new FXMLLoader(); // zainicjowanie wczytywania FXML
+   
+   // wczytanie zasobu z katalogu resources (uniwersalny sposób)
    loader.setLocation(getClass().getClassLoader().getResource("simulation.fxml"));
+   
+   // Wczytanie FXML, konwersja FXML -> obiekty w Javie
    BorderPane viewRoot = loader.load();
    SimulationPresenter presenter = loader.getController();
    ```
@@ -61,8 +66,13 @@ Najważniejsze zadania:
 4. Żeby wyświetlić widok, musisz powiązać go jeszcze z oknem aplikacji (`Stage`). W tym celu dodaj pomocniczą metodę i wywołaj ją dla `primaryStage` i `viewRoot`:
    ```java
    private void configureStage(Stage primaryStage, BorderPane viewRoot) {
+	   // stworzenie sceny (panelu do wyświetlania wraz zawartością z FXML)
        var scene = new Scene(viewRoot);
+       
+       // ustawienie sceny w oknie
        primaryStage.setScene(scene);
+       
+       // konfiguracja okna
        primaryStage.setTitle("Simulation app");
        primaryStage.minWidthProperty().bind(viewRoot.minWidthProperty());
        primaryStage.minHeightProperty().bind(viewRoot.minHeightProperty());
@@ -71,7 +81,7 @@ Najważniejsze zadania:
 
 5. Po konfiguracji okienka wywołaj metodę `primaryStage.show()` i sprawdź, czy aplikacja działa - powinna teraz wyświetlać okienko z tekstem `All animals will be living here!`, zgodnie z opisem z FXML. 
 
-6. Teraz musisz już tylko powiązać model z prezenterem. Do klasy `SimulationPresenter` dodaj atrybut `WorldMap` i setter `setWorldMap(WorldMap map)`. Samą mapę oraz przykładową symulację możesz zainicjować na razie w metodzie `SimulationApp.start()` - użyj do tego kodu z poprzednich zajęć. Do pobrania parametrów z linii komend możesz użyć `getParameters().getRaw()`.
+6. Teraz musisz już tylko powiązać model z prezenterem. Do klasy `SimulationPresenter` dodaj atrybut `WorldMap` i setter `setWorldMap(WorldMap map)`. Samą mapę zainicjuj w `SimulationApp.start()` i podaj ją do prezentera przygotowanym setterem. Może być to dowolna mapa, np. prostokątna o racjonalnie niewielkim rozmiarze, np. 5x10. 
 
 7. W prezenterze dodaj również metodę `drawMap()`. Docelowo będzie ona tłumaczyć mapę na postać siatki kontrolek. Na razie wystarczy, że ustawi ona zawartość mapy jako tekst wyświetlany zamiast dotychczasowego. W klasie prezentera możesz odwoływać się do wszystkich niezbędnych kontrolek z FXML. Jeśli przykładowo tag `Label` posiada identyfikator `fx:id="infoLabel"` to możesz w prezenterze utworzyć atrybut:
    ```java
@@ -81,29 +91,31 @@ Najważniejsze zadania:
 
    ...a potem odwoływać się do niego w kodzie podczas wyświetlania mapy.
 
-8. Kluczowe jest to, żeby każda kolejna zmiana mapy była wyświetlana w UI. W tym celu możemy **ponownie skorzystać z wzorca obserwator**. Używając istniejącego już mechanizmu zarejestruj `SimulationPresenter` jako kolejnego obserwatora dla mapy. Metoda `mapChanged()` powinna wywoływać metodę `drawMap()`.
+8. Kluczowe jest to, żeby każda kolejna zmiana mapy była wyświetlana w UI. W tym celu możemy **ponownie skorzystać z wzorca obserwator**. Używając istniejącego już mechanizmu zarejestruj `SimulationPresenter` jako kolejnego obserwatora dla mapy (`MapChangeListener`, użyj kodu z poprzednich zajęć). Metoda `mapChanged()` powinna wywoływać metodę `drawMap()`.
 
-9. Przetestuj działanie aplikacji. Na tym etapie uruchomienie przykładowej symulacji w metodzie `start()` sprawi, że prawdopodobnie po wyświetleniu aplikacji zobaczysz jedynie jej stan końcowy (zdąży się już wcześniej wykonać). Żeby nad tym zapanować konieczne będzie dodanie kilku interaktywnych elementów do aplikacji.
+9. Przetestuj działanie aplikacji. Na potrzeby testów możesz np. dodać pojedyncze zwierzę do mapy w `SimulationApp`. Zastanów się, w którym miejscu należy wywołać metodę `place()` aby obserwator poprawnie zadziałał.
+   Na tym etapie uruchomienie aplikacji powinno sprawić, że wyświetli okno z tekstową wersją mapy w stanie po dodaniu zwierzaka do mapy. Żeby umożliwić wizualizację pełnych symulacji konieczne będzie dodanie kilku interaktywnych elementów do aplikacji.
 
 ### Przyciski i interakcje
 
 1. W pliku FXML dodaj dodatkowe kontrolki (możesz dowolnie układać layouty, korzystając z takich elementów jak `BorderPane`, `VBox`, `HBox`):
 
    - pole tekstowe (`TextField`) do wpisywania listy ruchów,
-   - dodatkową etykietę (`Label`) do wypisywania opisu ruchu (przekazywanego do `mapChanged()`),
+   - dodatkową etykietę `moveInfoLabel` (`Label`) do wypisywania opisu ruchu (przekazywanego do `mapChanged()`),
    - Przycisk z etykietą "Start" (`Button`), który posłuży do uruchamiania symulacji.
 
-2. W przypadku pola z listą ruchów konieczne będzie podpięcie go w klasie prezentera - w ten sposób, wywołując metodę `textField.getText()` można dostać się do aktualnie wpisanych ruchów.
+1. W przypadku pola z listą ruchów konieczne będzie podpięcie go w klasie prezentera - w ten sposób, wywołując metodę `textField.getText()` można dostać się do aktualnie wpisanych ruchów. Skorzystaj z `fx:id`, podobnie jak w przypadku `infoLabel`.
 
-3. W przypadku przycisku możesz dodać w tagu FXML atrybut: `onAction="#onSimulationStartClicked"`. W ten sposób powiążesz z kliknięciem przycisku wywołanie metody `onSimulationStartClicked()` w prezenterze. Stwórz brakującą metodę.
+2. W przypadku przycisku możesz dodać w tagu FXML atrybut: `onAction="#onSimulationStartClicked"`. W ten sposób powiążesz z kliknięciem przycisku wywołanie metody `onSimulationStartClicked()` w prezenterze. Stwórz brakującą metodę.
 
-4. Powiąż ze sobą wszystkie potrzebne informacje - przenieś startowanie symulacji z klasy `SimulationApp` do metody `SimulationPresenter.onSimulationStartClicked()`. Skorzystaj z listy ruchów wpisanej przez użytkownika.
+3. W utworzonej metodzie startującej symulację stwórz obiekt `Simulation` w podobny sposób, jak na poprzednich laboratoriach. Skorzystaj z listy ruchów wpisanej przez użytkownika.
 
    **Uwaga 1**: Możesz założyć, że na mapie będą dwa zwierzęta i zainicjować ich pozycje w kodzie.
 
    **Uwaga 2**: Do przekształcenia stringa z ruchami na tablicę `String[]` możesz użyć metody `String.split()`.
 
-5. Uruchom i przetestuj program. Prawdopodobnie już *prawie* działa.
+4. W metodzie `mapChanged()` ustaw stan etykiety `moveInfoLabel` tak by pokazywała opis aktualnego ruchu.
+5. Uruchom i przetestuj program. Prawdopodobnie już *prawie* działa. Zastanów się, jaki stan symulacji widzisz na ekranie i zapoznaj się z poniższym wyjaśnieniem. Następnie spróbuj poprawić aplikację. Symulacja powinna w pełni działać i wyświetlać animację prezentującą kolejne stany mapy. 
 
    **Uwaga o asynchroniczności:** JavaFX pracuje w swoim własnym, dedykowanym wątku, który cyklicznie rysuje aktualny stan kontrolek. Jeśli w tym samym wątku wywołamy dłuższą logikę, np. symulację, to UI będzie zajęty (zatnie się), dopóki symulacja się nie zakończy. Z tego względu konieczne jest wywoływanie symulacji asynchronicznie. Możesz tutaj skorzystać z `SimulationEngine` z poprzednich zajęć. Konieczne są tutaj dwa elementy:
 

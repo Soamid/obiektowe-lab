@@ -7,6 +7,28 @@ Podczas pracy na zajęciach będziemy używać [środowiska IntelliJ](https://ww
 
 Można korzystać z darmowej (ograniczonej) wersji IntelliJ lub użyć [studenckiego maila żeby aktywować wersję Ultimate](https://www.jetbrains.com/academy/student-pack). Na tych zajęciach zaawansowane funkcje Ultimate raczej nam się nie przydadzą, ale warto o tym pamiętać w kontekście projektów na kolejnych semestrach (np. dużo łatwiej pracuje się z bazami danych). Założenie i aktywacja konta JetBrains nie zajmuje dużo czasu.
 
+### Typowe problemy
+
+#### Projekt się nie kompiluje, IDE podkreśla kod na czerwono
+
+W pierwszej kolejności zawsze warto odświeżyć projekt Gradle. IntelliJ automatycznie importuje konfigurację Gradle, ale jeśli coś w niej zmienimy musimy sami pamiętać by przeładować projekt:
+
+![project structure](intellij3.png)
+#### LinkageError podczas uruchamiania aplikacji
+
+Jeśli podczas uruchamiania aplikacji stworzonej w IntelliJ zobaczysz błąd tego typu:
+```
+Error: LinkageError occurred while loading main class agh.ics.oop.World
+	java.lang.UnsupportedClassVersionError: agh/ics/oop/World has been compiled by a more recent version of the Java Runtime (class file version 65.0), this version of the Java Runtime only recognizes class file versions up to 61.0
+
+```
+
+...to oznacza, że najprawdopodobniej masz zainstalowaną więcej niż jedną wersję Javy. IntelliJ powinien wykryć wymaganą wersję na podstawie konfiguracji Gradle, ale czasem w wyniku zmian w projekcie ustawienia potrafią się wymieszać. W takiej sytuacji należy sprawdzić dwa miejsca, w których ustawiamy JDK (oba powinny wskazywać na to samo JDK w tej samej wersji):
+1. Ustawienia (zębatka) -> *Project Structure* -> *Project*:
+      ![project structure](intellij1.png)
+2. Ustawienia (zębatka) -> *Settings* -> *Build, Execution, Deployment* -> *Build Tools* -> *Gradle*
+    ![project structure](intellij2.png)
+   
 ### Wsparcie AI
 
 IntellliJ posiada wbudowane narzędzia do wspierania procesu pisania kodu. Można tam znaleźć zarówno AI Chat z dostępem do popularnych modeli LLM, jak i złożone narzędzie Junie do automatyzacji używania narzędzi IDE.
@@ -61,7 +83,7 @@ To również skrót klawiszowy, ale mocno kontekstowy. W wielu sytuacjach po ust
 
 Domyślnie otwarcie pliku w edytorze IJ (np. w wyniku wyszukiwania) nie powoduje, że w drzewie plików widzimy miejsce, w którym znajduje się on w projekcie. Szczególnie przy przełączaniu się między wieloma plikami z różnych miejsc projektu jest to bardzo niewygodne. Dlatego warto ustawić sobie dwie opcje w menu z trzykropkiem przy drzewie projektu:
 
-   ![wektory](intellij1.png)
+   ![nawigacja](intellij4.png)
    
 Pierwsza z nich zapewni szybkie przechodzenie po otwartych plikach klikając po drzewie projektu, a druga dodaje synchronizację podświetlenia aktualnie otwartego pliku w drzewie.
 

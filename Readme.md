@@ -48,7 +48,7 @@ Będzie to wyglądało następująco:
 
 4. Aby zaliczyć przedmiot Twój zwierzak musi być **na koniec** co najmniej **Podlotem** oraz powinien zdobyć co najmniej **16xp** w trakcie Projektu. Ponadto musi on **wykluć się z Jaja** przed końcem laboratoriów (*inkubacja*). 
 
-5. Dodatkowo w trakcie całego semestru będzie można zdobywać wraz z zwierzakiem łupy za wykonywanie dodatkowych, opcjonalnych aktywności. Łupy ułatwią zdobywanie xp, a nawet pozwolą pomnożyć jego wartość! **Wykonywanie dodatkowych aktywności to również jedyny sposób by zdobyć więcej niż 84xp, a co za tym idzie osiągnąć maksymalny poziom zwierzaka i ocenę 5.0.**
+5. Dodatkowo w trakcie całego semestru będzie można zdobywać wraz z zwierzakiem łupy za wykonywanie dodatkowych aktywności. Łupy ułatwią zdobywanie xp, a nawet pozwolą pomnożyć jego wartość! **Wykonywanie dodatkowych aktywności to również jedyny sposób by zdobyć więcej niż 84xp, a co za tym idzie osiągnąć maksymalny poziom zwierzaka i ocenę 5.0.**
 
 6. Rodzaje zdobywanych łupów są zależne od momentu w semestrze. W pierwszej części kursu realizujemy laboratoria, z którymi związane są inne łupy niż z projektem, który zaczniemy po zakończeniu laboratoriów:
 
@@ -68,17 +68,20 @@ Będzie to wyglądało następująco:
 
 7. Wykonanie dodatkowej aktywności skutkuje otrzymaniem skrzynki z łupami. W zależności od rodzaju aktywności skrzynka może mieć różnią wartość, a co za tym idzie - mieć różną liczbę łupów do wyboru. Brązowe skrzynki zawierają jeden łup. Srebrne pozwalają wybrać jeden z dwóch (w momencie zdobycia skrzynki to Ty decydujesz, jaki łup zdobywasz). Złote skrzynki pozwalają na zdobycie dwóch łupów. Każdy łup zostaje aktywowany niezwłocznie po zdobyciu.
 
-| Symbol skrzynki                                              | Zawartość <br />(część laboratoryjna)                        | Zawartość<br />(część projektowa) | Rodzaj aktywności                                           |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------- | ----------------------------------------------------------- |
-| <img src="img/reward_gold.png" alt="reward_gold"  width="100" /> | <img src="img/bonus_restore_test.png" alt="restore_test"  width="60" /><img src="img/bonus_multiplier_lab.png" alt="marchew" width="60" /> |    <img src="img/bonus_restore_lab.png" alt="restore_lab"  width="60" /><img src="img/bonus_multiplier_proj.png" alt="pietrucha" width="60" />                                | Quizy na wykładzie                                          |
-| <img src="img/reward_silver.png" alt="reward_silver"  width="100" /> | <img src="img/bonus_restore_test.png" alt="restore_test"  width="60" /> lub <img src="img/bonus_multiplier_lab.png" alt="marchew" width="60" /> |  <img src="img/bonus_restore_lab.png" alt="restore_lab"  width="60" /> lub <img src="img/bonus_multiplier_proj.png" alt="pietrucha" width="60" />                                 | Zadania dodatkowe, <br /> Wydarzenia specjalne,<br /> Quizy na wykładzie |
-| <img src="img/reward_bronze.png" alt="reward_bronze"  width="100" /> | <img src="img/bonus_restore_test.png" alt="restore_test"  width="60" /> |   <img src="img/bonus_restore_lab.png" alt="restore_lab"  width="60" />                                 | Wydarzenia specjalne,<br /> Quizy na wykładzie                    |
+| Symbol skrzynki                                                      | Zawartość <br />(część laboratoryjna)                                                                                                           | Zawartość<br />(część projektowa)                                                                                                                | Rodzaj aktywności                                                        |
+| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| <img src="img/reward_gold.png" alt="reward_gold"  width="100" />     | <img src="img/bonus_restore_test.png" alt="restore_test"  width="60" /><img src="img/bonus_multiplier_lab.png" alt="marchew" width="60" />      | <img src="img/bonus_restore_lab.png" alt="restore_lab"  width="60" /><img src="img/bonus_multiplier_proj.png" alt="pietrucha" width="60" />      | Wydarzenia specjalne                                                     |
+| <img src="img/reward_silver.png" alt="reward_silver"  width="100" /> | <img src="img/bonus_restore_test.png" alt="restore_test"  width="60" /> lub <img src="img/bonus_multiplier_lab.png" alt="marchew" width="60" /> | <img src="img/bonus_restore_lab.png" alt="restore_lab"  width="60" /> lub <img src="img/bonus_multiplier_proj.png" alt="pietrucha" width="60" /> | Wydarzenia specjalne,<br />Zadania dodatkowe                            |
+| <img src="img/reward_bronze.png" alt="reward_bronze"  width="100" /> | <img src="img/bonus_restore_test.png" alt="restore_test"  width="60" />                                                                         | <img src="img/bonus_restore_lab.png" alt="restore_lab"  width="60" />                                                                            | Wydarzenia specjalne,<br />Zadania dodatkowe,<br />Aktywność podczas lab,<br />Quizy na wykładzie  |
 
 8. W trakcie semestru pojawią się liczne okazje do zdobycia skrzynek z łupami. Za każdą aktywność będzie można zdobyć jedną lub dwie skrzynki. Rodzaje dodatkowych aktywności:
 
-   - **Zadania dodatkowe -** w niektórych konspektach do laboratoriów z Javy pojawią się dodatkowe, opcjonalne zadania. Aby otrzymać skrzynkę z łupem należy wykonać zadanie w tym samym terminie, co podstawową część laboratorium. W części laboratoryjnej przewidzieliśmy **3 takie zadania (3 skrzynki do zdobycia**). W części projektowej pojawią się **2 dodatkowe, całkowicie opcjonalne** laboratoria do samodzielnego przerobienia. Za każde z nich będzie można otrzymać po **2 skrzynki (łącznie 4 skrzynki)**.
-   - **Quizy na wykładzie** - na niektórych wykładach będzie można wziąć udział w krótkim quizie podsumowującym omawiane na nim zagadnienia. Osoby, które udzielą poprawne odpowiedzi otrzymają skrzynkę z łupem. Wartość skrzynki będzie zależała od poprawności i czasu odpowiedzi (najlepsze osoby otrzymają złotą skrzynkę).
-   - **Wydarzenia specjalne** - podobnie jak zadania dodatkowe będą polegały na wykonaniu aktywności poza zajęciami. Będą one miały jednak określony czas trwania, dłuższy niż tydzień. Przewidujemy **2 takie wydarzenia**, każde warte **2 skrzynki**.
+   - **Zadania dodatkowe -** w niektórych konspektach do laboratoriów z Javy pojawią się dodatkowe, opcjonalne zadania. Aby otrzymać skrzynkę z łupem należy wykonać zadanie w tym samym terminie, co podstawową część laboratorium. W części laboratoryjnej przewidzieliśmy **3 takie zadania (3 skrzynki do zdobycia**). W części projektowej pojawią się **2 dodatkowe, całkowicie opcjonalne** laboratoria do samodzielnego przerobienia. Za każde z nich będzie można otrzymać po **2 skrzynki (łącznie 4 skrzynki)**. Dodatkowo za wyróżniający się projekt również będzie można zarobić dodatkową **srebrną skrzynkę**.
+   - **Wydarzenia specjalne** - podobnie jak zadania dodatkowe będą polegały na wykonaniu aktywności poza zajęciami. Będą one miały jednak określony czas trwania, dłuższy niż tydzień. Przewidujemy **2 takie wydarzenia**, każde warte **złotą skrzynkę**.
+   - **Aktywność na zajęciach lab** - podczas dyskusji na temat rozwiązań zadań laboratoryjnych prowadzący będzie czasem zadawał dodatkowe pytania, związane z rozumieniem kodu czy zagadnień poruszanych na wykładzie. Za odpowiedź na takie pytanie będzie można zarobić **brązową skrzynkę**.
+   - **Quizy na wykładzie** - na niektórych wykładach będzie można wziąć udział w krótkim quizie podsumowującym omawiane na nim zagadnienia. Domyślnie za quizy nie są przyznawane nagrody, ale w wyjątkowych (zapowiedzianych wcześniej) sytuacjach będzie można w ten sposób otrzymać **brązową skrzynkę**.
+   - W uzasadnionych przypadkach prowadzący może arbitralnie przyznać studentowi dodatkowy łup za inne, wyróżniające się aktywności.
+   
 
 ### Roadmapa
 Wszystkie łupy  (poza tymi z quizów), jakie można zdobyć podczas kursu są zawsze oznaczone przy instrukcjach do lab, ale dla wygody można też zaplanować sobie łowy na podstawie roadmapy (kliknij żeby powiększyć):
@@ -93,7 +96,7 @@ Domyślnie każde zadanie wykonujemy w ciągu tygodnia od jego zadania. W specyf
 
 **Czy muszę być obecny na zajęciach?**
 
-Tak, należy przychodzić na zajęcia laboratoryjne i projektowe. Dopuszczalne są 2 nieusprawiedliwione nieobecności w trakcie semestru. Każdą kolejną należy usprawiedliwić, żeby zaliczyć przedmiot. Kartkówki, które przepadły przez nieobecność można odrobić w przypadku pokazania sensownego usprawiedliwienia (np. zwolnienie lekarskie, udział w konferencji itp). 
+Tak, należy przychodzić na zajęcia laboratoryjne i projektowe. Dopuszczalne są 2 nieusprawiedliwione nieobecności w trakcie semestru. Każdą kolejną należy usprawiedliwić, żeby zaliczyć przedmiot. Kartkówki, które przepadły przez nieobecność można odrobić w przypadku pokazania sensownego, papierowego usprawiedliwienia (np. zwolnienie lekarskie, udział w konferencji itp). 
 
 **Czego trzeba nauczyć się na kartkówkę?**
 
@@ -101,9 +104,11 @@ Kartkówka zawsze będzie dotyczyła tematu poruszanego na ostatnim wykładzie. 
 
 **Czy mogę korzystać z AI podczas rozwiązywania zadań?**
 
-Wszystkie zadania oraz projekt należy pisać samodzielnie. Używanie chatbota do generowania rozwiązań zadań jest równoważne z oddawaniem cudzej pracy. Pamiętajcie, że uczycie się tu absolutnych podstaw programowania! Jeśli nie będziecie w stanie pisać kodu na takim poziomie samodzielnie, nie będziecie też w stanie w przyszłości weryfikować odpowiedzi chatbota i rozwiązywać mniej oczywistych problemów.
+Wszystkie zadania oraz projekt należy pisać samodzielnie. Używanie chatbota/LLM do generowania rozwiązań zadań jest równoważne z oddawaniem cudzej pracy. Pamiętajcie, że uczycie się tu absolutnych podstaw programowania! Jeśli nie będziecie w stanie pisać kodu na takim poziomie samodzielnie, nie będziecie też w stanie w przyszłości weryfikować odpowiedzi chatbota i rozwiązywać mniej oczywistych problemów.
 
-Zalecamy całkowite odcięcie się od wspomagania AI na tym przedmiocie. Dotyczy to nie tylko rozwiązań opartych o LLM, ale również maszynowo generowanych podpowiedzi w IntelliJ. Podpowiadamy jak je konfigurować tutaj. 
+Zalecamy całkowite odcięcie się od wspomagania AI na tym przedmiocie. Dotyczy to nie tylko rozwiązań opartych o LLM, ale również maszynowo generowanych podpowiedzi w IntelliJ. Podpowiadamy jak je konfigurować [tutaj](guides/IntelliJ%20-%20porady%20i%20konfiguracja.md). 
+
+Uwaga: prowadzący ma prawo wstawić 0xp za wcześniej ocenioną laborkę, jeśli podczas ustnej weryfikacji okaże się, że student nie zna swojego kodu i nie potrafi wyjaśnić dokładnie działania użytych przez siebie instrukcji.
 
 **Jak dokładnie działają mnożniki (marchewki i pietruszki)?**
 

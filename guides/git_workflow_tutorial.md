@@ -6,7 +6,7 @@ Wszystkie grafiki w poniższym przykładzie pochodzą z aplikacji GitKraken. Bar
 
 Zakładając, że mamy już za sobą jakieś zajęcia, nasze repozytorium może wyglądać na przykład tak:
 
-![Stan repo po lab1](img/1.png)
+![Stan repo po lab1](img/git1.png)
 
 1. Zaczynamy od utworzenia brancha. Możemy to zrobić zarówno z poziomu GitHuba (wówczas wystarczy potem przepiąć się lokalnie na utworzonego brancha), jak i lokalnie:
     ```
@@ -14,33 +14,33 @@ Zakładając, że mamy już za sobą jakieś zajęcia, nasze repozytorium może 
     ```
 	Po utworzeniu i przepięciu się na nowego brancha repozytorium wygląda następująco:
 	
-	![Stan repo po utworzeniu brancha lab2](img/2.png)
+	![Stan repo po utworzeniu brancha lab2](img/git2.png)
 
 1. Teraz możemy swobodnie pracować i rozwijać nasz kod. W zależności od preferencji możemy w określonych momentach wykonywać **commit**, żeby utrwalać zmiany, i ewentualnie **push**, żeby przekazać je do zdalnego repozytorium na GitHubie. Mamy tutaj pełną swobodę, ale polecamy co jakiś czas utrwalać sobie zmiany na GitHubie (nawet traktując to jako formę backupu). 
 
-	![Stan repo po wykonaniu szeregu zmian na branchu lab2](img/3.png)
+	![Stan repo po wykonaniu szeregu zmian na branchu lab2](img/git3.png)
 
 	Warto zwrócić w tym miejscu uwagę, że główna gałąź (`main`) nadal wskazuje na miejsce, z którego utworzyliśmy brancha `lab2`. Jeśli przepniemy się na nią wszystkie nasze zmiany z `lab2` znikną. Nie jest to błąd i nie należy wówczas panikować, tylko wrócić na odpowiedniego brancha. :) A w razie głębszych problemów zawsze da się odnaleźć zaginiony `commit`, ponieważ Git przechowuje wszystko w lokalnej bazie danych (patrz polecenie [reflog](https://git-scm.com/docs/git-reflog)). 
 
 1. W momencie, gdy chcemy oddać nasze rozwiązanie do oceny, musimy utworzyć Pull Request. Pamiętamy, żeby wcześniej upewnić się, że wszystkie zmiany zostały przekazane do zdalnego repo (`git push`). Wchodzimy w tym celu na GitHuba i postępujemy zgodnie z instrukcjami:
 
-	![Tworzenie Pull Request na GitHubie](img/4.png)
+	![Tworzenie Pull Request na GitHubie](img/git4.png)
 
-	![Tworzenie Pull Request na GitHubie](img/5.png)
+	![Tworzenie Pull Request na GitHubie](img/git5.png)
 
 	Ważne by PR zawsze był wynikiem porównania `main <- lab`. 
 
 1. W zależności od ustaleń z prowadzącym czekamy na komentarze od niego lub pokazujemy PR w trakcie zajęć. Po otrzymaniu oceny możemy zamknąć PR na GitHubie i scalić branch z główną gałęzią `main`:
 
-	![Wcielanie zmian do głównej gałęzi](img/6.png)
+	![Wcielanie zmian do głównej gałęzi](img/git6.png)
 	
 1. W tym momencie w logu naszego repozytorium lokalnego powinniśmy widzieć taką sytuację:
 
-	![Stan repo po scaleniu PR](img/7.png)
+	![Stan repo po scaleniu PR](img/git7.png)
 
     Warto zauważyć, że nasz lokalny branch `main` nadal wskazuje na to samo miejsce, w którym go pozostawiliśmy na początku! Jest to bardzo ważne, ponieważ po przełączeniu się na niego (`git checkout main`), wciąż nie będą widoczne nasze zmiany z lab2. 
 
-	![Stan repo po przełączeniu się na lokalny main](img/8.png)
+	![Stan repo po przełączeniu się na lokalny main](img/git8.png)
 	
 	Aby zobaczyć wszystkie zmiany, należy po przełączeniu się na branch `main` zaktualizować jego stan, synchronizując go z branchem `origin/main` (ze zdalnego repozytorium na GitHubie), wykonując komendę:
 
@@ -48,8 +48,8 @@ Zakładając, że mamy już za sobą jakieś zajęcia, nasze repozytorium może 
 	
 	W tym momencie lokalny branch `main` będzie już wskazywał tam, gdzie zdalny `origin/main`:
 
-	![Stan repo po zsynchronizowaniu main](img/9.png)	
+	![Stan repo po zsynchronizowaniu main](img/git9.png)	
 	
 1. Na tym etapie repozytorium jest już gotowe do kolejnej laborki - możemy utworzyć w tym miejscu branch `lab3` i cały cykl się powtarza:
 
-	![Stan repo po rozpoczęciu kolejnego lab](img/10.png)	
+	![Stan repo po rozpoczęciu kolejnego lab](img/git10.png)	

@@ -66,7 +66,7 @@ W trakcie semestru będziemy korzystać ze środowiska IntelliJ do tworzenia pro
 
    **Podobną procedurę będziemy stosować na wszystkich kolejnych laboratoriach. Pamiętaj by zawsze na początku pracy tworzyć branch z głównej gałęzi, commitować zmiany (liczba commitów nie ma znaczenia), a na koniec przygotować PR do sprawdzenia. Więcej informacji na ten temat znajdziesz w dodatkowej instrukcji:**
    
-   [Praca z Git na kolejnych laboratoriach](git_workflow_tutorial.md)
+   [Praca z Git na kolejnych laboratoriach](../guides/git_workflow_tutorial.md)
    
 10. Po wykonaniu wszystkich ćwiczeń [zarejestruj swojego zwierzaka wypełniając formularz](https://forms.office.com/Pages/ResponsePage.aspx?id=PwOxgOAhgkq7wPBf3M07yF6m9cn7cIlCm9fFlCH8KDJUMzdIU0NaTzUyTkFLME5TUzBCVFJRUDVJUi4u). W ten sposób prowadzący będzie wiedział również, jak dostać się do Twojego repozytorium.
    

@@ -13,7 +13,7 @@ Można korzystać z darmowej (ograniczonej) wersji IntelliJ lub użyć [studenck
 
 W pierwszej kolejności zawsze warto odświeżyć projekt Gradle. IntelliJ automatycznie importuje konfigurację Gradle, ale jeśli coś w niej zmienimy musimy sami pamiętać by przeładować projekt:
 
-![project structure](intellij3.png)
+![project structure](img/intellij3.png)
 #### LinkageError podczas uruchamiania aplikacji
 
 Jeśli podczas uruchamiania aplikacji stworzonej w IntelliJ zobaczysz błąd tego typu:
@@ -25,9 +25,9 @@ Error: LinkageError occurred while loading main class agh.ics.oop.World
 
 ...to oznacza, że najprawdopodobniej masz zainstalowaną więcej niż jedną wersję Javy. IntelliJ powinien wykryć wymaganą wersję na podstawie konfiguracji Gradle, ale czasem w wyniku zmian w projekcie ustawienia potrafią się wymieszać. W takiej sytuacji należy sprawdzić dwa miejsca, w których ustawiamy JDK (oba powinny wskazywać na to samo JDK w tej samej wersji):
 1. Ustawienia (zębatka) -> *Project Structure* -> *Project*:
-      ![project structure](intellij1.png)
+      ![project structure](img/intellij1.png)
 2. Ustawienia (zębatka) -> *Settings* -> *Build, Execution, Deployment* -> *Build Tools* -> *Gradle*
-    ![project structure](intellij2.png)
+    ![project structure](img/intellij2.png)
    
 ### Wsparcie AI
 
@@ -83,7 +83,7 @@ To również skrót klawiszowy, ale mocno kontekstowy. W wielu sytuacjach po ust
 
 Domyślnie otwarcie pliku w edytorze IJ (np. w wyniku wyszukiwania) nie powoduje, że w drzewie plików widzimy miejsce, w którym znajduje się on w projekcie. Szczególnie przy przełączaniu się między wieloma plikami z różnych miejsc projektu jest to bardzo niewygodne. Dlatego warto ustawić sobie dwie opcje w menu z trzykropkiem przy drzewie projektu:
 
-   ![nawigacja](intellij4.png)
+   ![nawigacja](img/intellij4.png)
    
 Pierwsza z nich zapewni szybkie przechodzenie po otwartych plikach klikając po drzewie projektu, a druga dodaje synchronizację podświetlenia aktualnie otwartego pliku w drzewie.
 

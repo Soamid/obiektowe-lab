@@ -32,7 +32,7 @@ W trakcie semestru będziemy korzystać ze środowiska IntelliJ do tworzenia pro
 
 2. Stwórz nowe repozytorium i nazwij je odpowiednio (schemat nazywania poniżej) - będziesz w nim przechowywać rozwiązania zadań z kolejnych laboratoriów.
 
-   * nazwa repozytorium to PO_2024_[dzień][godzina]_[nazwisko studenta] - np. PO_2024_PN1500_BRZECZYSZCZYKIEWICZ lub PO_2024_WT1820_PAPADOPOULOS. Dzień prosimy zapisać w formacie dwuliterowym bez polskich znaków (PN, WT, SR, CZ, PT),
+   * nazwa repozytorium to PO_2025_[dzień][godzina]_[nazwisko studenta] - np. PO_2025_PN1500_BRZECZYSZCZYKIEWICZ lub PO_2025_WT1820_PAPADOPOULOS. Dzień prosimy zapisać w formacie dwuliterowym bez polskich znaków (PN, WT, SR, CZ, PT),
    * repozytorium może być prywatne lub publiczne. Na potrzeby naszych zajęć repozytoria powinny być **prywatne**,
    * możesz na tym etapie zaznaczyć opcję *Add a README file* - zainicjujesz w ten sposób repozytorium plikiem, którego zawartość będzie domyślna na głównej stronie repozytorium.
 
@@ -54,7 +54,7 @@ W trakcie semestru będziemy korzystać ze środowiska IntelliJ do tworzenia pro
 
    5. Możesz też dodać dowolny dodatkowy tekst, to Twoje repo. ;)
 
-   **Uwaga**: zanim zapiszesz nazwę swojego zwierzaka, [upewnij się czy nie jest ona już zajęta](https://aghedupl-my.sharepoint.com/:x:/g/personal/miidzik_agh_edu_pl/EbRk-hL6hWJKnESfA3NMlVEBJi-fSMmz-Z9pIOwQ7tpdkg?e=GwTsDz), żeby uniknąć kolizji z innymi studentami! Każdy zwierzak powinien być unikalny. Podlinkowany arkusz aktualizuje się automatycznie co jakiś czas.
+   **Uwaga**: zanim zapiszesz nazwę swojego zwierzaka, [upewnij się czy nie jest ona już zajęta](???), żeby uniknąć kolizji z innymi studentami! Każdy zwierzak powinien być unikalny. Podlinkowany arkusz aktualizuje się automatycznie co jakiś czas.
 
 7. Dodaj plik **.gitignore** i przygotuj go do pracy ze środowiskiem IntelliJ - możesz skorzystać z [gotowego szablonu](https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore).
 
@@ -66,9 +66,9 @@ W trakcie semestru będziemy korzystać ze środowiska IntelliJ do tworzenia pro
 
    **Podobną procedurę będziemy stosować na wszystkich kolejnych laboratoriach. Pamiętaj by zawsze na początku pracy tworzyć branch z głównej gałęzi, commitować zmiany (liczba commitów nie ma znaczenia), a na koniec przygotować PR do sprawdzenia. Więcej informacji na ten temat znajdziesz w dodatkowej instrukcji:**
    
-   [Praca z Git na kolejnych laboratoriach](git_workflow_tutorial.md)
+   [Praca z Git na kolejnych laboratoriach](../guides/git_workflow_tutorial.md)
    
-10. Po wykonaniu wszystkich ćwiczeń [zarejestruj swojego zwierzaka wypełniając formularz](https://forms.office.com/Pages/ResponsePage.aspx?id=PwOxgOAhgkq7wPBf3M07yF6m9cn7cIlCm9fFlCH8KDJUMzdIU0NaTzUyTkFLME5TUzBCVFJRUDVJUi4u). W ten sposób prowadzący będzie wiedział również, jak dostać się do Twojego repozytorium.
+10. Po wykonaniu wszystkich ćwiczeń [zarejestruj swojego zwierzaka wypełniając formularz](???). W ten sposób prowadzący będzie wiedział również, jak dostać się do Twojego repozytorium.
    
 
 ## Przydatne informacje

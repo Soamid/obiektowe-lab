@@ -73,6 +73,11 @@ Uwaga: dla przejrzystości pliki z klasami `Vector2d` oraz `MapDirection` należ
 
 ### Testy
 
+Umiejętność pisania testów jest niezbędna przy pisaniu bardziej złożonych programów. Warto więc zacząć już teraz. Testy będziemy dodawać do kodu stworzonego na tej i kilku kolejnych laborkach.
+
+Ponieważ jest to prawdopodobnie pierwsze Twoje zderzenie z tematem testowania, polecamy przed wykonaniem kolejnych zadań obejrzeć [krótkie wprowadzenie na ten temat](Testy%20jednostkowe%20-%20tutorial.mp4). Jeśli chcesz wiedzieć więcej na ten temat, na Upel znajdziesz nagranie z dodatkowym, pełnym wykładem o testach.
+   
+Pamiętaj też, że kod testów również powinien być czytelny i dobrze ustrukturyzowany. Warto zapoznać się z konwencją [Given When Then](https://www.j-labs.pl/blog-technologiczny/given-when-then-pattern-in-unit-tests/) i zawsze formułować przypadki testowe tak by jasno opisywały, co chcemy przetestować i jakie powinny być skutki badanej akcji.
 
 1. Utwórz klasę `MapDirectionTest` w katalogu `src/test/java` w pakiecie `agh.ics.oop.model`.
 
@@ -90,8 +95,6 @@ Uwaga: dla przejrzystości pliki z klasami `Vector2d` oraz `MapDirection` należ
    `opposite()`.
    
 7. W podobny sposób przetestuj także `OptionsParser`.
-
-   Pamiętaj, że kod testów również powinien być czytelny i dobrze ustrukturyzowany. Warto zapoznać się z konwencją [Given When Then](https://www.j-labs.pl/blog-technologiczny/given-when-then-pattern-in-unit-tests/) i zawsze formułować przypadki testowe tak by jasno opisywały, co chcemy przetestować i jakie powinny być skutki badanej akcji.
 
 
 

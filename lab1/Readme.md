@@ -8,12 +8,15 @@ Najważniejsze zadania:
 2. Stworzenie klasy `World` sterującej programem.
 3. Stworzenie typu wyliczeniowego `MoveDirection` i narzędzia `OptionsParser`.
 
+## Przygotowanie środowiska pracy
+
+1. Przed zainicjowaniem projektu zalecamy upewnić się, czy połączenie z Internetem jest stabilne i wystarczająco szybkie. Stworzenie projektu wymaga pobrania kilku dodatkowych narzędzi w tle. W szczególności **NIE** polecamy pracy na otwartej sieci `AGH-Guest` (lepiej skorzystać z `AGH-5` lub `AGH-WPA`).
+2. Projekt tworzony na zajęciach powinien znaleźć się w utworzonym wcześniej repozytorium Git. Kolejne laboratoria będą wymagały rozszerzania tego projektu o nowe elementy. **Pamiętaj, by każdą laborkę rozpoczynać od utworzenia brancha z aktualnego stanu repo (np. "lab1")**, a także o regularnym commitowaniu zmian i udostępnieniu gotowego rozwiązania w formie Pull Requesta do oceny zgodnie z wytycznymi prowadzącego. Zwracaj też uwagę na pliki, które commitujesz - nie umieszczaj w repo śmieci (w razie potrzebny zmodyfikuj *.gitignore*), jedynie sam kod i pliki konfiguracyjne gradle. Polecamy na początek zajrzeć do [dodatkowej instrukcji o pracy z Gitem podczas laboratoriów](../guides/git_workflow_tutorial.md).
+3. Podczas pracy na zajęciach będziemy używać środowiska programistycznego (tzw. IDE) o nazwie [IntelliJ IDEA](https://www.jetbrains.com/idea). IDE posiada bardzo wiele narzędzi ułatwiających pracę z kodem - będziemy je stopniowo poznawać na zajęciach. [Porady na temat konfiguracji IntellliJ znajdziesz tutaj.](../guides/IntelliJ%20-%20porady%20i%20konfiguracja.md)
 
 ## Zadania do wykonania (4xp)
 
-**Uwaga 1:** Przed zainicjowaniem projektu zalecamy upewnić się, czy połączenie z Internetem jest stabilne i wystarczająco szybkie. Stworzenie projektu wymaga pobrania kilku dodatkowych narzędzi w tle. W szczególności **NIE** polecamy pracy na otwartej sieci `AGH-Guest` (lepiej skorzystać z `AGH-5` lub `AGH-WPA`).
-
-**Uwaga 2:** Projekt tworzony na zajęciach powinien znaleźć się w utworzonym wcześniej repozytorium Git. Kolejne laboratoria będą wymagały rozszerzania tego projektu o nowe elementy. **Pamiętaj, by każdą laborkę rozpoczynać od utworzenia brancha z aktualnego stanu repo (np. "lab1")**, a także o regularnym commitowaniu zmian i udostępnieniu gotowego rozwiązania w formie Pull Requesta do oceny zgodnie z wytycznymi prowadzącego. Zwracaj też uwagę na pliki, które commitujesz - nie umieszczaj w repo śmieci (w razie potrzebny zmodyfikuj *.gitignore*), jedynie sam kod i pliki konfiguracyjne gradle. Polecamy na początek zajrzeć do [dodatkowej instrukcji o pracy z Gitem podczas laboratoriów](../lab0/git_workflow_tutorial.md).
+**Uwaga 2:** 
 
 1. Uruchom program IntelliJ.
 

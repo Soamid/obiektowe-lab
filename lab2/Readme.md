@@ -40,10 +40,11 @@ Uwaga: dla przejrzystości pliki z klasami `Vector2d` oraz `MapDirection` należ
 2. Poniższy obrazek ilustruje metody `precedes` i `follows`. `v1` poprzedza (precedes) `v2` oraz `v3`. `v2` poprzedza `v3`.
    Wszystkie wektory poprzedzają również same siebie (relacja ta jest zwrotna). `v3` następuje po (follows) `v2` oraz
    `v1`, `v2` następuje po `v1`. Wszystkie wektory następują również po samych sobie.
-   ![wektory](vector2d.png)
+   <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/lab2/vector2d.png" alt="wektory" data-inline align="center" />
 
 3. Poniższy obrazek ilustruje metody `lowerLeft` oraz `upperRight`.
-   ![rogi](vector2d-a.png)
+      <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/lab2/vector2d-a.png" alt="rogi" data-inline align="center" />
+
 
 4. W metodzie `main` w klasie `World` wprowadź następujący kod:
 

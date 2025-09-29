@@ -16,8 +16,6 @@ Najważniejsze zadania:
 
 ## Zadania do wykonania (4xp)
 
-**Uwaga 2:** 
-
 1. Uruchom program IntelliJ.
 
 2. Utwórz nowy projekt o nazwie `oolab` typu **Gradle**. Pamiętaj, by w kreatorze projektu ustawić pole `Language` na `Java`, `Build system` na `Gradle`  (a **nie** na `IntelliJ`), a `Gradle DSL` najlepiej na `Groovy`. Możesz wybrać (lub w razie potrzeby pobrać) najnowszą wersję JDK, ale zalecamy **25**, ponieważ jest to wersja LTS i instrukcje do laboratoriów są o nią oparte. 
@@ -157,7 +155,7 @@ Najważniejsze zadania:
 * Instrukcję `switch` można używać m. in. na typach wyliczeniowych oraz napisach zarówno w formie instrukcji, jak i wyrażenia, którego wynik można przypisać do zmiennej (od Javy 14):
 
   ```java
-   switch (argument) {
+  switch (argument) {
     case "f" ->  System.out.println("Do przodu");
     case "b" ->  System.out.println("Do tyłu");
   }

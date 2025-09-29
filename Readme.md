@@ -90,19 +90,19 @@ Wszystkie łupy  (poza tymi z quizów), jakie można zdobyć podczas kursu są z
 
 ### FAQ
 
-**Ile mam czasu na wykonanie zadania z lab?**
+#### Ile mam czasu na wykonanie zadania z lab?
 
 Domyślnie każde zadanie wykonujemy w ciągu tygodnia od jego zadania. W specyficznych przypadkach (np. lab wyprzedził wykład) prowadzący może przedłużyć ten czas. Dokładny deadline zawsze ustalamy z prowadzącym lab.
 
-**Czy muszę być obecny na zajęciach?**
+#### Czy muszę być obecny na zajęciach?
 
 Tak, należy przychodzić na zajęcia laboratoryjne i projektowe. Dopuszczalne są 2 nieusprawiedliwione nieobecności w trakcie semestru. Każdą kolejną należy usprawiedliwić, żeby zaliczyć przedmiot. Kartkówki, które przepadły przez nieobecność można odrobić w przypadku pokazania sensownego, papierowego usprawiedliwienia (np. zwolnienie lekarskie, udział w konferencji itp). 
 
-**Czego trzeba nauczyć się na kartkówkę?**
+#### Czego trzeba nauczyć się na kartkówkę?
 
 Kartkówka zawsze będzie dotyczyła tematu poruszanego na ostatnim wykładzie. Forma kartkówki to jedno pytanie zamknięte typu test wyboru z jedną poprawną odpowiedzią. Jeśli zajęcia lab są opóźnione względem wykładu to kartkówka ostatniego dotyczy wykładu, którego znajomość nie była jeszcze weryfikowana (np. jeśli mamy już wykład nr 3, a na lab była dopiero jedna kartkówka to kolejna dotyczy wykładu nr 2). Jeśli z kolei lab wyprzedza wykład to kartkówka nie odbywa się.
 
-**Czy mogę korzystać z AI podczas rozwiązywania zadań?**
+#### Czy mogę korzystać z AI podczas rozwiązywania zadań?
 
 Wszystkie zadania oraz projekt należy pisać samodzielnie. Używanie chatbota/LLM do generowania rozwiązań zadań jest równoważne z oddawaniem cudzej pracy. Pamiętajcie, że uczycie się tu absolutnych podstaw programowania! Jeśli nie będziecie w stanie pisać kodu na takim poziomie samodzielnie, nie będziecie też w stanie w przyszłości weryfikować odpowiedzi chatbota i rozwiązywać mniej oczywistych problemów.
 
@@ -110,37 +110,37 @@ Zalecamy całkowite odcięcie się od wspomagania AI na tym przedmiocie. Dotyczy
 
 Uwaga: prowadzący ma prawo wstawić 0xp za wcześniej ocenioną laborkę, jeśli podczas ustnej weryfikacji okaże się, że student nie zna swojego kodu i nie potrafi wyjaśnić dokładnie działania użytych przez siebie instrukcji.
 
-**Jak dokładnie działają mnożniki (marchewki i pietruszki)?**
+#### Jak dokładnie działają mnożniki (marchewki i pietruszki)?
 
 Każda zdobyta marchewka lub pietruszka zwiększa wartość wszystkich zdobytych xp za laboratoria z Javy lub projekt. Przykładowo, jeśli zwierzak  zdobędzie w trakcie lab 26xp (z 32 możliwych) oraz 3 marchewki to otrzyma sumarycznie `26 + 3*2,6 = 33,8xp`.
 
-**Czy mogę wykorzystać mnożniki zdobyte w trakcie lab na projekcie?**
+#### Czy mogę wykorzystać mnożniki zdobyte w trakcie lab na projekcie?
 
 Nie, mnożniki działają zgodnie z ich oznaczeniami. W pierwszej części semestru zdobywamy marchewki (maksymalnie 3). W drugiej części semestru, w trakcie projektu pietruszki (maksymalnie 4).
 
-**Czy marchewki działają również na ćwiczenia z Gita?**
+#### Czy marchewki działają również na ćwiczenia z Gita?
 
 Nie, mnożą one jedynie punkty zdobywane w trakcie lab z Javy (8 spotkań).
 
-**Czy weterynarz pozwala odrabiać zawalone kartkówki czy być zwolnionym z pisania kolejnych?**
+#### Czy weterynarz pozwala odrabiać zawalone kartkówki czy być zwolnionym z pisania kolejnych?
 
 Tak. 
 
 W zależności od sytuacji, weterynarz albo naprawia utracone punkty albo pomaga zdobyć punkty za kolejną kartkówkę. Można jednak mimo wszystko przystąpić do kartkówki - wtedy weterynarz zaaplikuje się do kolejnej, jeśli bieżąca zostanie zaliczona.
 
-**Czy plastry działają tylko na pojedyncze laborki?**
+#### Czy plastry działają tylko na pojedyncze laborki?
 
 Plastry działają również na ułamki straconych xp w różnych laborkach, regenerując maksymalnie 2xp. Przykładowo, jeśli z Lab1 zdobyliśmy 3 z 4xp, a z Lab2 3.5 z 4xp to zastosowanie plastra uzupełni nam brakujące 1.5xp. 
 
-**Skąd wiadomo jaki kolor skrzynki otrzymam za daną aktywność?**
+#### Skąd wiadomo jaki kolor skrzynki otrzymam za daną aktywność?
 
 Rodzaje skrzynek z łupami są zawsze określane w konspekcie lub przez prowadzącego.  
 
-**Co się stanie, jeśli nie zdobędę wystarczająco xp by wykluć zwierzaka z Jaja przed startem projektu?**
+#### Co się stanie, jeśli nie zdobędę wystarczająco xp by wykluć zwierzaka z Jaja przed startem projektu?
 
 W takiej sytuacji należy normalnie wziąć udział w projekcie, ale liczyć się z koniecznością zaliczenia przedmiotu w terminie poprawkowym. Rezultat projektu może wpłynąć na ocenę uzyskaną w terminie poprawkowym. 
 
-**Czy muszę brać udział w quizach na wykładzie by mieć szansę na 5.0?**
+#### Czy muszę brać udział w quizach na wykładzie by mieć szansę na 5.0?
 
 Absolutnie nie! Zarówno wykłady, jak i quizy na nich są nieobowiązkowe. Aby zdobyć maksymalną liczbę marchewek i pietruszek (mnożników) wystarczy zrobić np. dodatkowe zadania, które pojawiają się na niektórych laborkach - będą dokładnie 3 takie zadania w trakcie części laboratoryjnej i 4 w trakcie części projektowej. Ponadto można też brać udział w wydarzeniach specjalnych. Co więcej, zdobycie wszystkich możliwych mnożników i zrobienie zadań na max punktów pozwala w teorii nawet przekroczyć 100% możliwych do zdobycia punktów doświadczenia. Quizy na wykładzie to po prostu jeszcze jedna okazja by zdobyć nagrody.
 

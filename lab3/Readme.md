@@ -51,12 +51,13 @@ Najważniejsze zadania:
 4. Zapewnij by po każdym ruchu program wypisywał informację `Zwierzę i : (x ,y)`, gdzie `i`- numer zwierzęcia na liście, `x`,`y` - pozycja zwierzęcia po ruchu (skorzystaj z przygotowanego wcześniej `toString()`).
 
 5. W celu weryfikacji rozwiązania wykonaj następujący kod w metodzie `main` klasy `World`:
-       ```java
-       List<MoveDirection> directions = OptionsParser.parse(args);
-       List<Vector2d> positions = List.of(new Vector2d(2,2), new Vector2d(3,4));
-       Simulation simulation = new Simulation(positions, directions);
-       simulation.run();
-       ```
+   
+   ```java
+   List<MoveDirection> directions = OptionsParser.parse(args);
+   List<Vector2d> positions = List.of(new Vector2d(2,2), new Vector2d(3,4));
+   Simulation simulation = new Simulation(positions, directions);
+   simulation.run();
+   ```
 
     Sprawdź, czy zwierzęta poruszają się poprawnie dla ciągu: `f b r l f f r r f f f f f f f f`.
 

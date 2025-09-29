@@ -41,7 +41,7 @@ Najważniejsze zadania:
 
 
 
-## Zadanie dodatkowe (<img src="../img/reward_silver.png" alt="srebrna skrzynka" width="50" align="center" />)
+## Zadanie dodatkowe <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/reward_silver.png" alt="srebrna skrzynka" width="50" align="center" />
 
 Interfejs `WorldMap` zakłada, że mapa może przechowywać jedynie zwierzęta, a pozycje zawsze wyrażone są jako dwuwymiarowe wektory. Te założenia można poluzować, wprowadzając parametryzację i typy generyczne.
 

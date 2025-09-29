@@ -36,13 +36,13 @@ Będzie to wyglądało następująco:
 
    |                                                              | poziom doświadczenia  | xp        | ocena |
    | ------------------------------------------------------------ | --------------------- | --------- | ----- |
-   | <img src="img/owlbear1.png" alt="jajo" width="100" /> | Jajo                  | <0, 25)   | 2.0   |
-   | <img src="img/owlbear2.png" alt="pisklak"  width="100" /> | Pisklak               | <25, 50)  | 2.0   |
-   | <img src="img/owlbear3.png" alt="podlot"  width="100" /> | Podlot                | <50, 60)  | 3.0   |
-   | <img src="img/owlbear4.png" alt="zoltodziob"  width="100" /> | Żółtodziób            | <60, 70)  | 3.5   |
-   | <img src="img/owlbear5.png" alt="nieopierzony" width="100" /> | Nieopierzony odkrywca | <70, 80)  | 4.0   |
-   | <img src="img/owlbear6.png" alt="samodzielny"  width="100"/> | Samodzielny Zwierzak  | <80, 90)  | 4.5   |
-   | <img src="img/owlbear7.png" alt="bestia"  width="100" /> | Majestatyczna Bestia  | <90, 100) | 5.0   |
+   | <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/owlbear1.png" alt="jajo" width="100" /> | Jajo                  | <0, 25)   | 2.0   |
+   | <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/owlbear2.png" alt="pisklak"  width="100" /> | Pisklak               | <25, 50)  | 2.0   |
+   | <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/owlbear3.png" alt="podlot"  width="100" /> | Podlot                | <50, 60)  | 3.0   |
+   | <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/owlbear4.png" alt="zoltodziob"  width="100" /> | Żółtodziób            | <60, 70)  | 3.5   |
+   | <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/owlbear5.png" alt="nieopierzony" width="100" /> | Nieopierzony odkrywca | <70, 80)  | 4.0   |
+   | <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/owlbear6.png" alt="samodzielny"  width="100"/> | Samodzielny Zwierzak  | <80, 90)  | 4.5   |
+   | <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/owlbear7.png" alt="bestia"  width="100" /> | Majestatyczna Bestia  | <90, 100) | 5.0   |
 
    
 
@@ -56,23 +56,23 @@ Będzie to wyglądało następująco:
 
    |                                                              | Nazwa łupu | Znaczenie                                                    |
    | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ |
-   | <img src="img/bonus_multiplier_lab.png" alt="marchew_lab"  width="100" /> | Marchewka  | **+10%** do sumy za lab z Javy (maks. 30%)<br /><br />*zdrowa alternatywa dla kija* |
-   | <img src="img/bonus_restore_test.png" alt="restore_lab"  width="100" /> | Weterynarz | **2xp** za kartkówkę (przeszłą lub przyszłą)<br /><br />*darmowy zastrzyk wiedzy* |
+   | <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/bonus_multiplier_lab.png" alt="marchew_lab"  width="100" /> | Marchewka  | **+10%** do sumy za lab z Javy (maks. 30%)<br /><br />*zdrowa alternatywa dla kija* |
+   | <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/bonus_restore_test.png" alt="restore_lab"  width="100" /> | Weterynarz | **2xp** za kartkówkę (przeszłą lub przyszłą)<br /><br />*darmowy zastrzyk wiedzy* |
 
    **II. Część projektowa (*Eksploracja*)**
 
    |                                                              | Nazwa łupu              | Znaczenie                                          |
    | ------------------------------------------------------------ | ----------------------- | -------------------------------------------------- |
-   | <img src="img/bonus_multiplier_proj.png" alt="marchew_proj"  width="100" /> | Pietruszka | **+10%** do sumy za projekt (maks. 40%)<br /><br />*to o nią toczy się gra* |
-   | <img src="img/bonus_restore_lab.png" alt="restore_lab"  width="100" /> | Plaster    | odrobienie straconych **2xp** za lab<br /><br />*na wypadek wystąpienia dziur w kodzie* |
+   | <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/bonus_multiplier_proj.png" alt="marchew_proj"  width="100" /> | Pietruszka | **+10%** do sumy za projekt (maks. 40%)<br /><br />*to o nią toczy się gra* |
+   | <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/bonus_restore_lab.png" alt="restore_lab"  width="100" /> | Plaster    | odrobienie straconych **2xp** za lab<br /><br />*na wypadek wystąpienia dziur w kodzie* |
 
 7. Wykonanie dodatkowej aktywności skutkuje otrzymaniem skrzynki z łupami. W zależności od rodzaju aktywności skrzynka może mieć różnią wartość, a co za tym idzie - mieć różną liczbę łupów do wyboru. Brązowe skrzynki zawierają jeden łup. Srebrne pozwalają wybrać jeden z dwóch (w momencie zdobycia skrzynki to Ty decydujesz, jaki łup zdobywasz). Złote skrzynki pozwalają na zdobycie dwóch łupów. Każdy łup zostaje aktywowany niezwłocznie po zdobyciu.
 
 | Symbol skrzynki                                                      | Zawartość <br />(część laboratoryjna)                                                                                                           | Zawartość<br />(część projektowa)                                                                                                                | Rodzaj aktywności                                                        |
 | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| <img src="img/reward_gold.png" alt="reward_gold"  width="100" />     | <img src="img/bonus_restore_test.png" alt="restore_test"  width="60" /><img src="img/bonus_multiplier_lab.png" alt="marchew" width="60" />      | <img src="img/bonus_restore_lab.png" alt="restore_lab"  width="60" /><img src="img/bonus_multiplier_proj.png" alt="pietrucha" width="60" />      | Wydarzenia specjalne                                                     |
-| <img src="img/reward_silver.png" alt="reward_silver"  width="100" /> | <img src="img/bonus_restore_test.png" alt="restore_test"  width="60" /> lub <img src="img/bonus_multiplier_lab.png" alt="marchew" width="60" /> | <img src="img/bonus_restore_lab.png" alt="restore_lab"  width="60" /> lub <img src="img/bonus_multiplier_proj.png" alt="pietrucha" width="60" /> | Wydarzenia specjalne,<br />Zadania dodatkowe                            |
-| <img src="img/reward_bronze.png" alt="reward_bronze"  width="100" /> | <img src="img/bonus_restore_test.png" alt="restore_test"  width="60" />                                                                         | <img src="img/bonus_restore_lab.png" alt="restore_lab"  width="60" />                                                                            | Wydarzenia specjalne,<br />Zadania dodatkowe,<br />Aktywność podczas lab,<br />Quizy na wykładzie  |
+| <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/reward_gold.png" alt="reward_gold"  width="100" />     | <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/bonus_restore_test.png" alt="restore_test"  width="60" /><img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/bonus_multiplier_lab.png" alt="marchew" width="60" />      | <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/bonus_restore_lab.png" alt="restore_lab"  width="60" /><img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/bonus_multiplier_proj.png" alt="pietrucha" width="60" />      | Wydarzenia specjalne                                                     |
+| <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/reward_silver.png" alt="reward_silver"  width="100" /> | <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/bonus_restore_test.png" alt="restore_test"  width="60" /> lub <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/bonus_multiplier_lab.png" alt="marchew" width="60" /> | <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/bonus_restore_lab.png" alt="restore_lab"  width="60" /> lub <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/bonus_multiplier_proj.png" alt="pietrucha" width="60" /> | Wydarzenia specjalne,<br />Zadania dodatkowe                            |
+| <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/reward_bronze.png" alt="reward_bronze"  width="100" /> | <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/bonus_restore_test.png" alt="restore_test"  width="60" />                                                                         | <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/bonus_restore_lab.png" alt="restore_lab"  width="60" />                                                                            | Wydarzenia specjalne,<br />Zadania dodatkowe,<br />Aktywność podczas lab,<br />Quizy na wykładzie  |
 
 8. W trakcie semestru pojawią się liczne okazje do zdobycia skrzynek z łupami. Za każdą aktywność będzie można zdobyć jedną lub dwie skrzynki. Rodzaje dodatkowych aktywności:
 

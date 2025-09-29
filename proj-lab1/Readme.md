@@ -7,7 +7,7 @@ Zrealizowanie zadań może być **bardzo pomocne przy realizacji projektu**.
 
 ## Zadania do wykonania
 
-### Część I: Elementy funkcyjne w Javie (<img src="../img/reward_silver.png" alt="srebrna skrzynka" width="50" align="center" />)
+### Część I: Elementy funkcyjne w Javie <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/reward_silver.png" alt="srebrna skrzynka" width="50" align="center" />
 
 ####  Wyrażenia lambda
 
@@ -34,7 +34,7 @@ Zrealizowanie zadań może być **bardzo pomocne przy realizacji projektu**.
 1. Metoda `WorldMap.objectAt()` może zwrócić `null` w momencie, gdy na danej pozycji nie będzie żadnego obiektu. Przerób interfejs w taki sposób by metoda zwracała `Optional<WorldElement>` i nigdy nie podawała `null`. 
 2. Obsłuż wszystkie miejsca, w których Twój program wywoływał `objectAt()`. Pamiętaj, że `Optional`, podobnie jak strumienie, posiada szereg operatorów przetwarzających jego zawartość bez "rozpakowywania" obiektu (np. operator `map()`, `filter()` czy `or()`). 
 
-### Część II : Zarządzanie zasobami (<img src="../img/reward_silver.png" alt="srebrna skrzynka" width="50" align="center" />)
+### Część II : Zarządzanie zasobami <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/reward_silver.png" alt="srebrna skrzynka" width="50" align="center" />
 
 #### Zapisywanie logów do pliku
 
@@ -60,8 +60,9 @@ Wczytywanie plików może być przydatne również na potrzeby UI. Do tej pory k
    `up.png`, jeśli zwierzę zwrócone jest na północ). Zaimplementuj je w klasach implementujących ten interfejs.
 6. Wykorzystaj powyższe metody w konstruktorze klasy `WorldElementBox`, który powinien przyjmować instancję `WorldElement` i wyświetlać reprezentację elementu. Upewnij się, że elementy te nie są niepotrzebnie tworzone wielokrotnie.
 7. Zamień reprezentację tekstową na graficzną w prezenterze widoku.
-8. Docelowy wygląd:<br>
-![look2](img/preview.png)
+8. Docelowy wygląd:
+   
+    <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/proj-lab1/img/preview.png" alt="preview" data-inline  align="center" />
 
 
 

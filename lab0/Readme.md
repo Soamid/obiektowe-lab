@@ -54,7 +54,7 @@ W trakcie semestru będziemy korzystać ze środowiska IntelliJ do tworzenia pro
 
    5. Możesz też dodać dowolny dodatkowy tekst, to Twoje repo. ;)
 
-   **Uwaga**: zanim zapiszesz nazwę swojego zwierzaka, [upewnij się czy nie jest ona już zajęta](???), żeby uniknąć kolizji z innymi studentami! Każdy zwierzak powinien być unikalny. Podlinkowany arkusz aktualizuje się automatycznie co jakiś czas.
+   **Uwaga**: zanim zapiszesz nazwę swojego zwierzaka, [upewnij się czy nie jest ona już zajęta]([PO2025 Rejestr nazw zwierzaków.xlsx](https://aghedupl-my.sharepoint.com/:x:/g/personal/miidzik_agh_edu_pl/EbkxCcljPz5LjKGBb8f5YnUBHUSZtbpweQDEjJBiXbqKOA?e=9q6vWr)), żeby uniknąć kolizji z innymi studentami! Każdy zwierzak powinien być unikalny. Podlinkowany arkusz aktualizuje się automatycznie co jakiś czas.
 
 7. Dodaj plik **.gitignore** i przygotuj go do pracy ze środowiskiem IntelliJ - możesz skorzystać z [gotowego szablonu](https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore).
 
@@ -68,7 +68,7 @@ W trakcie semestru będziemy korzystać ze środowiska IntelliJ do tworzenia pro
    
    [Praca z Git na kolejnych laboratoriach](../guides/git_workflow_tutorial.md)
    
-10. Po wykonaniu wszystkich ćwiczeń [zarejestruj swojego zwierzaka wypełniając formularz](???). W ten sposób prowadzący będzie wiedział również, jak dostać się do Twojego repozytorium.
+10. Po wykonaniu wszystkich ćwiczeń [zarejestruj swojego zwierzaka wypełniając formularz](https://forms.office.com/Pages/ResponsePage.aspx?id=PwOxgOAhgkq7wPBf3M07yF6m9cn7cIlCm9fFlCH8KDJUMEI0WFdJVlpXVTYwR0dJQUlGMEZYUkc4MC4u). W ten sposób prowadzący będzie wiedział również, jak dostać się do Twojego repozytorium.
    
 
 ## Przydatne informacje

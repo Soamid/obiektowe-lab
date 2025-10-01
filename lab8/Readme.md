@@ -171,9 +171,12 @@ Najważniejsze zadania:
 	}
 	```
 7. Aktualnie, twój program powinien wyglądać mniej więcej tak (użyto mapy `GrassField`, dodano 2 zwierzaki):
-   ![ui grid](img/ui-grid.png)
+   
+   <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/lab8/img/ui-grid.png" alt="ui grid" data-inline  align="center" />
+
 	Oczywiście to tylko przykład wizualizacji. Możesz poprawić nieco doznania estetyczne dowolnie stylując kontrolki (przykłady stylowania z użyciem CSS znajdziesz m. in. na wykładzie).
-### Zadanie dodatkowe (<img src="../img/reward_silver.png" alt="srebrna skrzynka" width="50" align="center" />)
+	
+### Zadanie dodatkowe <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/reward_silver.png" alt="srebrna skrzynka" width="50" align="center" />
 
 Model naszej aplikacji umożliwia tworzenie nie jeden, a wielu działających równolegle symulacji. Zmodyfikuj kod aplikacji tak, by dało się uruchamiać i wyświetlać dowolnie dużo symulacji:
 

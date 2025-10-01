@@ -54,7 +54,7 @@ Najważniejsze zadania:
 
 11. Dodaj do interfejsu metodę `getElements()`, która zwróci kolekcję wszystkich elementów na mapie. Dopisz brakujące implementacje tej metody wykorzystując przygotowaną hierarchię klas tak, by nie powtarzać kodu.
 
-## Zadanie dodatkowe (<img src="../img/reward_silver.png" alt="srebrna skrzynka" width="50" align="center" />)
+## Zadanie dodatkowe <img src="https://raw.githubusercontent.com/Soamid/obiektowe-lab/refs/heads/master/img/reward_silver.png" alt="srebrna skrzynka" width="50" align="center" />
 
 Mechanizm losowania trawy w `GrassField` zakłada, że wylosowane pozycje nie powinny się powtarzać. Jeśli zastosujemy naiwne podejście, tj. w przypadku wylosowania już zajętej pozycji będziemy losować jeszcze raz, nasz program staje się niedeterministyczny. Nie jesteśmy w stanie przewidzieć, ilu losowań będziemy potrzebowali, a w skrajnych przypadkach losowanie może nigdy się nie zakończyć. Podejście naiwne ma sens, gdy liczba wolnych pozycji jest istotnie większa niż liczba pozycji do wylosowania. W innych przypadkach powinniśmy jednak stosować mądrzejszy algorytm ze stałą liczbą losowań, nawet kosztem pamięci.
 

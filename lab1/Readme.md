@@ -98,7 +98,7 @@ Najważniejsze zadania:
 
 23. Otwórz konsolę (np. terminal/PowerShell).
 
-24. Wywołaj komendę `export JAVA_HOME=/usr/lib/jvm/java-25` (pod Windows trzeba będzie ustawić zmienną środowiskową wskazującą na katalog, w którym zainstalowana jest Java). **Komendę trzeba zaadaptować do lokalnej instalacji Javy!**
+24. Ustaw ścieżkę do swojej lokalizacji JDK (znajdziesz ją np. w IntelliJ w _Project Structure_ -> _SDKs_): `export JAVA_HOME=/usr/lib/jvm/java-25` (lub `set "JAVA_HOME=C:\Program Files\Java\jdk-25"` w przypadku wiersza poleceń Windows lub `$env:JAVA_HOME = "C:\Program Files\Java\jdk-25"` w przypadku PowerShell).
 
 25. Uruchom program poleceniem `./gradlew run --args="f l"` (lub `gradlew.bat ...` w systemie Windows)
 

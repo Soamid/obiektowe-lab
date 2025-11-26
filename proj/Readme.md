@@ -1,6 +1,6 @@
 # Projekt: Darwin World
 
-Niniejsza treść została zaadaptowana przez Aleksandra Smywińskiego-Pohla na podstawie opisu oraz ilustracji przygotowanych przez Wojciecha Kosiora. Inspiracją dla niego była z kolei książka "Land of Lisp" Conrada Barskiego, który zaś zainspirował się artykułem w "Scientific American". A na końcu modyfikacje wprowadził Radosław Łazarz, bazując częściowo na książce "Algorytmy genetyczne i ich zastosowania" Davida E. Goldberga. Dużo ludzi jak na jeden projekcik.:-)
+Niniejsza treść została zaadaptowana przez Aleksandra Smywińskiego-Pohla na podstawie opisu oraz ilustracji przygotowanych przez Wojciecha Kosiora. Inspiracją dla niego była z kolei książka "Land of Lisp" Conrada Barskiego, który zaś zainspirował się artykułem w "Scientific American". A na końcu modyfikacje wprowadził Radosław Łazarz, bazując częściowo na książce "Algorytmy genetyczne i ich zastosowania" Davida E. Goldberga. Aktualną wersję przeredagował i rozszerzył Michał Idzik.
 
 ## Cel projektu
 
@@ -66,59 +66,27 @@ Daną symulację opisuje szereg parametrów:
 * długość genomu zwierzaków,
 * wariant zachowania zwierzaków (wyjaśnione w sekcji poniżej).
 
-## Warianty konfiguracji
-
-Pewne aspekty symulacji są konfigurowalne i mogą silnie zmieniać jej przebieg. Część to zwykłe parametry liczbowe (np. początkowe rozmiary populacji). Część z nich  jednak dość znacząco modyfikuje jej zasady. Dotyczy to w szczególności: działania mapy, działania wzrostu roślin, działania mutacji, zachowania zwierzaków. Każdy zespół realizujący projekt **powinien zrealizować wszystkie aspekty z sekcji poniżej oznaczone jako obowiązkowe, a także dodatkowo 2 warianty przydzielone na pierwszych zajęciach przez prowadzącego**. Jeden z dodatkowych wariantów będzie dotyczyć mapy (jej kształtu lub roślinności), a drugi zwierzaków (ich zachowania lub mutacji przy rozmnażaniu). 
-
-### Mapa i roślinność
-
-W przypadku mapy kluczowe jest to, jak obsługujemy jej krawędzie. Zrealizujemy następujące warianty:
-
-* [obowiązkowo dla wszystkich] **kula ziemska** - lewa i prawa krawędź mapy zapętlają się (jeżeli zwierzak wyjdzie za lewą krawędź, to pojawi się po prawej stronie - a jeżeli za prawą, to po lewej); górna i dolna krawędź mapy to bieguny - nie można tam wejść (jeżeli zwierzak próbuje wyjść poza te krawędzie mapy, to pozostaje na polu na którym był, a jego kierunek zmienia się na odwrotny);
-* [A] **bieguny** – bieguny zdefiniowane są na dolnej i górnej krawędzi mapy. Im bliżej bieguna znajduje się zwierzę, tym większą energię traci podczas pojedynczego ruchu (na biegunach jest zimno);
-* [B] **pożary** - co jakąś (zadaną w konfiguracji) liczbę tur na mapie pojawia się pożar. Pożar zaczyna się na jednym polu z rośliną i w każdej turze rozprzestrzenia się na wszystkie przylegające do niej rośliny (ale nie po skosie). Pożar na każdym polu trwa stałą zadaną (konfigurowalną) liczbę tur i po jego zakończeniu roślina na tym polu znika. Jeśli zwierzak wejdzie na pole z ogniem, umiera.  
-* [C] **przypływy i odpływy** - na mapie znajdują się obszary wodne, na które zwierzaki nie mogą wejść; obszary te powiększają się i zmniejszają cyklicznie co kilka ruchów symulacji.
-* [D] **dziki sowoniedźwiedź** - wyznaczony kwadratowy podobszar mapy (zajmujący 20% mapy) to terytorium dzikiego sowoniedźwiedzia. Sowoniedźwiedź w każdej turze porusza się podobnie jak zwierzaki na podstawie losowego genotypu, ale nie wychodzi nigdy poza swoje terytorium. Sowoniedźwiedź jest mięsożerny, więc nie wchodzi w interakcje z trawą. Interesują go tylko nasze zwierzaki. Gdy zwierzak znajdzie się na jednym polu z sowoniedźwiedziem, zostaje natychmiastowo skonsumowany i ginie. Sowoniedźwiedź jest nieśmiertelny i nie traci energii.
-
-W przypadku wzrostu roślin pewne pola są silnie preferowane, zgodnie z zasadą Pareto. Istnieje 80% szansy, że nowa roślina wyrośnie na preferowanym polu, a tylko 20% szans, że wyrośnie na polu drugiej kategorii. Preferowanych jest około 20% wszystkich miejsc na mapie, 80% miejsc jest uznawane za nieatrakcyjne. Implementujemy następujące warianty:
-
-* [obowiązkowo dla wszystkich] **zalesione równiki** - preferowany przez rośliny jest poziomy pas pól w centralnej części mapy (udający równik i okolice);
-* [E] **życiodajne truchła** - rośliny preferują rosnąć na tych polach, w których sąsiedztwie niedawno zdechł zwierzak;
-* [F] **pełzająca dżungla** - nowe rośliny pojawiają się najczęściej w sąsiedztwie już istniejących roślin (chyba, że mapa została z nich całkowicie ogołocona);
-* [G] **dorodne plony** - preferowany jest rozkład równomierny, ale na pewnym kwadratowym podobszarze mapy (zajmującym 20% mapy) czasem pojawiają się większe rośliny, których zjedzenie dodaje zwierzakowi znacznie więcej energii. Każda taka roślina zajmuje kwadratowy obszar 2x2 pola. Obsługa sytuacji, w której więcej zwierzaków kończy ruch na jednym z pól należących do dużej rośliny powinna wyglądać tak samo jak w przypadku, gdy wiele zwierząt walczy o normalną roślinę na jednym polu.
-
-### Zwierzaki
-
-W przypadku mutacji mamy do czynienia z dwoma prostymi opcjami:
-
-* [obowiązkowo dla wszystkich] **pełna losowość** - mutacja zmienia gen na dowolny inny gen;
-* [1] **lekka korekta** - mutacja zmienia gen o `1` w górę lub w dół (np. gen `3` może zostać zamieniony na `2` lub `4`, a gen `0` na `1` lub `7`);
-* [2] **podmianka** - mutacja może też skutkować tym, że dwa geny zamienią się miejscami.
-
-Podobnie proste są warianty zachowania:
-
-* [obowiązkowo dla wszystkich] **pełna predestynacja** - zwierzak zawsze wykonuje kolejno geny, jeden po drugim;
-* [3] **nieco szaleństwa** - w 80% przypadków zwierzak po wykonaniu genu aktywuje gen następujący zaraz po nim, w 20% przypadków przeskakuje jednak do innego, losowego genu;
-* [4] **starość nie radość** - starsze zwierzaki poruszają się wolniej, raz na kilka tur pomijając swój ruch, ale nadal tracąc energię. Prawdopodobieństwo pominięcia ruchu rośnie z wiekiem, maksymalnie do 80%. 
-
-### Przykład realizacji wariantów
-Jeśli zespół projektowy otrzymał do realizacji projekt w wariancie B-3 to znaczy, że:
-- musi zapewnić w konfiguracji symulacji możliwość wyboru między mapą _kula ziemska_ a _pożary_,
-- musi zapewnić w konfiguracji symulacji możliwość wyboru zachowania zwierzaka: _pełna predestynacja_ lub _nieco szaleństwa_,
-- w symulacji rośliny zawsze rosną zgodnie ze strategią _zalesione równiki_, a mutacje zwierząt są _w pełni losowe_ (brak dodatkowej konfiguracji)
-
 ## Wymagania dla aplikacji
 
-1. Aplikacja ma być realizowana z użyciem graficznego interfejsu użytkownika z wykorzystaniem biblioteki JavaFX.
-2. Jej głównym zadaniem jest umożliwienie uruchamiania symulacji o wybranych konfiguracjach.
-   1. Powinna umożliwić wybranie jednej z uprzednio przygotowanych gotowych konfiguracji,
-   1. "wyklikanie" nowej konfiguracji,
-   1. oraz zapisanie jej do ponownego użytku w przyszłości.
-3. Uruchomienie symulacji powinno skutkować pojawieniem się nowego okna obsługującego daną symulację.
-   1. Jednocześnie uruchomionych może być wiele symulacji, każda w swoim oknie, każda na osobnej mapie.
-4. Sekcja symulacji ma wyświetlać animację pokazującą pozycje zwierzaków, ich energię w dowolnej formie (np. koloru lub paska zdrowia) oraz pozycje roślin - i ich zmiany.
-5. Program musi umożliwiać zatrzymywanie oraz wznawianie animacji w dowolnym momencie (niezależnie dla każdej mapy - patrz niżej).
-6. Program ma pozwalać na śledzenie następujących statystyk dla aktualnej sytuacji w symulacji:
+Aplikacja ma być realizowana z użyciem graficznego interfejsu użytkownika z wykorzystaniem biblioteki JavaFX. Można skorzystać z kodu, przygotowanego podczas laboratorium i go rozwinąć. Nie jest dozwolone korzystanie z cudzych prac (z obecnej lub poprzednich edycji). Wykrycie niesamodzielnej pracy będzie traktowane jak plagiat i poskutkuje brakiem zaliczenia przedmiotu!
+
+Wymagania projektu dzielimy na **część podstawową**, z którą można otrzymać **maksymalnie połowę punktów (16xp)** oraz rozszerzenia, które można dobrać w dowolnej ilości. Każde rozszerzenie daje określoną liczbę punktów. **Sumarycznie za cały projekt można otrzymać 32xp  (powiększone o ewentualne bonusy wynikające z zgromadzonych pietruszek).**. W przypadku zrealizowania rozszerzeń w sumie przekraczającej maksymalną liczbę punktów nadal można otrzymać maks. 32xp, ale przyznawana jest również dodatkowa **srebrna skrzynka**.
+
+### Część podstawowa (maks. 16xp)
+
+1. Umożliwienie uruchamiania symulacji o wybranych konfiguracjach.
+   1. Konfiguracja to zestaw wartości parametrów opisanych powyżej. Każdy parametr można określić z poziomu interfejsu graficznego.
+   1. Aplikacja powinna zapewniać domyślną konfigurację oraz możliwość zmiany parametrów.
+   1. Niektóre z wariantów projektów wymagają zdefiniowania dodatkowych parametrów.
+   1. Można założyć, że mapa ma określoną maksymalną wysokość i szerokość (tak by mieściła się sensownie na ekranie).
+
+2. Uruchomienie symulacji powinno skutkować pojawieniem się nowego okna obsługującego daną symulację.
+
+3. Sekcja symulacji ma wyświetlać animację pokazującą pozycje zwierzaków i innych obiektów na mapie tak, by dało się rozróżnić różne typy obiektów.
+
+4. Program musi umożliwiać zatrzymywanie oraz wznawianie animacji w dowolnym momencie.
+
+5. Program ma pozwalać na śledzenie następujących statystyk dla aktualnej sytuacji w symulacji:
    * liczby wszystkich zwierzaków,
    * liczby wszystkich roślin,
    * liczby wolnych pól,
@@ -126,31 +94,49 @@ Jeśli zespół projektowy otrzymał do realizacji projekt w wariancie B-3 to zn
    * średniego poziomu energii dla żyjących zwierzaków,
    * średniej długości życia zwierzaków dla martwych zwierzaków (wartość uwzględnia wszystkie nieżyjące zwierzaki - od początku symulacji),
    * średniej liczby dzieci dla żyjących zwierzaków (wartość uwzględnia wszystkie powstałe zwierzaki, a nie tylko zwierzaki powstałe w danej epoce).
-7. Po zatrzymaniu programu można oznaczyć jednego zwierzaka jako wybranego do śledzenia. Od tego momentu (do zatrzymania śledzenia) UI powinien przekazywać nam informacje o jego statusie i historii:
-   * jaki ma genom,
-   * która jego część jest aktywowana,
-   * ile ma energii,
-   * ile zjadł roślin,
-   * ile posiada dzieci,
-   * ile posiada potomków (niekoniecznie będących bezpośrednio dziećmi),
-   * ile dni już żyje (jeżeli żyje),
-   * którego dnia zmarło (jeżeli żywot już skończyło).
-8. Po zatrzymaniu programu powinno być też możliwe:
-   * pokazanie, które ze zwierząt mają dominujący (najpopularniejszy) genotyp (np. poprzez wyróżnienie ich wizualnie),
-   * pokazanie, które z pól są preferowane przez rośliny (np. poprzez wyróżnienie ich wizualnie).
-9. Jeżeli zdecydowano się na to w momencie uruchamiania symulacji, to jej statystyki powinny być zapisywane (każdego dnia) do pliku CSV. Plik ten powinnien być "otwieralny" przez dowolny rozujmiejący ten format program (np. MS Excel). 
-10. Aplikacja powinna być możliwa do zbudowania i uruchomienia z wykorzystaniem Gradle'a.
+
+6. Program powinien realizować wariant projektu wylosowany na pierwszych zajęciach. Wariant jest związany z alternatywnym przebiegiem symulacji i powinien być wybierany jako jeden z elementów konfiguracji. Opis wszystkich wariantów znajduje się w sekcji poniżej.
+
+### Rozszerzenia (maks. 16xp)
+
+ Można wybrać dowolne z podanej listy w dowolnej liczbie:
+
+- Uruchamianie wielu symulacji jednocześnie w osobnych okienkach **(+2xp)**
+- Wizualizowanie energii zwierzaków (np. kolor/pasek pod obiektem) na żywo w trakcie symulacji **(+2xp)**
+- Zapisywanie i wczytywanie konfiguracji symulacji do pliku oraz zapewnienie listy "presetów" **(+2xp)**
+- Podglądanie statystyk danego zwierzaka **(+3xp)**
+  Po zatrzymaniu symulacji można zaznaczyć zwierzaka jako wybranego do śledzenia. Od tego momentu (do zatrzymania śledzenia) UI powinien przekazywać nam informacje o jego statusie i historii:
+  - jaki ma genom,
+  - która jego część jest aktywowana,
+  - ile ma energii,
+  - ile zjadł roślin,
+  - ile posiada dzieci,
+  - ile posiada potomków (niekoniecznie będących bezpośrednio dziećmi),
+  - ile dni już żyje (jeżeli żyje),
+  - którego dnia zmarło (jeżeli żywot już skończyło).
+- Wyróżnianie wizualne zwierzaków z dominującym (najpopularniejszym) genotypem oraz pozycji preferowanych przez rośliny **(+2xp)**
+- Zapisywanie statystyk symulacji do pliku CSV po każdym dniu **(+2xp)** - plik powinien być możliwy do otworzenia np. w Excelu w celu wizualizacji przebiegu wartości danej statystyki.
+- Wizualizacja wybranej statystyki na wykresie, zmieniającym się w trakcie symulacji **(+2xp)** - ważne, by dało się określić w aplikacji, którą statystykę śledzimy (np. średnia energia zwierzaków albo średnia długość życia)
+- Skalowanie rozmiaru mapy w zależności od rozmiaru **(+2xp)** - np. mapa o dużych wymiarach powinna mieć bardziej zagęszczoną wizualnie siatkę.
+- Przewijanie krokowe symulacji w przód i w tył **(+3xp)**
+- Własny, **zaakceptowany przez prowadzącego** pomysł **(+2xp)**
 
 ## Ocenianie
 
-Za projekt można zdobyć łącznie **32xp** (powiększone o ewentualne bonusy wynikające z marchewek projektowych). Podczas oceniania uwzględniane będą następujące czynniki:
-1. Funkcjonalność (16xp) - kompletność programu i pokrycie wszystkich wymagań, a także (przynajmniej minimalnie przyzwoita) ergonomia interfejsu użytkownika.
-2. Kod programu (16xp)
+Podczas oceniania uwzględniane będą następujące czynniki:
+1. Funkcjonalność - kompletność programu i pokrycie wszystkich wymagań, a także (przynajmniej minimalnie przyzwoita) ergonomia interfejsu użytkownika.
+2. Kod programu 
    - Architektura - dekompozycja problemu, projekt modelu aplikacji, zastosowawnie wzorców projektowych;
    - Clean code - estetyka kodu, czytelność, stosowanie zasad SOLID, poprawne nazewnictwo itp;
    - Wydajność i techniczna realizacja - dobieranie odpowiednich narzędzi i algorytmów do problemów, prawidłowa obsługa wątków itp.
    - Obsługa błędów i zasobów zewnętrznych
    - Testy - powinny weryfikować przynajmniej kluczowe fragmenty logiki aplikacji
+
+## Warianty projektu
+
+Każdy zespół otrzyma od prowadzącego wariant projektu, który może wpływać na różne aspekty symulacji (np. typy obiektów na mapie, zachowanie roślinności itp). Projekt należy zrealizować tak, by dało się uruchomić symulację w wariancie podstawowym oraz w wariancie przydzielonym przez prowadzącego. Powinien być to element konfiguracji programu.
+
+TODO opisy wariantów
 
 ## FAQ
 

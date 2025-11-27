@@ -12,7 +12,7 @@ Stwórzmy grę! Nie będzie to jednak gra, w którą my gramy. Zamiast tego będ
 
 <p align="center"><img src="dzungla.jpg" style="width:600px" /></p>
 
-Nasze zwierzęta, które są roślinożercami, będą przemierzały ten świat w poszukiwaniu pożywienia. Każdy zwierzak ma określoną energię, która zmniejsza się co dnia. Znalezienie i zjedzenie rośliny zwiększa poziom energii o pewną wartość.
+Nasze zwierzaki, które są roślinożercami, będą przemierzały ten świat w poszukiwaniu pożywienia. Każdy zwierzak ma określoną energię, która zmniejsza się co dnia. Znalezienie i zjedzenie rośliny zwiększa poziom energii o pewną wartość.
 
 ## Anatomia zwierzaka
 
@@ -29,6 +29,12 @@ Musimy również pamiętać, w którą stronę zwierzak jest zwrócony. Jest to 
 Na koniec musimy także przechowywać geny zwierzaka. Każdy zwierzak ma N genów, z których każdy jest jedną liczbą z zakresu od `0` do `7`. Geny te opisują (w bardzo uproszczony sposób) schemat zachowania danej istoty. Egzystencja naszych zwierzaków ma cykliczną naturę. Każdy z nich przechowuje informację o tym, z którego fragmentu swojego genomu będzie korzystał najbliższego dnia. Podczas każdego ruchu zwierzak zmienia najpierw swoje ustawienie, obracając się zgodnie z aktualnie aktywnym genem, a potem porusza się o jedno pole w wyznaczonym kierunku. Następnie gen ulega dezaktywacji, a aktywuje się gen na prawo od niego (będzie sterował zwierzakiem kolejnego dnia). Gdy geny skończą się, to aktywacja wraca na początek ich listy. Przykładowo - genom:
 `0 0 7 0 4`
 oznacza, że żyjątko będzie kolejno: szło przed siebie, szło przed siebie, szło nieco w lewo, szło przed siebie, zawracało, szło przed siebie, ... - itd.
+
+W domyślnym wariancie projektu mapa działa jak kula ziemska, tzn. po dotarciu do lewej krawędzi mapy, zwierzak wychodzi z prawej strony. Po dotarciu do jednego z biegunów (północnego lub południowego) odbija się od nich, zmieniając zwrot swojego wektora ruchu na przeciwny.
+
+## Roślinność
+
+Nowe rośliny pojawiają się na mapie każdego dnia. Lokalizacja nowych roślin jest losowa, ale z większym prawdopodobieństwem roślina pojawi się na preferowanym polu (dżungli). W domyślnym wariancie projektu dżungla to obszar zlokalizowany wokół równika. Równik definiujemy jako ciag rzędów mapy zlokalizowany w jej centrum. Zajmuje on 20% wysokości mapy. Zakładamy, że rozrost roślin działa zgodnie z zasadą Pareto: istnieje 80% szans, że roślina wyrośnie w dżungli, zajmującej 20% mapy.
 
 ## Konsumpcja i rozmnażanie
 

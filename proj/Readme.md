@@ -74,6 +74,8 @@ Daną symulację opisuje szereg parametrów:
 
 ## Wymagania dla aplikacji
 
+Na potrzeby projektu każda para zakłada nowe repozytorium (prywatne!) o nazwie `PO_2025_[dzień][godzina]_[nazwisko1]_[nazwisko2]` i dodaje do niego swojego prowadzącego. 
+
 Aplikacja ma być realizowana z użyciem graficznego interfejsu użytkownika z wykorzystaniem biblioteki JavaFX. Można skorzystać z kodu, przygotowanego podczas laboratorium i go rozwinąć. Nie jest dozwolone korzystanie z cudzych prac (z obecnej lub poprzednich edycji). Wykrycie niesamodzielnej pracy będzie traktowane jak plagiat i poskutkuje brakiem zaliczenia przedmiotu!
 
 Wymagania projektu dzielimy na **część podstawową**, z którą można otrzymać **maksymalnie połowę punktów (16xp)** oraz rozszerzenia, które można dobrać w dowolnej ilości. Każde rozszerzenie daje określoną liczbę punktów. **Sumarycznie za cały projekt można otrzymać 32xp  (powiększone o ewentualne bonusy wynikające z zgromadzonych pietruszek).**. W przypadku zrealizowania rozszerzeń w sumie przekraczającej maksymalną liczbę punktów nadal można otrzymać maks. 32xp, ale przyznawana jest również dodatkowa **srebrna skrzynka**.

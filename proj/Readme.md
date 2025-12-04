@@ -103,7 +103,7 @@ Wymagania projektu dzielimy na **część podstawową**, z którą można otrzym
    * średniej długości życia zwierzaków dla martwych zwierzaków (wartość uwzględnia wszystkie nieżyjące zwierzaki - od początku symulacji),
    * średniej liczby dzieci dla żyjących zwierzaków (wartość uwzględnia wszystkie powstałe zwierzaki, a nie tylko zwierzaki powstałe w danej epoce).
 
-6. Program powinien realizować wariant projektu wylosowany na pierwszych zajęciach. Wariant jest związany z alternatywnym przebiegiem symulacji i powinien być wybierany jako jeden z elementów konfiguracji. Opis wszystkich wariantów znajduje się w sekcji poniżej.
+6. Program powinien realizować wariant projektu wylosowany na pierwszych zajęciach. Wariant jest związany z alternatywnym przebiegiem symulacji i powinien być wybierany jako jeden z elementów konfiguracji. Opis wszystkich wariantów [znajduje się w sekcji poniżej](#Warianty-projektu).
 
 ### Rozszerzenia (maks. 16xp)
 

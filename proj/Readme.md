@@ -64,6 +64,7 @@ Daną symulację opisuje szereg parametrów:
 * liczba roślin wyrastająca każdego dnia,
 * startowa liczba zwierzaków,
 * startowa energia zwierzaków,
+* energia tracona przez zwierzaka na koniec dnia,
 * energia konieczna, by uznać zwierzaka za najedzonego (i gotowego do rozmnażania),
 * energia rodziców zużywana by stworzyć potomka,
 * minimalna i maksymalna liczba mutacji u potomków (może być równa `0`),

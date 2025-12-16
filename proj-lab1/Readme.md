@@ -51,11 +51,10 @@ Wczytywanie plików może być przydatne również na potrzeby UI. Do tej pory k
 3. Dodaj utworzone tekstury do folderu `src/main/resources`.
 4. Utwórz klasę `WorldElementBox`, która pozwoli na dodanie obrazka do siatki:
     * utwórz instancję klasy `Image`,
-    * zainicjuj za jej pomocą obiekt `ImageView`,
     * ustal jego rozmiary na 20 x 20,
+    * dodaj metodę `draw(GraphicsContext gc)`, w której zdefiniujesz logikę rysowania (metodę będzie trzeba wywołać z poziomu prezentera podczas rysowania mapy),
     * utwórz etykietę informującą o pozycji zwierzaka,
-    * uwtórz obiekt *vertical box* (`VBox`), do którego dodasz oba obiekty (obrazek i etykietę),
-    * wyśrodkuj elementy wewnątrz kontenera.
+    * wyśrodkuj elementy wewnątrz kontenera tak, by obrazek był nad etykietą,
 5. Dodaj do interfejsu `WorldElement` metody pozwalające na pobranie nazwy zasobu odzwierciedlającego wygląd danego elementu (czyli np.
    `up.png`, jeśli zwierzę zwrócone jest na północ). Zaimplementuj je w klasach implementujących ten interfejs.
 6. Wykorzystaj powyższe metody w konstruktorze klasy `WorldElementBox`, który powinien przyjmować instancję `WorldElement` i wyświetlać reprezentację elementu. Upewnij się, że elementy te nie są niepotrzebnie tworzone wielokrotnie.

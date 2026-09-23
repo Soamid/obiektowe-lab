@@ -16,7 +16,7 @@ Git jest rozproszonym systemem wersjonowania pracy. Jego najważniejsze cechy to
 
 Do wykonania wszystkich ćwiczeń na tym laboratorium potrzebne będą **jedynie zainstalowany Git oraz terminal**. Jeśli nie jesteś fanem pracy z samą konsolą warto zaopatrzyć się też w aplikację z GUI do obsługi Git:
 
-- [GitKraken](https://www.gitkraken.com) - najbardziej zaawansowane narzędzie tego typu, wersja Pro jest darmowa dla studentów korzystających z [GitHub Student Developer Pack](https://education.github.com/pack) (bardzo polecam go sobie aktywować niezależnie od samego Gita!)
+- [GitKraken](https://www.gitkraken.com) - najbardziej zaawansowane narzędzie tego typu, wersja Pro jest darmowa na 6 miesięcy dla studentów korzystających z [GitHub Student Developer Pack](https://education.github.com/pack) (bardzo polecam go sobie aktywować niezależnie od samego Gita!)
 - [SourceTree](https://www.sourcetreeapp.com) - popularny darmowy klient z podstawowymi funkcjami i wizualizacją repozytorium.
 
 W trakcie semestru będziemy korzystać ze środowiska IntelliJ do tworzenia projektów w Javie. IntelliJ również umożliwia pracę z Gitem, można więc całkowicie zrezygnować z dodatkowych programów. Nie zalecamy jednak tego podejścia, szczególnie na początku przygody z Gitem, ponieważ IntelliJ opakowuje i ukrywa wiele operacji Gita i łatwo stracić nad tym kontrolę. Najlepszym wyborem na program towarzyszący nauce Gita wydaje się obecnie GitKraken. 
@@ -54,7 +54,7 @@ W trakcie semestru będziemy korzystać ze środowiska IntelliJ do tworzenia pro
 
    5. Możesz też dodać dowolny dodatkowy tekst, to Twoje repo. ;)
 
-   **Uwaga**: zanim zapiszesz nazwę swojego zwierzaka, [upewnij się czy nie jest ona już zajęta](https://aghedupl.sharepoint.com/:x:/s/ProgramowanieObiektowe20252026/EU_TF-55Sd9InXqKBGKnOPcBQtK2OUS1_ubzSLbAs15IkA?e=oJ5HZi), żeby uniknąć kolizji z innymi studentami! Każdy zwierzak powinien być unikalny. Podlinkowany arkusz aktualizuje się automatycznie co jakiś czas.
+   **Uwaga**: zanim zapiszesz nazwę swojego zwierzaka, [upewnij się czy nie jest ona już zajęta](https://aghedupl.sharepoint.com/:x:/s/ProgramowanieObiektowe20262027/IQDWSzE_CCK3Rpsuusn3SZTUAeAPHDhCDHlf9r_wQPNxvhY?e=ztSE3D), żeby uniknąć kolizji z innymi studentami! Każdy zwierzak powinien być unikalny. Podlinkowany arkusz aktualizuje się automatycznie co jakiś czas.
 
 7. Dodaj plik **.gitignore** i przygotuj go do pracy ze środowiskiem IntelliJ - możesz skorzystać z [gotowego szablonu](https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore).
 
@@ -68,8 +68,8 @@ W trakcie semestru będziemy korzystać ze środowiska IntelliJ do tworzenia pro
    
    [Praca z Git na kolejnych laboratoriach](../guides/git_workflow_tutorial.md)
    
-10. Po wykonaniu wszystkich ćwiczeń [zarejestruj swojego zwierzaka wypełniając formularz](https://forms.office.com/Pages/ResponsePage.aspx?id=PwOxgOAhgkq7wPBf3M07yF6m9cn7cIlCm9fFlCH8KDJUMEI0WFdJVlpXVTYwR0dJQUlGMEZYUkc4MC4u). W ten sposób prowadzący będzie wiedział również, jak dostać się do Twojego repozytorium.
-   
+10. Po wykonaniu wszystkich ćwiczeń [zarejestruj swojego zwierzaka wypełniając formularz](https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=PwOxgOAhgkq7wPBf3M07yF6m9cn7cIlCm9fFlCH8KDJUMFY5OEVGSEJTRzcxVUQxR1pPWlBaTENMQS4u). W ten sposób prowadzący będzie wiedział również, jak dostać się do Twojego repozytorium.
+
 
 ## Przydatne informacje
 
@@ -93,7 +93,7 @@ W celu przygotowania kodu źródłowego do pracy z Gitem należy, będąc w gł�
 
 6. `git remote add origin https://github.com/<login>/<repozytorium>.git` (dodanie zdalnego repozytorium z Githuba)
 
-9. `git push origin master` (wysłanie zmian do zdalnego repozytorium)
+9. `git push origin main` (wysłanie zmian do zdalnego repozytorium)
 
 ### Odtworzenie repozytorium
 
@@ -112,13 +112,13 @@ W poniższych poleceniach fragment ujęty w nawiasy ostre, np. `<file-name>`, na
 3. `git push origin <branch-name>` (wysłanie zmian do zdalnego repozytorium na gałąź `<branch-name>`; jeśli tworzymy nowy branch może być konieczne dodanie przełącznika `--set-upstream-to`)
 
 
-### Aktualizowanie się względem zdalnej gałęzi `master`
+### Aktualizowanie się względem zdalnej gałęzi `main`
 
 1. `git remote add <remote-repo-name> <remote-repo-address>` (dodanie zdalnego repozytorium; jeśli korzystamy z jednego zdalnego repozytorium, to zwyczajowo ma ono nazwę `origin`).
-2. `git checkout master` (przełączenie się do lokalnej gałęzi master).
-3. `git pull <remote-repo-name> master` (pobranie do lokalnej gałęzi `master` zmian ze zdalnej gałęzi `master`)
+2. `git checkout main` (przełączenie się do lokalnej gałęzi main).
+3. `git pull <remote-repo-name> main` (pobranie do lokalnej gałęzi `main` zmian ze zdalnej gałęzi `main`)
 4. `git checkout <feature-branch>` (przełączenie się do gałęzi, na której pracowaliśmy).
-5. `git rebase master` (przepięcie commitów z obecnej gałęzi tak, by poprzedzał je ostatni commit z `master`).
+5. `git rebase main` (przepięcie commitów z obecnej gałęzi tak, by poprzedzał je ostatni commit z `main`).
 6. Rozwiązanie konfliktów, ewentualne wprowadzenie zmian.
 7. `git push origin <feature-branch> -f` (wysłanie zaktualizowanej wersji do zdalnej gałęzi `<feature-branch>` w naszym
    repozytorium).
@@ -128,5 +128,6 @@ W poniższych poleceniach fragment ujęty w nawiasy ostre, np. `<file-name>`, na
 
 * https://git-scm.com/book/pl/v2 - oficjalny podręcznik Gita, częściowo przetłumaczony na język polski
 * https://guides.github.com/introduction/git-handbook/ - wprowadzenie do Gita, wyjaśnienie najważniejszych koncepcji
+* https://learngitbranching.js.org/ - bardzo przyjazny, interaktywny tutorial do nauki Gita
 * https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud - inne wprowadzenie do Gita, zawiera dużo
   ilustracji

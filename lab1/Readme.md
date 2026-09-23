@@ -27,22 +27,19 @@ Najważniejsze zadania:
 5. W pakiecie `agh.ics.oop` utwórz klasę `World` ze statyczną metodą `main`.
 
 6. Zaimplementuj metodę `main` tak aby wyświetlały się dwa komunikaty:
-   - `system wystartował`
-   - `system zakończył działanie`
-
+   
+   ````
+   Start
+   Stop
+   ````
+   
 7. Uruchom program, np. klikając zieloną ikonę pojawiającą się na początku linii, w której występuje metoda `main`.
 
-8. Dodaj metodę statyczną `run`, która jest wywoływana pomiędzy tymi komunikatami.
+8. Dodaj metodę statyczną `run`, która jest wywoływana pomiędzy tymi komunikatami. Metoda powinna akceptować tablicę argumentów typu `String`. Przekaż do niej tablicę `args`, która zawiera parametry wywołania programu.
 
-9. Metoda `run` powinna informować o tym, że zwierzak idzie do przodu.
+12. W zdefiniowanej metodzie wypisz w konsoli wartości wszystkich argumentów tej metody oddzielone przecinkami. Zwróć uwagę na to, żeby nie było nadmiarowych przecinków.
 
-10. Uruchom program.
-
-11. Rozszerz metodę `run` tak, by akceptowała tablicę argumentów typu `String`. Przekaż do niej tablicę `args`, która zawiera parametry wywołania programu.
-
-12. Po komunikacie o poruszaniu się do przodu wypisz w konsoli wartości wszystkich argumentów tej metody oddzielone przecinkami. Zwróć uwagę na to, żeby nie było nadmiarowych przecinków.
-
-13. Uruchom program z dowolnymi parametrami (muszą występować co najmniej 2). W IntelliJ parametry programu możesz ustawiać po wejściu w konfigurację uruchomieniową (rozwijane menu z nazwą klasy --> `Edit configurations...` --> pole `Program arguments`).
+13. Uruchom program z dowolnymi parametrami (muszą występować co najmniej 2) i przetestuj jego działanie. W IntelliJ parametry programu możesz ustawiać po wejściu w konfigurację uruchomieniową (rozwijane menu z nazwą klasy --> `Edit configurations...` --> pole `Program arguments`).
 
 14. Zmodyfikuj program tak, aby interpretował wprowadzone argumenty:
 
@@ -54,13 +51,16 @@ Najważniejsze zadania:
 
 15. Poruszanie się oraz zmiana kierunku ma być oznajmiana odpowiednim komunikatem. Program powinien akceptować dowolną liczbę
     argumentów. Przykładowo wprowadzenie sekwencji `f f r l` powinno dać w wyniku następujące komunikaty:
-    - Start
-    - Zwierzak idzie do przodu
-    - Zwierzak idzie do przodu
-    - Zwierzak skręca w prawo
-    - Zwierzak skręca w lewo
-    - Stop
-
+    
+    ```
+    Start
+    Zwierzak idzie do przodu
+    Zwierzak idzie do przodu
+    Zwierzak skręca w prawo
+    Zwierzak skręca w lewo
+    Stop
+    ```
+    
 16. Zdefiniuj typ wyliczeniowy (enum) `MoveDirection`, który będzie zawierał wszystkie opcje ruchu (np. `FORWARD`, `BACKWARD` itp.). Enum powinien znajdować się w nowym pliku w pakiecie `agh.ics.oop.model` (utwórz w tym celu pod-pakiet `model`).
     
 17. Zmodyfikuj program w ten sposób, aby metoda `run` nie akceptowała tablicy łańcuchów znaków, lecz tablicę

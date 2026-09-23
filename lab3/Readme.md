@@ -48,7 +48,7 @@ Najważniejsze zadania:
 
 3. W klasie `Simulation` zdefiniuj również metodę `run()`, która na przemian steruje ruchem wszystkich zwierząt. Przykładowo, jeśli użytkownik wprowadzi ciąg: `f b r l`, a na mapie są dwa zwierzęta, to pierwsze zwierzę otrzyma ruchy `f` i `r`, a drugie `b` i `l`. Ruchy obu zwierząt mają być wykonywane na przemian, tzn. po każdym ruchu pierwszego zwierzęcia następuje ruch drugiego zwierzęcia.
 
-4. Zapewnij by po każdym ruchu program wypisywał informację `Zwierzę i : (x ,y)`, gdzie `i`- numer zwierzęcia na liście, `x`,`y` - pozycja zwierzęcia po ruchu (skorzystaj z przygotowanego wcześniej `toString()`).
+4. Zapewnij by po każdym ruchu program wypisywał informację `Zwierzę i : (x ,y) O`, gdzie `i`- numer zwierzęcia na liście, `x`,`y` - pozycja zwierzęcia po ruchu, a `O` - jego orientacja (skorzystaj z przygotowanego wcześniej `toString()`). Przykładowo: `Zwierzę 1 : (1, 2) Wschód`
 
 5. W celu weryfikacji rozwiązania wykonaj następujący kod w metodzie `main` klasy `World`:
    
@@ -61,7 +61,7 @@ Najważniejsze zadania:
 
     Sprawdź, czy zwierzęta poruszają się poprawnie dla ciągu: `f b r l f f r r f f f f f f f f`.
 
-6. Napisz testy integracyjne weryfikujące poprawność implementacji. Uwzględnij:
+6. Napisz **testy integracyjne** weryfikujące poprawność implementacji (zapoznaj się z wskazówkami w sekcji *Przydatne informacje*). Uwzględnij:
     * czy zwierzę ma właściwą orientację, 
     * czy zwierzę przemieszcza się na właściwe pozycje,
     * czy zwierzę nie wychodzi poza mapę,
@@ -73,24 +73,38 @@ Najważniejsze zadania:
 
 ## Przydatne informacje
 
-* Początkowe wartości obiektu można określić albo w konstruktorze, albo bezpośrednio przypisując je do pól, np.
+Początkowe wartości obiektu można określić albo w konstruktorze, albo bezpośrednio przypisując je do pól, np.
 
-  ```java
-  class Animal {
-    private Vector2d position = new Vector2d(2,2);
-  }
-  ```
-* W Javie istnieją dwie podstawowe struktury sekwencyjne (poza tablicami): [LinkedList](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedList.html) oraz [ArrayList](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html). W przeciwieństwie do tablic, obie klasy pozwalają na określenie początkowego rozmiaru na 0 i dowolne rozszerzanie kolekcji. 
+```java
+class Animal {
+  private Vector2d position = new Vector2d(2,2);
+}
+```
+
+#### Listy
+
+W Javie istnieją dwie podstawowe struktury sekwencyjne (poza tablicami): [LinkedList](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/LinkedList.html) oraz [ArrayList](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ArrayList.html). W przeciwieństwie do tablic, obie klasy pozwalają na określenie początkowego rozmiaru na 0 i dowolne rozszerzanie kolekcji. 
+
 * Obie klasy implementują interfejs `List`, który definiuje podstawowe operacje na listach.
-* Klasy te różnią się implementację - `LinkedList` oparta jest o listę dwukierunkową, przez co operacje dodawania i usuwania elementów są szybkie, ale swobodny dostęp za pomocą operatora `get` jest wolniejszy. `ArrayList` oparta jest o tablicę, dlatego dostęp jest szybki, ale dodawanie i usuwanie elementów jest wolniejsze.
+* Klasy te różnią się implementację - `LinkedList` oparta jest o listę dwukierunkową, przez co operacje dodawania i usuwania elementów na końcach są szybkie, ale swobodny dostęp za pomocą operatora `get` i przeglądanie elementów jest wolniejsze. `ArrayList` oparta jest o tablicę, dlatego dostęp jest szybki, ale dodawanie i usuwanie elementów jest wolniejsze (szczególnie bliżej początku listy). Więcej informacji na ten temat można zobaczyć [tutaj](https://www.youtube.com/watch?v=ul4wHrbJ8Fk).
 * W Javie występują typy parametryzowane i typ `List` jest tego przykładem. Taki typ jest podobny do szablonów w C++. Wymaga on podania innego typu (lub typów) jako parametru (parametr musi być typem obiektowym):
+
     ```java
     List<Animal> animals = new ArrayList<>();
     ```
-  W tym przykładzie tworzona jest lista zwierząt, a jako implementacja wybrana została klasa `ArrayList`. Dzięki temu
-  wywołania takie jak:
+    W tym przykładzie tworzona jest lista zwierząt, a jako implementacja wybrana została klasa `ArrayList`. Dzięki temu
+    wywołania takie jak:
+
     ```java
-    animals.get(1);
+      animals.get(1);
     ```
-  zwracają obiekty klasy `Animal`, dzięki czemu mogą one być używane w "bezpieczny" sposób - tzn. kompilator może sprawdzić,
-  czy wywoływane metody faktycznie występują w klasie `Animal`.
+    zwracają obiekty klasy `Animal`, dzięki czemu mogą one być używane w "bezpieczny" sposób - tzn. kompilator może sprawdzić,
+    czy wywoływane metody faktycznie występują w klasie `Animal`.
+
+    
+
+#### Testy integracyjne
+
+Na poprzednich zajęciach tworzyliśmy testy jednostkowe, które z założenia służą do weryfikowania pojedynczych elementów i zwykle można przyjąć, że test jednostkowy dotyczy tylko jednej klasy i sprawdza ją w izolacji od innych. Tym razem proponujemy inne podejście: zamiast skupiać się na pojedynczych klasach, przetestujemy cały mechanizm, który wymaga współpracy kilku klas, może wykonywać cięższe operacje itp. Tego rodzaju testy nazywamy **testami integracyjnymi**. W przypadku tego typu testów najczęściej musimy jasno zdefiniować dane wejściowe i oczekiwane dane wyjściowe i sprawdzić, czy faktycznie po przejściu przez cały mechanizm otrzymujemy odpowiednie rezultaty.
+
+W przypadku testów integracyjnych często odwołujemy się również do istniejących serwisów, baz danych czy API. Na potrzeby naszych zajęć nie będzie to potrzebne, bo nadal operujemy na stosunkowo prostym modelu. Trzeba jednak zastanowić się, jak poprawnie zbudować całą symulację i które klasy wykorzystać, zaczynając od podania tekstowej reprezentacji ruchów (wejście), a kończąc na badaniu ostatecznych pozycji zwierzaków (wyjście). 

@@ -12,8 +12,6 @@ Instrukcje do poszczególnych laboratoriów znajdują się w odpowiednich folder
 * [Wielowątkowość](lab7/Readme.md)
 * [Interfejs graficzny](lab8/Readme.md)
 
-[Opis i wymagania do projektu.](proj/Readme.md)
-
 Dodatkowe laboratoria do realizowania (opcjonalnie) w trakcie projektu:
 * [Lambdy, streamy i zarządzanie zasobami](proj-lab1/Readme.md)
 * [Kotlin jako alternatywa dla Javy](proj-lab2/Readme.md)

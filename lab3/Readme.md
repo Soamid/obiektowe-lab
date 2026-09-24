@@ -32,7 +32,8 @@ Najważniejsze zadania:
       * Dla kierunków `FORWARD` i `BACKWARD` zmienia pozycję zwierzęcia o 1 pole, uwzględniając jego orientację, np. kiedy zwierzę
         jest na pozycji `(2,2)` i jego orientacja to `NORTH`, to po ruchu `FORWARD` jego pozycja to `(2,3)`.
       * **Uniemożliwia** wyjechanie poza mapę, która ustalona jest od pozycji `(0,0)` do pozycji `(4,4)` (pięć na pięć pól). W
-        sytuacji, w której zwierzę miałoby wyjść poza mapę, wywołanie `move` nie ma żadnego skutku.
+        sytuacji, w której zwierzę miałoby wyjść poza mapę, wywołanie `move` nie zmienia stanu zwierzaka.
+      * Zwraca `true` jeśli zwierzak poruszył się w wyniku całej operacji, `false` w przeciwnym przypadku.
 
 ### Zastosowanie list
 
@@ -107,4 +108,4 @@ W Javie istnieją dwie podstawowe struktury sekwencyjne (poza tablicami): [Linke
 
 Na poprzednich zajęciach tworzyliśmy testy jednostkowe, które z założenia służą do weryfikowania pojedynczych elementów i zwykle można przyjąć, że test jednostkowy dotyczy tylko jednej klasy i sprawdza ją w izolacji od innych. Tym razem proponujemy inne podejście: zamiast skupiać się na pojedynczych klasach, przetestujemy cały mechanizm, który wymaga współpracy kilku klas, może wykonywać cięższe operacje itp. Tego rodzaju testy nazywamy **testami integracyjnymi**. W przypadku tego typu testów najczęściej musimy jasno zdefiniować dane wejściowe i oczekiwane dane wyjściowe i sprawdzić, czy faktycznie po przejściu przez cały mechanizm otrzymujemy odpowiednie rezultaty.
 
-W przypadku testów integracyjnych często odwołujemy się również do istniejących serwisów, baz danych czy API. Na potrzeby naszych zajęć nie będzie to potrzebne, bo nadal operujemy na stosunkowo prostym modelu. Trzeba jednak zastanowić się, jak poprawnie zbudować całą symulację i które klasy wykorzystać, zaczynając od podania tekstowej reprezentacji ruchów (wejście), a kończąc na badaniu ostatecznych pozycji zwierzaków (wyjście). 
+W przypadku testów integracyjnych często odwołujemy się również do istniejących serwisów, baz danych czy API. Na potrzeby naszych zajęć nie będzie to potrzebne, bo nadal operujemy na stosunkowo prostym modelu. Trzeba jednak zastanowić się, jak poprawnie zbudować całą symulację i które klasy wykorzystać, zaczynając od podania tekstowej reprezentacji ruchów (wejście), a kończąc na badaniu pozycji zwierzaków (wyjście). 

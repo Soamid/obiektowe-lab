@@ -16,9 +16,9 @@ Najważniejsze zadania:
 
 ### Obsługa błędów
 
-1. W metodzie odpowiedzialnej za zamianę argumentów aplikacji na ruchy zwierzęcia rzuć wyjątek `IllegalArgumentException`, jeśli którykolwiek z parametrów nie należy do listy poprawnych parametrów (`f`, `forward`, `b`, `backward`, etc.). Jako przyczynę wyjątku wprowadź łańcuch znaków informujący, że określony parametr jest niepoprawny, np.  `new IllegalArgumentException(argument + " is not legal move specification")`.
-2. Stwórz własną klasę wyjątku - `IncorrectPositionException`. Powinien być to wyjątek typu **checked**. Wyjątek powinien przyjmować w konstruktorze `Vector2d` i tworzyć na jego podstawie wiadomość np. `Position (x, y) is not correct`.
-3. W metodach odpowiedzialnych za dodawanie elementów do mapy, jeśli dodanie elementu na wybrane pole jest niemożliwe, rzuć wyjątek `IncorrectPositionException`. Wyjątek zastępuje sygnalizowanie błędu przy pomocy zwracania wartości `false` (zmień sygnaturę metody).
+1. W metodach odpowiedzialnych za dodawanie elementów do mapy, jeśli dodanie elementu na wybrane pole jest niemożliwe, rzuć wyjątek `IllegalArgumentException`. Zapewnij, by w wiadomości przekazywanej do wyjątku pojawiała się informacja o pozycji (np. `"Position (x, y) is not correct"`). Wyjątek zastępuje sygnalizowanie błędu przy pomocy zwracania wartości `false` (zmień sygnaturę metody).
+2. Stwórz własną klasę wyjątku - `UnsupportedParameterException`. Powinien być to wyjątek typu **checked**. Wyjątek posłuży nam do sygnalizowania niepoprawnych parametrów wpisywanych przez użytkownika. Powinien przyjmować w konstruktorze `String` z nazwą parametru i opakowywać to w wiadomość np. `"Unsupported parameter: x"` (**uwaga**: wykorzystaj konstruktor klasy bazowej używając`super(..)`).
+3. W metodzie odpowiedzialnej za zamianę argumentów aplikacji na ruchy zwierzęcia rzuć wyjątek `UnsupportedParameterException`, jeśli którykolwiek z parametrów nie należy do listy poprawnych parametrów (`f`, `forward`, `b`, `backward`, etc.). 
 4. Obsłuż oba wyjątki. W przypadku błędów walidacji opcji program powinien zostać przerwany z odpowiednim komunikatem. W przypadku próby ustawiania zwierzątek na złych pozycjach w klasie `Simulation` powinny one być pominięte, ale program nadal ma działać i umożliwiać symulację dla poprawnie ustawionych zwierzątek.
 5. Zaktualizuj testy metody `place` oraz klasy `OptionsParser`, aby były zgodne z nowym kontraktem.
 

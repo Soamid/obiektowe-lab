@@ -188,3 +188,24 @@ umieszczenie obiektów w kolekcji takiej jak `Set` będzie niezgodne z semantyk�
   * `assertTrue(a)` - weryfikuje czy wartość logiczna `a` jest prawdą,
   * `assertFalse(a)` - weryfikuje czy wartość logiczna `a` jest fałszem.
 
+## Dodatkowo: automatyczne uruchamianie testów (CI)
+
+**CI** (*Continuous Integration*) to automatyczne budowanie projektu i uruchamianie testów po każdym wypchnięciu zmian.
+Dzięki temu od razu widać, czy kod się kompiluje i czy testy przechodzą - nie tylko u Ciebie, ale na czystej maszynie,
+a w Pull Requeście z rozwiązaniem laboratorium pojawia się status ✅ lub ❌.
+
+Na GitHubie CI możemy realizować za pomocą **GitHub Actions**. W repozytorium umieszczamy plik YAML (*workflow*), który opisuje,
+kiedy ma się uruchomić (np. przy każdym pushu) i co ma zrobić (pobrać kod, zainstalować Javę, uruchomić `./gradlew build`,
+czyli kompilację i testy).
+
+Aby testy uruchamiały się automatycznie na każdym branchu:
+
+1. Pobierz gotowy plik [oolab-ci.yml](https://github.com/sumo-slonik/git-hub-actiosns-sample-core/blob/main/resources/oolab-ci.yml)
+   i zapisz go w swoim repozytorium jako `.github/workflows/ci.yml`. Katalog `.github` musi być w **głównym katalogu
+   repozytorium** (tam, gdzie jest katalog `.git`).
+2. W pliku ustaw `PROJECT_DIR` na katalog, w którym leżą `build.gradle` i `gradlew` (domyślnie `oolab`;
+   jeśli projekt jest bezpośrednio w głównym katalogu repozytorium, wpisz `.`).
+3. Zrób commit i push. Wynik zobaczysz w zakładce **Actions** swojego repozytorium oraz w Pull Requeście.
+
+Więcej o CI i GitHub Actions (jak to działa, co zrobić, gdy build nie przechodzi, jak zablokować merge przy czerwonych
+testach) znajdziesz w repozytorium [git-hub-actiosns-sample-core](https://github.com/sumo-slonik/git-hub-actiosns-sample-core).

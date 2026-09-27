@@ -8,7 +8,6 @@ Najważniejsze zadania:
 1. Stworzenie klasy `Grass` - nowego rodzaju obiektu na mapie.
 2. Stworzenie klasy `GrassField` - nowego rodzaju mapy, przechowującej zwierzęta i trawy.
 3. Stworzenie klasy `AbstractWorldMap`.
-4. Testy integracyjne.
 
 ## Zadania do wykonania (4xp)
 

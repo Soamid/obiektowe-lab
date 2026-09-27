@@ -12,8 +12,6 @@ Instrukcje do poszczególnych laboratoriów znajdują się w odpowiednich folder
 * [Wielowątkowość](lab7/Readme.md)
 * [Interfejs graficzny](lab8/Readme.md)
 
-[Opis i wymagania do projektu.](proj/Readme.md)
-
 Dodatkowe laboratoria do realizowania (opcjonalnie) w trakcie projektu:
 * [Lambdy, streamy i zarządzanie zasobami](proj-lab1/Readme.md)
 * [Kotlin jako alternatywa dla Javy](proj-lab2/Readme.md)
@@ -80,9 +78,12 @@ Będzie to wyglądało następująco:
 
    - **Zadania dodatkowe -** w niektórych konspektach do laboratoriów z Javy pojawią się dodatkowe, opcjonalne zadania. Aby otrzymać skrzynkę z łupem należy wykonać zadanie w tym samym terminie, co podstawową część laboratorium. W części laboratoryjnej przewidzieliśmy **3 takie zadania (3 skrzynki do zdobycia**). W części projektowej pojawią się **2 dodatkowe, całkowicie opcjonalne** laboratoria do samodzielnego przerobienia. Za każde z nich będzie można otrzymać po **2 skrzynki (łącznie 4 skrzynki)**. Dodatkowo za wyróżniający się projekt również będzie można zarobić dodatkową **srebrną skrzynkę**.
    - **Wydarzenia specjalne** - podobnie jak zadania dodatkowe będą polegały na wykonaniu aktywności poza zajęciami. Będą one miały jednak określony czas trwania, dłuższy niż tydzień. Przewidujemy **2 takie wydarzenia**, każde warte **złotą skrzynkę**.
-   - **Aktywność na zajęciach lab** - podczas dyskusji na temat rozwiązań zadań laboratoryjnych prowadzący będzie czasem zadawał dodatkowe pytania, związane z rozumieniem kodu czy zagadnień poruszanych na wykładzie. Za odpowiedź na takie pytanie będzie można zarobić **brązową skrzynkę**.
+   - **Aktywność na zajęciach lab** - podczas dyskusji na temat rozwiązań zadań laboratoryjnych prowadzący będzie czasem zadawał dodatkowe pytania, związane z rozumieniem kodu czy zagadnień poruszanych na wykładzie. Za odpowiedź na takie pytanie będzie można zarobić **brązową skrzynkę**. 
    - **Quizy na wykładzie** - na niektórych wykładach będzie można wziąć udział w krótkim quizie podsumowującym omawiane na nim zagadnienia. Domyślnie za quizy nie są przyznawane nagrody, ale w wyjątkowych (zapowiedzianych wcześniej) sytuacjach będzie można w ten sposób otrzymać **brązową skrzynkę**.
    - W uzasadnionych przypadkach prowadzący może arbitralnie przyznać studentowi dodatkowy łup za inne, wyróżniające się aktywności.
+9. W trakcie zajęć laboratoryjnych Twój zwierzak może zostać poddany **morderczej próbie**. Prowadzący może poprosić Cię o wyjaśnienie swojego rozwiązania z poprzednich zajęć i szczegółowe słówne opisanie wszystkich zastosowanych narzędzi, konstrukcji językowych itp. Brak poprawnej odpowiedzi może w takiej sytuacji poskutkować anulowaniem punktów przyznanych za tę laborkę! Nie warto więc iść na skróty i **zawsze** stosować wyłącznie elementy, które w pełni rozumiemy (patrz sekcja FAQ o stosowaniu AI).
+10. Przewidujemy też specjalne **wyróżnienia dla wyjątkowo aktywnych**. W części lab osoby, które zgromadzą co najmniej **6 łupów (niezależnie od ich rodzaju)** zostaną nagrodzone dodatkową **złotą skrzynką** w części projektowej. Z kolei na koniec semestru osoba znajdująca się szczycie _Hall of Fame_ może liczyć na pamiątkową symboliczną niespodziankę (i wieczną chwałę). Remisy będą rozstrzygane na podstawie liczby zdobytych łupów.
+
    
 
 ### Roadmapa

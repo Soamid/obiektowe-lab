@@ -1,0 +1,57 @@
+# Workflow CI dla projektu z laboratoriów z Programowania Obiektowego (AGH WI, obiektowe-lab).
+# Skopiuj ten plik do SWOJEGO repozytorium jako: .github/workflows/ci.yml
+name: CI
+
+on:
+  # push na dowolny branch (lab1, lab2, ...) - testy po każdym wypchniętym commicie
+  push:
+  # pull request (np. lab2 -> main) - wynik testów widoczny bezpośrednio w PR
+  pull_request:
+  # ręczne uruchomienie z zakładki Actions
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Katalog z projektem Gradle (tam, gdzie leżą build.gradle i gradlew) - jedyna rzecz do ustawienia.
+  # Jeśli projekt jest bezpośrednio w głównym katalogu repozytorium, wpisz: .
+  PROJECT_DIR: oolab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ env.PROJECT_DIR }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      # Ta sama wersja Javy co w build.gradle (java { toolchain { languageVersion = 25 } }).
+      - name: Set up JDK 25
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '25'
+
+      # cache-provider: basic - otwartoźródłowy cache, działa również w repozytoriach prywatnych.
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          cache-provider: basic
+
+      # "build" kompiluje kod i uruchamia testy jednostkowe (task "test").
+      - name: Build and run tests
+        run: ./gradlew build
+
+      - name: Upload test report
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: test-report
+          path: ${{ env.PROJECT_DIR }}/build/reports/tests/test

@@ -7,7 +7,7 @@ Najważniejsze zadania:
 1. Stworzenie klasy `RectangularMap` do przechowywania wielu zwierząt i ich pozycji z wykorzystaniem `HashMap`.
 2. Zabezpieczenie kontraktów między mapą a zwierzęciem.
 3. Konsolowa wizualizacja mapy podczas symulacji.
-4. Testy integracyjne.
+4. Utrzymywanie testów.
 
 ## Zadania do wykonania (4xp)
 
@@ -37,7 +37,8 @@ Najważniejsze zadania:
      * zmodyfikuj metodę `toString` tak, by zwracała jedynie schematyczną orientację zwierzęcia w postaci łańcucha składającego się z jednego znaku, Np. jeśli zwierzę ma orientację północną, to metoda `toString()` powinna zwracać łańcuch "N" albo "^".
 
 6. Zmodyfikuj klasę `Simulation` tak, by przyjmowała w konstruktorze również obiekt `WorldMap`. Następnie popraw realizację metody `run()` tak, by ruch odbywał się za pośrednictwem mapy. Po każdym ruchu wypisz aktualny stan mapy.
-7. Dodaj testy integracyjne weryfikujące, że implementacja jest poprawna. 
+7. Pokryj testami jednostkowymi klasę `RectangularMap`. W razie potrzeby zmodyfikuj też dotychczasowe testy (pamiętaj, że już istniejące testy zawsze powinny przechodzić!).
+     **Wskazówka**: zwróć uwagę, że w testach `Animal` trzeba teraz podawać dodatkowy parametr dla metody `move()`. Zastanów się, w jaki sposób można wykorzystać interfejs `MoveValidator` żeby uniknąć tworzenia całej mapy i zachować izolacje testów. Zapoznaj się z pojęciem [dummy (fake) object](https://www.baeldung.com/cs/faking-mocking-stubbing). 
 
 
 

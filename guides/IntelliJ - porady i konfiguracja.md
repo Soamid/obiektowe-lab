@@ -46,8 +46,8 @@ Ta zasada dotyczy także przeklejania kodu znalezionego w Internecie - **warto p
 
 O ile w przypadku modeli LLM wystarczy po prostu z nich nie korzystać, o tyle automatyczne podpowiedzi AI w IntelliJ są w aktualnej wersji włączone domyślnie. Dla własnego dobra i efektywności nauki silnie zalecamy ich wyłączenie. Aby to zrobić należy:
 1. Otworzyć Ustawienia (ikona zębatki)
-2. Przejść do sekcji Editor -> General -> Inline Completion
-3. Odznaczyć checkbox *Enable local Full Line completion suggestions* i w razie potrzeby również *Enable cloud completion suggestions*
+2. Przejść do sekcji Editor -> General -> Code Completion -> Inline
+3. Odznaczyć checkbox *Enable inline completion using language models*.
 
 ### Przydatne skróty i sztuczki
 

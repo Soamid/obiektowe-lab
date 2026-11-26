@@ -36,7 +36,9 @@ Najważniejsze zadania:
 
 ### *Race conditions*
 
-1. Zmodyfikuj metodę `main()` tak, by zamiast dwóch symulacji tworzyła ich bardzo wiele w pętli (rzędu 1000 lub więcej - możesz eksperymentować z różnymi wartościami).
+1. Zmodyfikuj metodę `main()` tak, by zamiast dwóch symulacji tworzyła ich bardzo wiele w pętli (rzędu 1000 lub więcej - możesz eksperymentować z różnymi wartościami). 
+
+   **Uwaga:** Wszystkie symulacje i mapy powinny korzystać z jednego, wspólnego obiektu `ConsoleMapDisplay`.
 2. Uruchom program kilka razy i prześledź wypisywane stany mapy oraz, w szczególności, końcowe wartości liczników aktualizacji. Jakie problemy obserwujesz? Z czego to wynika?
 3. Dokonaj koniecznych modyfikacji w programie tak, by zapewnić, że każda aktualizacja mapy zostanie poprawnie i w całości wypisana.
 
